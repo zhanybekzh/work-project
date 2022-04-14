@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  padding-right: $container-gutter-x / 2;
+  padding-left: $container-gutter-x / 2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $breakpoint, $max-width in $container-max-widths {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    .container {
+      max-width: $max-width;
+    }
+  }
+}

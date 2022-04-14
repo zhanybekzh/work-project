@@ -1,0 +1,174 @@
+$button-font-family: interit;
+$button-font-size: $font-size-base;
+$button-font-weight: $font-weight-regular;
+$button-line-height: $line-height-base;
+$button-padding-x: .5625rem;
+$button-padding-y: .625rem;
+$button-color: $color-white;
+$button-hover-color: $button-color;
+$button-disabled-color: $button-color;
+$button-active-color: $button-color;
+$button-background-color: $color-green-300;
+$button-hover-background-color: $color-green-500;
+$button-disabled-background-color: $color-gray-300;
+$button-active-background-color: lighten($button-hover-background-color, 20%);
+$button-border-color: $button-background-color;
+$button-hover-border-color: $button-hover-background-color;
+$button-disabled-border-color: $button-disabled-background-color;
+$button-active-border-color: $button-active-background-color;
+$button-border-width: $border-width;
+$button-border-radius: .875rem;
+$button-cursor: $cursor-pointer;
+$button-focus-box-shadow: 0 0 0 .2rem rgba($button-background-color, .25);
+$button-min-width: 10.625rem;
+$button-outline-color: $button-background-color;
+$button-outline-background-color: $button-color;
+$button-outline-border-color: $button-background-color;
+$button-outline-hover-color: $button-color;
+$button-outline-hover-background-color: $button-background-color;
+$button-outline-hover-border-color: $button-border-color;
+$button-outline-active-color: $button-hover-color;
+$button-outline-active-background-color: $button-hover-background-color;
+$button-outline-active-border-color: $button-hover-border-color;
+$button-red-color: $color-white;
+$button-red-background-color: $color-red;
+$button-red-border-color: $button-red-background-color;
+$button-red-outline-color: $button-red-background-color;
+$button-red-hover-color: $color-white;
+$button-red-hover-background-color: darken($button-red-background-color, 25%);
+$button-red-hover-border-color: $button-red-hover-background-color;
+$button-red-active-color: $button-red-color;
+$button-red-active-background-color: lighten($button-red-hover-background-color, 10%);
+$button-red-active-border-color: $button-red-active-background-color;
+$button-red-focus-box-shadow: 0 0 0 .2rem rgba($button-red-background-color, .25);
+$button-red-outline-background-color: $button-red-color;
+$button-red-outline-border-color: $button-red-border-color;
+$button-red-outline-hover-color: $button-red-background-color;
+$button-red-outline-hover-background-color: $button-red-color;
+$button-red-outline-hover-border-color: $button-red-outline-hover-color;
+
+.button {
+  display: inline-block;
+  min-width: $button-min-width;
+  padding: $button-padding-y $button-padding-x;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  color: $button-color;
+  text-align: center;
+  text-decoration: $text-decoration-none;
+  vertical-align: middle;
+  cursor: $button-cursor;
+  background-color: $button-background-color;
+  border: $border-width solid $button-border-color;
+  border-radius: $button-border-radius;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  user-select: none;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:hover {
+    color: $button-hover-color;
+    text-decoration: $text-decoration-none;
+    background-color: $button-hover-background-color;
+    border-color: $button-hover-border-color;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: $button-focus-box-shadow;
+  }
+
+  &:active,
+  &.active {
+    color: $button-active-color;
+    background-color: $button-background-color;
+    border-color: $button-border-color;
+
+    &:focus {
+      box-shadow: $button-focus-box-shadow;
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & { // sass-lint:disable-line force-pseudo-nesting
+    color: $button-disabled-color;
+    pointer-events: none;
+    background-color: $button-disabled-background-color;
+    border-color: $button-disabled-border-color;
+    box-shadow: none;
+  }
+
+  &-outline {
+    color: $button-outline-color;
+    background-color: $button-outline-background-color;
+    border-color: $button-outline-border-color;
+
+    &:hover {
+      color: $button-outline-hover-color;
+      background-color: $button-outline-hover-background-color;
+      border-color: $button-outline-hover-border-color;
+    }
+
+    &:active,
+    &.active {
+      color: $button-outline-active-color;
+      background-color: $button-outline-active-background-color;
+      border-color: $button-outline-active-border-color;
+    }
+  }
+
+  &-red {
+    color: $button-red-color;
+    background-color: $button-red-background-color;
+    border-color: $button-red-border-color;
+
+    &:hover {
+      color: $button-red-hover-color;
+      background-color: $button-red-hover-background-color;
+      border-color: $button-red-hover-border-color;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: $button-red-focus-box-shadow;
+    }
+
+    &:active,
+    &.active {
+      color: $button-red-active-color;
+      background-color: $button-red-active-background-color;
+      border-color: $button-red-active-border-color;
+
+      &:focus {
+        box-shadow: $button-red-focus-box-shadow;
+      }
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & { // sass-lint:disable-line force-pseudo-nesting
+      color: $button-disabled-color;
+      pointer-events: none;
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
+      box-shadow: none;
+    }
+
+    &.button-outline {
+      color: $button-red-outline-color;
+      background-color: $button-red-outline-background-color;
+      border-color: $button-red-outline-border-color;
+
+      &:hover {
+        color: $button-red-outline-hover-color;
+        background-color: $button-red-outline-hover-background-color;
+        border-color: $button-red-outline-hover-border-color;
+      }
+    }
+  }
+}
