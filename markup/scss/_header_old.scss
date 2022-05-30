@@ -1,0 +1,9 @@
+header {
+    background-color: $color-green-300;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 0 0 auto;
+}

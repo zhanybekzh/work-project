@@ -1,6 +1,6 @@
 const del = require('del');
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 const sassLint = require('gulp-sass-lint');
 const sourcemaps = require('gulp-sourcemaps');
 
@@ -29,7 +29,7 @@ gulp.task('build.styles', () => {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./markup/css'))
 });
-
+gulp.watch('./markup/scss/**/*.scss', gulp.parallel('build.styles'));
 gulp.task('styles', gulp.series('clean.styles', 'lint.styles', 'build.styles'));
 
 gulp.task('build', gulp.series('styles'));

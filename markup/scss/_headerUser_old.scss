@@ -1,0 +1,42 @@
+.header {
+    &-user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:20px;
+        color:$color-white;
+        &__profile {
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            &-text {
+
+            }
+            &-name {
+                width: max-content;
+            }
+        }
+        &__account {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:6px;
+            cursor: pointer;
+        }
+        &__avatar {
+            width: 36px;
+            height:36px;
+            border-radius: 50%;
+            background: center $color-green-100 url('../../assets/img/fi_user.svg') no-repeat;
+        }
+        &__arrow {
+            width:12px;
+            height:6px;
+            background: center  url('../../assets/img/Vector.svg') no-repeat;
+        }
+    }
+
+}
+@media (min-width: 768px) {
+
+}

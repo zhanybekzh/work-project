@@ -1,0 +1,33 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+    &__columns {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+        
+    }
+    &-column {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        color: $color-white;
+        &__infos {
+            flex: 0 0 30%;
+        }
+        a {
+
+            color: $color-white;
+            text-decoration: none;
+        }
+        
+    }
+    &__copyright {
+
+        color: $color-white;
+        padding-bottom: 30px;
+    }
+}

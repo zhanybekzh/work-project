@@ -2,7 +2,7 @@ $button-font-family: interit;
 $button-font-size: $font-size-base;
 $button-font-weight: $font-weight-regular;
 $button-line-height: $line-height-base;
-$button-padding-x: .5625rem;
+$button-padding-x: .75rem;
 $button-padding-y: .625rem;
 $button-color: $color-white;
 $button-hover-color: $button-color;
@@ -51,7 +51,6 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
   display: inline-block;
   min-width: $button-min-width;
   padding: $button-padding-y $button-padding-x;
-  font-family: $button-font-family;
   font-size: $button-font-size;
   font-weight: $button-font-weight;
   line-height: $button-line-height;
@@ -65,6 +64,34 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
   border-radius: $button-border-radius;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   user-select: none;
+
+
+  &__type1 {
+    @extend .button;
+    color: $color-white;
+    background-color: $color-green-300;
+    border: none;
+
+    &_active {
+      color: $color-green-300;
+      background-color: $color-white;
+      font-weight: 700;
+    }
+  }
+
+  &__type2 {
+    @extend .button;
+    color: $color-green-300;
+    background-color: $color-white;
+    border: none;
+
+    &_active {
+      color: $color-white;
+      background-color: $color-green-300;
+      font-weight: 700;
+    }
+  }
+
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
@@ -95,7 +122,8 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
 
   &:disabled,
   &.disabled,
-  fieldset:disabled & { // sass-lint:disable-line force-pseudo-nesting
+  fieldset:disabled & {
+    // sass-lint:disable-line force-pseudo-nesting
     color: $button-disabled-color;
     pointer-events: none;
     background-color: $button-disabled-background-color;
@@ -151,7 +179,8 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
 
     &:disabled,
     &.disabled,
-    fieldset:disabled & { // sass-lint:disable-line force-pseudo-nesting
+    fieldset:disabled & {
+      // sass-lint:disable-line force-pseudo-nesting
       color: $button-disabled-color;
       pointer-events: none;
       background-color: $button-disabled-background-color;
