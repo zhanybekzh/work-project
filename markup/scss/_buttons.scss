@@ -2,8 +2,8 @@ $button-font-family: interit;
 $button-font-size: $font-size-base;
 $button-font-weight: $font-weight-regular;
 $button-line-height: $line-height-base;
-$button-padding-x: .75rem;
-$button-padding-y: .625rem;
+$button-padding-x: 0.75rem;
+$button-padding-y: 0.625rem;
 $button-color: $color-white;
 $button-hover-color: $button-color;
 $button-disabled-color: $button-color;
@@ -17,9 +17,9 @@ $button-hover-border-color: $button-hover-background-color;
 $button-disabled-border-color: $button-disabled-background-color;
 $button-active-border-color: $button-active-background-color;
 $button-border-width: $border-width;
-$button-border-radius: .875rem;
+$button-border-radius: 0.875rem;
 $button-cursor: $cursor-pointer;
-$button-focus-box-shadow: 0 0 0 .2rem rgba($button-background-color, .25);
+$button-focus-box-shadow: 0 0 0 0.2rem rgba($button-background-color, 0.25);
 $button-min-width: 10.625rem;
 $button-outline-color: $button-background-color;
 $button-outline-background-color: $button-color;
@@ -38,16 +38,19 @@ $button-red-hover-color: $color-white;
 $button-red-hover-background-color: darken($button-red-background-color, 25%);
 $button-red-hover-border-color: $button-red-hover-background-color;
 $button-red-active-color: $button-red-color;
-$button-red-active-background-color: lighten($button-red-hover-background-color, 10%);
+$button-red-active-background-color: lighten(
+  $button-red-hover-background-color,
+  10%
+);
 $button-red-active-border-color: $button-red-active-background-color;
-$button-red-focus-box-shadow: 0 0 0 .2rem rgba($button-red-background-color, .25);
+$button-red-focus-box-shadow: 0 0 0 0.2rem
+  rgba($button-red-background-color, 0.25);
 $button-red-outline-background-color: $button-red-color;
 $button-red-outline-border-color: $button-red-border-color;
 $button-red-outline-hover-color: $button-red-background-color;
 $button-red-outline-hover-background-color: $button-red-color;
 $button-red-outline-hover-border-color: $button-red-outline-hover-color;
-
-.button {
+@mixin button {
   display: inline-block;
   min-width: $button-min-width;
   padding: $button-padding-y $button-padding-x;
@@ -62,36 +65,9 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
   background-color: $button-background-color;
   border: $border-width solid $button-border-color;
   border-radius: $button-border-radius;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
-
-
-  &__type1 {
-    @extend .button;
-    color: $color-white;
-    background-color: $color-green-300;
-    border: none;
-
-    &_active {
-      color: $color-green-300;
-      background-color: $color-white;
-      font-weight: 700;
-    }
-  }
-
-  &__type2 {
-    @extend .button;
-    color: $color-green-300;
-    background-color: $color-white;
-    border: none;
-
-    &_active {
-      color: $color-white;
-      background-color: $color-green-300;
-      font-weight: 700;
-    }
-  }
-
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
@@ -200,4 +176,7 @@ $button-red-outline-hover-border-color: $button-red-outline-hover-color;
       }
     }
   }
+}
+.button {
+  @include button;
 }

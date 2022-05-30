@@ -5,17 +5,23 @@
   margin-right: auto;
   margin-left: auto;
 }
+@media (max-width: 992px) {
+  header .container {
+    min-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer .container {
+    min-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 @each $breakpoint, $max-width in $container-max-widths {
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     .container {
       max-width: $max-width;
     }
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
   }
 }

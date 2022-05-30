@@ -1,0 +1,22 @@
+.catalog-wrapper {
+    background-color: $color-white;
+
+}
+.catalog {
+    padding: 40px 0;
+    &__subtitle {
+        color: $color-black-text;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding:0;
+        gap: 20px;
+        &__item {
+
+        }
+    }
+}

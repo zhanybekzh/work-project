@@ -1,5 +1,5 @@
 ; (() => {
-    
+
     const headerMenu = document.querySelector('.header-menu');
     const menuIcon = headerMenu.querySelector('.header-menu__icon');
 
@@ -10,7 +10,7 @@
             menuList.classList.toggle('_active')
         })
     }
-    
+
 })();
 
 (() => {
@@ -42,7 +42,15 @@
     if (userMenu) {
         userMenuShowButton.addEventListener('click', (evt) => {
             userMenu.classList.toggle('_active');
-        })
+        });
+        // document.addEventListener('click', (evt) => {
+
+        //     const clickTarget = evt.target;
+
+        //     if(clickTarget !== userMenuShowButton && clickTarget !== userMenu && userMenu.classList.contains('_active')) {
+        //         userMenu.classList.remove('_active');
+        //     }
+        // });
     }
 
 })();
