@@ -58,3 +58,24 @@
 (() => {
     feather.replace();
 })();
+
+
+
+(() => {
+    let pageName = document.location.pathname;
+    const pagesId = document.querySelectorAll('.header-menu__link');
+    pagesId.forEach(element => {
+        if (element.classList.contains('header-menu__link_active')) {
+            element.classList.remove('header-menu__link_active');
+        }
+    });
+    pagesId.forEach(element => {
+        console.log(element.getAttribute('href').slice(1));
+        console.log(pageName);
+        console.log(element.getAttribute('href').slice(1) === pageName);
+        if(element.getAttribute('href').slice(1) === pageName) {
+            element.classList.add('header-menu__link_active');
+        }
+    });
+
+})();

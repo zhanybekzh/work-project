@@ -13,12 +13,14 @@
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
+    "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.52.1"
   }

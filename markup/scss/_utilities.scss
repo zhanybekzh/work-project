@@ -1,11 +1,11 @@
 @each $name, $color in $colors {
-  .text-#{$name} {
+  .text-#{'' + $name} {
     color: $color !important; // sass-lint:disable-line no-important
   }
 }
 
 @each $name, $color in $colors {
-  .background-#{$name} {
+  .background-#{'' + $name} {
     background-color: $color !important; // sass-lint:disable-line no-important
   }
 }

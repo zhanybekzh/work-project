@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Платформа сервисов</title>
+    </head>
+
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="ui">
+                <h2>Colors</h2>
+                <ul class="ui-colors">
+                    <li class="ui-colors__list">
+                        <div class="ui-colors__item background-black"></div>
+                        <div class="ui-colors__item background-green-500"></div>
+                        <div class="ui-colors__item background-green-400"></div>
+                        <div class="ui-colors__item background-green-300"></div>
+                        <div class="ui-colors__item background-green-200"></div>
+                        <div class="ui-colors__item background-green-100"></div>
+                    </li>
+                    <li class="ui-colors__list">
+                        <div class="ui-colors__item background-red"></div>
+                        <div class="ui-colors__item background-orange"></div>
+                        <div class="ui-colors__item background-yellow"></div>
+                    </li>
+                    <li class="ui-colors__list">
+                        <div class="ui-colors__item background-gray-400"></div>
+                        <div class="ui-colors__item background-gray-300"></div>
+                        <div class="ui-colors__item background-gray-200"></div>
+                        <div class="ui-colors__item background-gray-100"></div>
+                    </li>
+                </ul>
+                <h2>Form button &lt;button&gt;</h2>
+                <form action="">
+                    <ul class="ui-buttons">
+                        <li class="ui-buttons__list">
+                            <button class="button">:normal</button>
+                            <button class="button">:hover</button>
+                            <button class="button" disabled>:disable</button>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <button class="button button-outline">
+                                :normal
+                            </button>
+
+                            <button class="button button-outline">
+                                :hover
+                            </button>
+                            <button class="button button-outline" disabled>
+                                :disable
+                            </button>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <button class="button button-red button-outline">
+                                :normal
+                            </button>
+                            <button class="button button-red">:hover</button>
+                            <button class="button button-red" disabled>
+                                :disable
+                            </button>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <button
+                                class="button button_square button-outline"
+                            ></button>
+                            <button class="button button_square"></button>
+                            <button
+                                class="button button_square"
+                                disabled
+                            ></button>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <button
+                                class="button button_square button-outline"
+                            ></button>
+                            <button class="button button_square"></button>
+                            <button
+                                class="button button_square"
+                                disabled
+                            ></button>
+                        </li>
+                    </ul>
+                    <h2>Link button &lt;a&gt;</h2>
+                    <ul class="ui-buttons">
+                        <li class="ui-buttons__list">
+                            <a href="#" class="button">:normal</a>
+                            <a href="#" class="button">:hover</a>
+                            <a href="#" class="button disabled">:disable</a>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <a href="#" class="button button-outline">
+                                :normal
+                            </a>
+                            <a href="#" class="button button-outline">
+                                :hover
+                            </a>
+                            <a
+                                href="#"
+                                class="button button-outline disabled"
+                                disabled
+                            >
+                                :disable
+                            </a>
+                        </li>
+                        <li class="ui-buttons__list">
+                            <a
+                                href="#"
+                                class="button button-red button-outline"
+                            >
+                                :normal
+                            </a>
+                            <a href="#" class="button button-red">:hover</a>
+                            <a href="#" class="button disabled" disabled>
+                                :disable
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
+</html>

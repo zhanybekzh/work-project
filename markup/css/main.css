@@ -1126,6 +1126,13 @@ progress {
   background-color: #fff;
   border-color: #dc3747;
 }
+.button_square {
+  min-width: unset;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4px;
+}
 
 html,
 body {
@@ -1144,7 +1151,7 @@ body header {
   z-index: 1;
 }
 body main {
-  flex: 1 0 500px;
+  flex: 1 0 800px;
   background-color: #fff;
 }
 body footer {
@@ -1214,6 +1221,7 @@ body footer::after {
 .header-menu__list {
   background-color: #fff;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
   top: 100%;
@@ -1337,6 +1345,13 @@ body footer::after {
   background-color: #fff;
   border-color: #dc3747;
 }
+.header-menu__link_square {
+  min-width: unset;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4px;
+}
 .header-menu__link_active {
   color: #fff;
   background-color: #00898d;
@@ -1352,7 +1367,7 @@ body footer::after {
     display: flex;
     flex-direction: row;
     background-color: transparent;
-    padding: 0;
+    padding: 10px;
   }
   .header-menu__link {
     display: inline-block;
@@ -1473,6 +1488,15 @@ body footer::after {
     color: #dc3747;
     background-color: #fff;
     border-color: #dc3747;
+  }
+}
+@media (min-width: 1200px) {
+  .header-menu__link_square {
+    min-width: unset;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 4px;
   }
 }
 @media (min-width: 1200px) {
@@ -1885,6 +1909,13 @@ body footer::after {
   background-color: #fff;
   border-color: #dc3747;
 }
+.header-balance__button_square {
+  min-width: unset;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4px;
+}
 .header-balance__button_active {
   color: #fff;
   background-color: #00898d;
@@ -2099,6 +2130,13 @@ body footer::after {
   background-color: #fff;
   border-color: #dc3747;
 }
+.item__about_square {
+  min-width: unset;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4px;
+}
 .item__about_active {
   color: #00898d;
   background-color: #fff;
@@ -2109,5 +2147,30 @@ body footer::after {
   .item__content {
     padding: 15px;
   }
+}
+.ui {
+  padding: 50px;
+}
+.ui li {
+  list-style: none;
+}
+.ui-colors__list {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.ui-colors__item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.ui-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.ui-buttons__list {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
 }
 /*# sourceMappingURL=main.css.map */
