@@ -15,11 +15,11 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "node-sass": "^7.0.1"
+    "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
+    "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.52.1"
   }
 }

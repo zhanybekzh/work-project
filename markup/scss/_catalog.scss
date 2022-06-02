@@ -20,3 +20,13 @@
         }
     }
 }
+@media (min-width: 568px) {
+    .catalog-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1200px) {
+    .catalog-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
