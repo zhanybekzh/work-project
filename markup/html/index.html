@@ -1,178 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Платформа сервисов</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./markup/css/main.css" />
-    <link rel="stylesheet" href="./markup/css/main.css.map" />
-    <script src="./feather.min.js"></script>
-    <title>Платформа сервисов</title>
-</head>
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="container">
+                <div class="ui-wrap">
+                    <div class="ui">
+                        <h2>Colors</h2>
+                        <ul class="ui-colors">
+                            <li class="ui-colors__list">
+                                <div
+                                    class="ui-colors__item background-black"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-green-500"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-green-400"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-green-300"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-green-200"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-green-100"
+                                ></div>
+                            </li>
+                            <li class="ui-colors__list">
+                                <div
+                                    class="ui-colors__item background-red"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-orange"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-yellow"
+                                ></div>
+                            </li>
+                            <li class="ui-colors__list">
+                                <div
+                                    class="ui-colors__item background-gray-400"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-gray-300"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-gray-200"
+                                ></div>
+                                <div
+                                    class="ui-colors__item background-gray-100"
+                                ></div>
+                            </li>
+                        </ul>
+                        <h2>Form button &lt;button&gt;</h2>
+                        <form action="" class="form">
+                            <ul class="ui-buttons">
+                                <li class="ui-buttons__list">
+                                    <button class="button">:normal</button>
 
-<body>
-    //= ./templates/header.html
-    <main>
-        <div class="ui-wrap">
-        <div class="ui">
-            <h2>Colors</h2>
-            <ul class="ui-colors">
-                <li class="ui-colors__list">
-                    <div class="ui-colors__item background-black"></div>
-                    <div class="ui-colors__item background-green-500"></div>
-                    <div class="ui-colors__item background-green-400"></div>
-                    <div class="ui-colors__item background-green-300"></div>
-                    <div class="ui-colors__item background-green-200"></div>
-                    <div class="ui-colors__item background-green-100"></div>
-                </li>
-                <li class="ui-colors__list">
-                    <div class="ui-colors__item background-red"></div>
-                    <div class="ui-colors__item background-orange"></div>
-                    <div class="ui-colors__item background-yellow"></div>
-                </li>
-                <li class="ui-colors__list">
-                    <div class="ui-colors__item background-gray-400"></div>
-                    <div class="ui-colors__item background-gray-300"></div>
-                    <div class="ui-colors__item background-gray-200"></div>
-                    <div class="ui-colors__item background-gray-100"></div>
-                </li>
-            </ul>
-            <h2>Form button &lt;button&gt;</h2>
-            <form action="" class="form">
-                <ul class="ui-buttons">
-                    <li class="ui-buttons__list">
-                        <button class="button">:normal</button>
+                                    <button class="button" disabled>
+                                        :disable
+                                    </button>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <button class="button-outline">
+                                        :normal
+                                    </button>
 
-                        <button class="button" disabled>:disable</button>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <button class="button-outline">
-                            :normal
-                        </button>
+                                    <button class="button-outline" disabled>
+                                        :disable
+                                    </button>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <button class="button-red">:normal</button>
 
-                        <button class="button-outline" disabled>
-                            :disable
-                        </button>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <button class="button-red">
-                            :normal
-                        </button>
+                                    <button class="button-red" disabled>
+                                        :disable
+                                    </button>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <button class="button-square_plus"></button>
+                                    <button
+                                        class="button-square_plus"
+                                        disabled
+                                    ></button>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <button
+                                        class="button-square_cancel"
+                                    ></button>
+                                    <button
+                                        class="button-square_cancel"
+                                        disabled
+                                    ></button>
+                                </li>
+                            </ul>
+                            <h2>Link button &lt;a&gt;</h2>
+                            <ul class="ui-buttons">
+                                <li class="ui-buttons__list">
+                                    <a href="#" class="button">:normal</a>
 
-                        <button class="button-red" disabled>
-                            :disable
-                        </button>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <button class="button-square_plus"></button>
-                        <button class="button-square_plus" disabled></button>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <button class="button-square_cancel"></button>
-                        <button class="button-square_cancel" disabled></button>
-                    </li>
-                </ul>
-                <h2>Link button &lt;a&gt;</h2>
-                <ul class="ui-buttons">
-                    <li class="ui-buttons__list">
-                        <a href="#" class="button">:normal</a>
+                                    <a href="#" class="button disabled"
+                                        >:disable</a
+                                    >
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <a href="#" class="button-outline">
+                                        :normal
+                                    </a>
 
-                        <a href="#" class="button disabled">:disable</a>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <a href="#" class="button-outline">
-                            :normal
-                        </a>
+                                    <a
+                                        href="#"
+                                        class="button-outline disabled"
+                                        disabled
+                                    >
+                                        :disable
+                                    </a>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <a
+                                        href="#"
+                                        class="button-red button-outline"
+                                    >
+                                        :normal
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="button-red disabled"
+                                        disabled
+                                    >
+                                        :disable
+                                    </a>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <a href="#" class="button-square_plus"></a>
+                                    <a
+                                        href="#"
+                                        class="button-square_plus disabled"
+                                        disabled
+                                    ></a>
+                                </li>
+                                <li class="ui-buttons__list">
+                                    <a
+                                        href="#"
+                                        class="button-square_cancel"
+                                    ></a>
+                                    <a
+                                        href="#"
+                                        class="button-square_cancel disabled"
+                                        disabled
+                                    ></a>
+                                </li>
+                            </ul>
+                            <h2>Input type radio</h2>
+                            <ul>
+                                <div class="form-radio">
+                                    <input
+                                        id="radio-1"
+                                        type="radio"
+                                        name="radio"
+                                        value="fiz"
+                                        checked
+                                    />
+                                    <label for="radio-1">Физическое лицо</label>
+                                </div>
+                                <div class="form-radio">
+                                    <input
+                                        id="radio-2"
+                                        type="radio"
+                                        name="radio"
+                                        value="too"
+                                        disabled
+                                    />
+                                    <label for="radio-2"
+                                        >Юридическое лицо ТОО 'disabled'</label
+                                    >
+                                </div>
+                                <div class="form-radio">
+                                    <input
+                                        id="radio-3"
+                                        type="radio"
+                                        name="radio"
+                                        value="ip"
+                                    />
+                                    <label for="radio-3">ТОО</label>
+                                </div>
+                            </ul>
+                            <h2>Input type checkbox</h2>
+                            <ul>
+                                <div class="form-checkbox">
+                                    <input
+                                        id="checkbox-1"
+                                        type="checkbox"
+                                        name="checkbox"
+                                        value="fiz"
+                                        checked
+                                    />
+                                    <label for="checkbox-1"
+                                        >Физическое лицо</label
+                                    >
+                                </div>
+                                <div class="form-checkbox">
+                                    <input
+                                        id="checkbox-2"
+                                        type="checkbox"
+                                        name="checkbox"
+                                        value="too"
+                                        disabled
+                                    />
+                                    <label for="checkbox-2"
+                                        >Юридическое лицо ТОО 'disabled'</label
+                                    >
+                                </div>
+                                <div class="form-checkbox">
+                                    <input
+                                        id="checkbox-3"
+                                        type="checkbox"
+                                        name="checkbox"
+                                        value="ip"
+                                    />
+                                    <label for="checkbox-3">ТОО</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input
+                                        id="checkbox-4"
+                                        type="checkbox"
+                                        name="checkbox"
+                                        value="ip"
+                                    />
+                                    <label for="checkbox-4">ТОО</label>
+                                </div>
+                            </ul>
+                            <h2>Pagination</h2>
+                            <div class="pagination">
+                                <a class="pagination__left-arrow" href="#"></a>
+                                <a class="pagination__link" href="#">1</a>
+                                <a
+                                    class="pagination__link pagination__link_active"
+                                    href="#"
+                                    >2</a
+                                >
+                                <a class="pagination__link" href="#">3</a>
+                                <a class="pagination__link" href="#">4</a>
+                                <a class="pagination__link" href="#">5</a>
+                                <a class="pagination__right-arrow" href="#"></a>
+                            </div>
+                            <h2>Input type</h2>
+                            <div class="form-text">
+                                <label class="form-text__label" for="form-text1"
+                                    >Форма собственности*</label
+                                >
+                                <input
+                                    class="form-text__input"
+                                    type="text"
+                                    name="form-text"
+                                    id="form-text1"
+                                    placeholder="Форма собственности"
+                                />
+                                <div class="form-text__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+                            <div class="form-text">
+                                <label class="form-text__label" for="form-text2"
+                                    >Форма собственности*</label
+                                >
+                                <input
+                                    class="form-text__input form-text__input_valid"
+                                    type="text"
+                                    name="form-text"
+                                    id="form-text2"
+                                    placeholder="Форма собственности"
+                                    value="Форма собственности"
+                                />
+                                <div class="form-text__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+                            <div class="form-text">
+                                <label class="form-text__label" for="form-text3"
+                                    >Форма собственности*</label
+                                >
+                                <input
+                                    class="form-text__input"
+                                    type="text"
+                                    name="form-text"
+                                    id="form-text3"
+                                    placeholder="Форма собственности"
+                                />
+                                <div class="form-text__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+                            <div class="form-text">
+                                <label class="form-text__label" for="form-text4"
+                                    >Форма собственности*</label
+                                >
 
-                        <a href="#" class="button-outline disabled" disabled>
-                            :disable
-                        </a>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <a href="#" class="button-red button-outline">
-                            :normal
-                        </a>
-                        <a href="#" class="button-red disabled" disabled>
-                            :disable
-                        </a>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <a href="#" class="button-square_plus"></a>
-                        <a href="#" class=" button-square_plus disabled" disabled></a>
-                    </li>
-                    <li class="ui-buttons__list">
-                        <a href="#" class=" button-square_cancel"></a>
-                        <a href="#" class=" button-square_cancel disabled" disabled></a>
-                    </li>
-                </ul>
-                <h2>Input type radio</h2>
-                <ul>
-                    <div class="form-radio">
-                        <input id = "radio-1" type="radio" name="radio" value="fiz" checked>
-                        <label for="radio-1">Физическое лицо</label>
+                                <input
+                                    class="form-text__input form-text__input_invalid"
+                                    type="text"
+                                    name="form-text"
+                                    id="form-text4"
+                                    placeholder="Форма собственности"
+                                    value="Полное наименование"
+                                />
+                                <div class="form-text__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+                        </form>
+                        <h2>Notificatons</h2>
+                        <div class="alert-block">
+                            <div class="alert alert_warning">
+                                <p>
+                                    <b>Юридическим лицам</b> - доступна оплата
+                                    по Счету на оплату и оплата Платежными
+                                    картами.
+                                </p>
+                                <p>
+                                    <b>Физическим лицам</b> - доступна оплата
+                                    Платежными картами.
+                                </p>
+                            </div>
+                            <div class="alert alert_warning">
+                                <p class="alert-heading">Отмена подписки!</p>
+                                <p>
+                                    Вы отменили подписку и можете вернуться к
+                                    сервисам.
+                                </p>
+                            </div>
+                            <div class="alert alert_success">
+                                <p class="alert-heading">Поздравляем!</p>
+                                <p>Вы пополнили баланс на сумму 60 000 тг.</p>
+                            </div>
+                            <div class="alert alert_error">
+                                <p class="alert-heading">Ошибка!</p>
+                                <p>Вы сделали что то не верно!</p>
+                            </div>
+                        </div>
+                        <h2>Pop-up</h2>
+                        <div class=" popup-wrapper">
+                            <div class="popup popup-question">
+                                <div class="popup__close-button"></div>
+                                <p class="popup__title">Хотите lorem Ipsum?</p>
+                                <p class="popup__text">
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Nemo culpa quas molestiae
+                                    soluta rerum repudiandae dolor ipsam
+                                    eveniet, qui sit suscipit dolorem quia
+                                    labore sed delectus exercitationem veritatis
+                                    non obcaecati.
+                                </p>
+                                <div class="popup__buttons">
+                                    <button class="popup__button">Да</button>
+                                    <button class="popup__button">Нет</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" popup-wrapper">
+                            <div class="popup popup-ok">
+                                <div class="popup__close-button"></div>
+                                <p class="popup__title">Вы успешно зарегистрировались на платформе сервисов stsl.kz</p>
+
+                                <div class="popup__buttons">
+                                    <button class="popup__button">Продолжить</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-radio">
-                        <input id = "radio-2" type="radio" name="radio" value="too" disabled>
-                        <label for="radio-2">Юридическое лицо ТОО 'disabled'</label>
-                    </div>
-                    <div class="form-radio">
-                        <input id = "radio-3" type="radio" name="radio" value="ip">
-                        <label for="radio-3">ТОО</label>
-                    </div>
-                </ul>
-                <h2>Input type checkbox</h2>
-                <ul>
-                    <div class="form-checkbox">
-                        <input id = "checkbox-1" type="checkbox" name="checkbox" value="fiz" checked>
-                        <label for="checkbox-1">Физическое лицо</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input id = "checkbox-2" type="checkbox" name="checkbox" value="too" disabled>
-                        <label for="checkbox-2">Юридическое лицо ТОО 'disabled'</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input id = "checkbox-3" type="checkbox" name="checkbox" value="ip">
-                        <label for="checkbox-3">ТОО</label>
-                    </div>
-                    <div class="form-checkbox">
-                        <input id = "checkbox-4" type="checkbox" name="checkbox" value="ip">
-                        <label for="checkbox-4">ТОО</label>
-                    </div>
-                </ul>
-                <h2>Pagination</h2>
-                <div class="pagination">
-                    <a class="pagination__left-arrow" href="#"></a>
-                    <a class="pagination__link" href="#">1</a>
-                    <a class="pagination__link pagination__link_active"  href="#">2</a>
-                    <a class="pagination__link"  href="#">3</a>
-                    <a class="pagination__link"  href="#">4</a>
-                    <a class="pagination__link"  href="#">5</a>
-                    <a class="pagination__right-arrow"  href="#"></a>
                 </div>
-                <h2>Input type</h2>
-                <div class="form-text">
-                    <label class="form-text__label"  for="form-text1" >Форма собственности*</label>
-                    <input class="form-text__input" type="text" name="form-text" id="form-text1" placeholder="Форма собственности">
-                </div>
-                <div class="form-text">
-                    <label class="form-text__label" for="form-text2">Форма собственности*</label>
-                    <input class="form-text__input form-text__input_valid" type="text" name="form-text" id="form-text2" placeholder="Форма собственности" value="Форма собственности">
-                </div>
-                <div class="form-text">
-                    <label class="form-text__label" for="form-text3">Форма собственности*</label>
-                    <input class="form-text__input" type="text" name="form-text" id="form-text3" placeholder="Форма собственности">
-                </div>
-                <div class="form-text">
-                    <label class="form-text__label" for="form-text4" >Форма собственности*</label>
-                    <input class="form-text__input form-text__input_invalid" type="text" name="form-text" id="form-text4" placeholder="Форма собственности" value="Полное наименование">
-                </div>
-            </form>
-        </div>
-    </div>
-    </main>
-    //= ./templates/footer.html
-    <script src="./script.js"></script>
-</body>
-
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
 </html>

@@ -6,7 +6,7 @@
     &-wrap {
         overflow: auto;
     }
-    width:700px;
+    width:900px;
     h2 {
         &:first-child {
             margin-top: 0;
@@ -44,5 +44,13 @@
             gap:40px;
         }
 
+    }
+    .alert-block {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .popup-wrapper {
+        margin-bottom: 40px;
     }
 }

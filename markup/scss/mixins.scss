@@ -7,11 +7,10 @@
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
-@mixin button($button-type: 'button') {
-  @if ($button-type =='button') {
+@mixin button($button-type: "button") {
+  @if ($button-type == "button") {
     display: inline-block;
     min-width: $button-min-width;
     padding: $button-padding-y $button-padding-x;
@@ -70,8 +69,8 @@
     }
   }
 
-  @if ($button-type =='red') {
-    @include button('button');
+  @if ($button-type == "red") {
+    @include button("button");
     color: $button-red-color;
     background-color: $button-red-background-color;
     border-color: $button-red-color;
@@ -100,8 +99,8 @@
     }
   }
 
-  @if ($button-type =='outline') {
-    @include button('button');
+  @if ($button-type == "outline") {
+    @include button("button");
 
     color: $button-outline-color;
     background-color: $button-outline-background-color;
@@ -122,44 +121,42 @@
     }
   }
 
-  @if ($button-type =='square') {
-
+  @if ($button-type == "square") {
     &_plus {
-      @include button('outline');
+      @include button("outline");
       @include button-square-form();
 
-      background-image: url('../../assets/icons/custom/plus_green.svg');
+      background-image: url("../../assets/icons/custom/plus_green.svg");
 
       &.active,
       &:active,
       &_active,
       &:hover {
-        background-image: url('../../assets/icons/custom/plus_white.svg');
+        background-image: url("../../assets/icons/custom/plus_white.svg");
       }
 
       &.disabled,
       &:disabled {
-        background-image: url('../../assets/icons/custom/plus_white.svg');
+        background-image: url("../../assets/icons/custom/plus_white.svg");
       }
     }
 
     &_cancel {
-      @include button('red');
+      @include button("red");
       @include button-square-form();
-      background-image: url('../../assets/icons/custom/x_red.svg');
+      background-image: url("../../assets/icons/custom/x_red.svg");
 
       &.active,
       &:active,
       &:hover {
-        background-image: url('../../assets/icons/custom/x_white.svg');
+        background-image: url("../../assets/icons/custom/x_white.svg");
       }
 
       &.disabled,
       &:disabled {
-        background-image: url('../../assets/icons/custom/x_white.svg');
+        background-image: url("../../assets/icons/custom/x_white.svg");
       }
     }
-
   }
 }
 
@@ -167,19 +164,20 @@
   &-radio {
     margin-bottom: 10px;
 
-    input[type=radio] {
+    input[type="radio"] {
       display: none;
 
-      &:checked+label::before {
-        background: url('../../assets/icons/custom/radio-button_active.svg') center no-repeat;
+      &:checked + label::before {
+        background: url("../../assets/icons/custom/radio-button_active.svg")
+          center no-repeat;
       }
 
       &:disabled {
-        &+label {
+        & + label {
           cursor: default;
         }
 
-        &+label::before {
+        & + label::before {
           background: none;
           cursor: default;
           border: 1px solid $color-gray-300;
@@ -195,34 +193,35 @@
       cursor: pointer;
 
       &:before {
-        content: '';
+        content: "";
         width: 26px;
         height: 26px;
         position: absolute;
         top: 0;
         left: 0;
-        background: url('../../assets/icons/custom/radio-button.svg') center no-repeat;
+        background: url("../../assets/icons/custom/radio-button.svg") center
+          no-repeat;
       }
-
     }
   }
 
   &-checkbox {
     margin-bottom: 10px;
 
-    input[type=checkbox] {
+    input[type="checkbox"] {
       display: none;
 
-      &:checked+label::before {
-        background: url('../../assets/icons/custom/checkbox-button_active.svg') center no-repeat;
+      &:checked + label::before {
+        background: url("../../assets/icons/custom/checkbox-button_active.svg")
+          center no-repeat;
       }
 
       &:disabled {
-        &+label {
+        & + label {
           cursor: default;
         }
 
-        &+label::before {
+        & + label::before {
           background: none;
           cursor: default;
           border: 1px solid $color-gray-300;
@@ -238,15 +237,15 @@
       cursor: pointer;
 
       &:before {
-        content: '';
+        content: "";
         width: 26px;
         height: 26px;
         position: absolute;
         top: 0;
         left: 0;
-        background: url('../../assets/icons/custom/checkbox-button.svg') center no-repeat;
+        background: url("../../assets/icons/custom/checkbox-button.svg") center
+          no-repeat;
       }
-
     }
   }
 
@@ -268,6 +267,9 @@
       outline: 0;
       transition: border-color 0.15s ease-in-out;
       background-color: $color-white;
+      & + .form-text__error {
+        display: none;
+      }
 
       &::placeholder {
         color: $color-gray-300;
@@ -286,27 +288,96 @@
       &_invalid {
         border-color: $color-red;
         position: relative;
-        &::before {
-          content: 'Поле не заполнено';
-          display: block;
-          color:$color-white;
-          width:1000px;
+        z-index: 2;
+        & + .form-text__error {
+          display: flex;
+          padding: 0.5rem 0.8rem;
+          align-items: center;
+          color: $color-white;
+
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          width: 100%;
           height: 40px;
+          z-index: -1;
           background-color: $color-red;
-          position: absolute;
-          top:50px;
-          left:0;
-
-
+          transform: translateY(-4px);
         }
         &:focus {
           box-shadow: none;
           border-color: $color-red;
         }
-        
       }
-
     }
-
   }
+}
+@mixin alert() {
+  display: block;
+  min-height: 135px;
+  padding: 2rem;
+  color: $color-black-text;
+  & > p {
+    line-height: 1.2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-heading {
+    position: relative;
+    padding-left: 40px;
+    font-weight: bold;
+  }
+  &_success {
+    background-color: $color-green-100;
+    .alert-heading::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url("../../assets/icons/feather/alert-octagon.svg") center
+        no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &_warning {
+    background-color: $color-yellow;
+    .alert-heading::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url("../../assets/icons/feather/alert-octagon.svg") center
+        no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &_error {
+    background-color: $color-red;
+    color: $color-white;
+    .alert-heading::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url("../../assets/icons/custom/alert-octagon_white.svg")
+        center no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      stroke: white;
+    }
+  }
+}
+@mixin shadow() {
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
 }
