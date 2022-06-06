@@ -1,0 +1,84 @@
+.pagination {
+    display: flex;
+    gap:5px;
+    align-items: center;
+
+    &__left-arrow,
+    &__right-arrow {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $color-gray-300;
+        border-radius: 50%;
+        transition: background-color .3s ease;
+        &:hover {
+            background-color: $color-green-300;
+            
+            &::before,
+            &::after {
+                border-top-color: $color-white;
+                border-left-color: $color-white;
+            }
+        }
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid $color-green-300;
+            border-left: 2px solid $color-green-300;
+            top: 54%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            
+        }
+    }
+
+    &__left-arrow {
+        margin-right: 10px;
+        transform: rotate(-90deg);
+    }
+
+    &__right-arrow {
+        margin-left: 10px;
+        transform: rotate(90deg);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-gray-400;
+        border-radius: 50%;
+        background-color: $color-white;
+        width:30px;
+        height:30px;
+        display: flex;
+        line-height: 1;
+        padding:0;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        transition: background-color .5s ease;
+        
+        outline: solid 0px $color-white;
+
+        transition: outline-color .5s ease;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-gray-400;
+             
+            outline: solid 1px $color-green-300
+        }
+        &_active {
+            background-color: $color-green-300;
+            color:$color-white;
+            &:hover {
+                background-color: $color-green-300;
+                color:$color-white;  
+            }
+        }
+        
+    }
+}

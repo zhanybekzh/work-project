@@ -1,24 +1,312 @@
+@mixin button-square-form {
+  min-width: unset;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 4px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
 
-@mixin button__type1 {
-  @include button;
-  color: $color-white;
-  background-color: $color-green-300;
-  border: none;
-  &_active {
-    color: $color-green-300;
-    background-color: $color-white;
-    font-weight: 700;
+}
+
+@mixin button($button-type: 'button') {
+  @if ($button-type =='button') {
+    display: inline-block;
+    min-width: $button-min-width;
+    padding: $button-padding-y $button-padding-x;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    color: $button-color;
+    text-align: center;
+    text-decoration: $text-decoration-none;
+    vertical-align: middle;
+    cursor: $button-cursor;
+    background-color: $button-background-color;
+    border: $border-width solid $button-border-color;
+    border-radius: $button-border-radius;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    user-select: none;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    &:hover {
+      color: $button-hover-color;
+      text-decoration: $text-decoration-none;
+      background-color: $button-hover-background-color;
+      border-color: $button-hover-border-color;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: $button-focus-box-shadow;
+    }
+
+    &:active,
+    &.active,
+    &_active {
+      color: $button-active-color;
+      background-color: $button-background-color;
+      border-color: $button-border-color;
+
+      &:focus {
+        box-shadow: $button-focus-box-shadow;
+      }
+    }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+      // sass-lint:disable-line force-pseudo-nesting
+      color: $button-disabled-color;
+      pointer-events: none;
+      background-color: $button-disabled-background-color;
+      border-color: $button-disabled-border-color;
+      box-shadow: none;
+    }
+  }
+
+  @if ($button-type =='red') {
+    @include button('button');
+    color: $button-red-color;
+    background-color: $button-red-background-color;
+    border-color: $button-red-color;
+
+    &:hover {
+      color: $button-red-hover-color;
+      background-color: $button-red-hover-background-color;
+      border-color: $button-red-hover-border-color;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: $button-red-focus-box-shadow;
+    }
+
+    &:active,
+    &.active,
+    &_active {
+      color: $button-red-active-color;
+      background-color: $button-red-active-background-color;
+      border-color: $button-red-active-border-color;
+
+      &:focus {
+        box-shadow: $button-red-focus-box-shadow;
+      }
+    }
+  }
+
+  @if ($button-type =='outline') {
+    @include button('button');
+
+    color: $button-outline-color;
+    background-color: $button-outline-background-color;
+    border-color: $button-outline-border-color;
+
+    &:hover {
+      color: $button-outline-hover-color;
+      background-color: $button-outline-hover-background-color;
+      border-color: $button-outline-hover-border-color;
+    }
+
+    &:active,
+    &.active,
+    &_active {
+      color: $button-outline-active-color;
+      background-color: $button-outline-active-background-color;
+      border-color: $button-outline-active-border-color;
+    }
+  }
+
+  @if ($button-type =='square') {
+
+    &_plus {
+      @include button('outline');
+      @include button-square-form();
+
+      background-image: url('../../assets/icons/custom/plus_green.svg');
+
+      &.active,
+      &:active,
+      &_active,
+      &:hover {
+        background-image: url('../../assets/icons/custom/plus_white.svg');
+      }
+
+      &.disabled,
+      &:disabled {
+        background-image: url('../../assets/icons/custom/plus_white.svg');
+      }
+    }
+
+    &_cancel {
+      @include button('red');
+      @include button-square-form();
+      background-image: url('../../assets/icons/custom/x_red.svg');
+
+      &.active,
+      &:active,
+      &:hover {
+        background-image: url('../../assets/icons/custom/x_white.svg');
+      }
+
+      &.disabled,
+      &:disabled {
+        background-image: url('../../assets/icons/custom/x_white.svg');
+      }
+    }
+
   }
 }
 
-@mixin button__type2 {
-  @include button;
-  color: $color-green-300;
-  background-color: $color-white;
-  border: none;
-  &_active {
-    color: $color-white;
-    background-color: $color-green-300;
-    font-weight: 700;
+@mixin form() {
+  &-radio {
+    margin-bottom: 10px;
+
+    input[type=radio] {
+      display: none;
+
+      &:checked+label::before {
+        background: url('../../assets/icons/custom/radio-button_active.svg') center no-repeat;
+      }
+
+      &:disabled {
+        &+label {
+          cursor: default;
+        }
+
+        &+label::before {
+          background: none;
+          cursor: default;
+          border: 1px solid $color-gray-300;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      padding-left: 35px;
+      margin-right: 0;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../../assets/icons/custom/radio-button.svg') center no-repeat;
+      }
+
+    }
+  }
+
+  &-checkbox {
+    margin-bottom: 10px;
+
+    input[type=checkbox] {
+      display: none;
+
+      &:checked+label::before {
+        background: url('../../assets/icons/custom/checkbox-button_active.svg') center no-repeat;
+      }
+
+      &:disabled {
+        &+label {
+          cursor: default;
+        }
+
+        &+label::before {
+          background: none;
+          cursor: default;
+          border: 1px solid $color-gray-300;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      padding-left: 35px;
+      margin-right: 0;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../../assets/icons/custom/checkbox-button.svg') center no-repeat;
+      }
+
+    }
+  }
+
+  &-text {
+    margin-bottom: 20px;
+
+    &__label {
+      display: block;
+      padding-bottom: 0.3rem;
+      color: $color-gray-400;
+    }
+
+    &__input {
+      display: block;
+      border-radius: 5px;
+      border: 1px solid $color-gray-300;
+      padding: 0.5rem 0.8rem;
+      width: 100%;
+      outline: 0;
+      transition: border-color 0.15s ease-in-out;
+      background-color: $color-white;
+
+      &::placeholder {
+        color: $color-gray-300;
+      }
+
+      &:focus {
+        outline: 0;
+        border-color: $color-black-text;
+        box-shadow: 0px 5px 15px rgba(76, 86, 86, 0.2);
+      }
+
+      &_valid {
+        border-color: $color-gray-400;
+      }
+
+      &_invalid {
+        border-color: $color-red;
+        position: relative;
+        &::before {
+          content: 'Поле не заполнено';
+          display: block;
+          color:$color-white;
+          width:1000px;
+          height: 40px;
+          background-color: $color-red;
+          position: absolute;
+          top:50px;
+          left:0;
+
+
+        }
+        &:focus {
+          box-shadow: none;
+          border-color: $color-red;
+        }
+        
+      }
+
+    }
+
   }
 }

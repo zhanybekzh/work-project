@@ -6,6 +6,7 @@
   transition: all 0.3s ease 0s;
   background-color: $color-white;
 }
+
 .header-menu {
   display: flex;
 
@@ -27,24 +28,29 @@
       top: 50%;
       transform: scale(1) translate(0px, -50%);
     }
+
     &::before {
       content: "";
       @extend %menu-burger-sticks;
       top: 0;
     }
+
     &::after {
       content: "";
       @extend %menu-burger-sticks;
       bottom: 0;
     }
+
     &._active {
       & span {
         transform: scale(0) translate(0px, -50%);
       }
+
       &::before {
         top: 50%;
         transform: rotate(45deg) translate(0px, -50%);
       }
+
       &::after {
         bottom: 50%;
         transform: rotate(-45deg) translate(0px, 50%);
@@ -67,25 +73,32 @@
     align-items: baseline;
     display: none;
     box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+
     &._active {
       display: flex;
     }
   }
 
   &__link {
-    @include button__type2;
+    @include button('outline');
+    border: $color-white;
     min-width: fit-content;
     line-height: 1.18rem;
     font-weight: 400;
 
-
+    &_active {
+      
+      font-weight: 700;
+    }
   }
 }
+
 @media (min-width: 1200px) {
   .header-menu {
     &__icon {
       display: none;
     }
+
     &__list {
       position: static;
       display: flex;
@@ -93,12 +106,18 @@
       background-color: transparent;
       padding: 10px;
     }
+
     &__link {
-      @include button__type1;
+      @include button('button');
       min-width: fit-content;
       line-height: 1.18rem;
       font-weight: 400;
-
+      &_active {
+        color: $color-green-300;
+        background-color: $color-white;
+        font-weight: 700;
+      }
     }
+
   }
 }

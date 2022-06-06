@@ -1,15 +1,31 @@
 
 .ui {
+    ul {
+        padding:0;
+    }
+    &-wrap {
+        overflow: auto;
+    }
+    width:700px;
+    h2 {
+        &:first-child {
+            margin-top: 0;
+        }
+        margin-top: 70px;
+        margin-bottom: 25px;
+    }
     li {
         list-style: none;
     }
     padding:50px;
     &-colors{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
         &__list {
 
             display: flex;
             gap:20px;
-            padding:20px;
         }
         &__item {
 
@@ -22,11 +38,10 @@
     &-buttons {
         display: flex;
         flex-direction: column;
-
+        gap: 20px;
         &__list {
             display: flex;
             gap:40px;
-            padding:20px;
         }
 
     }

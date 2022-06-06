@@ -64,7 +64,7 @@
   }
 
   &__about {
-    @include button__type1;
+    @include button('button');
     min-width: 130px;
   }
 }

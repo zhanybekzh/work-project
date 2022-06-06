@@ -21,7 +21,7 @@
     font-weight: bold;
   }
   &__button {
-    @include button__type2;
+    @include button('outline');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,6 @@
     min-width: fit-content;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid $color-green-300;
   }
 }
 @media (min-width: 768px) {
