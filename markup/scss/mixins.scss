@@ -118,6 +118,11 @@
       color: $button-outline-active-color;
       background-color: $button-outline-active-background-color;
       border-color: $button-outline-active-border-color;
+      &:hover {
+        color: $button-outline-hover-color;
+        background-color: $color-green-500;
+        border-color: $color-green-500;
+      }
     }
   }
 

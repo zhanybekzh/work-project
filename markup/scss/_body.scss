@@ -11,15 +11,16 @@ body {
 
     header {
         background-color: $color-green-300;
-        box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+        @include shadow();
         z-index: 1;
-
+        position: fixed;
+        width:100%;
     }
 
     main {
         flex: 1 0 800px;
         background-color: $color-white;
-
+        margin-top:120px;
     }
 
     footer {
