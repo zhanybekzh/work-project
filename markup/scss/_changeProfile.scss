@@ -30,23 +30,19 @@
         padding: 10px 15px;
         cursor: pointer;
 
-        &::before,
-        &::after {
+        &::before
+        {
             content: "";
             position: absolute;
             top: 50%;
-            right: 16px;
+            transform: translateY(-50%);
+            right: 15px;
             display: block;
-            width: 10px;
-            height: 2px;
-            transition: all 0.3s ease-out;
-            background-color: $color-white;
-            transform: translate(-3px, -50%) rotate(45deg);
+            width: 15px;
+            height:15px;
+            background: url('../../assets/icons/custom/chevron-down_white.svg') center no-repeat;
         }
 
-        &::after {
-            transform: translate(3px, -50%) rotate(-45deg);
-        }
 
 
     }
