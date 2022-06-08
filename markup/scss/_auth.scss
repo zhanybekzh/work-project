@@ -1,0 +1,15 @@
+.auth-modal {
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    .form-registration {
+        &__button {
+            width: 100%;
+        }
+        &__button:first-child {
+            margin-bottom: 20px;
+            color:$color-black;
+        }
+    }
+}

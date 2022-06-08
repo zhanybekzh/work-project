@@ -2796,7 +2796,8 @@ header.unauthorized .header {
 .auth-modal .form-registration__button {
   width: 100%;
 }
-.auth-modal .form-registration__button:nth-child(1) {
+.auth-modal .form-registration__button:first-child {
   margin-bottom: 20px;
+  color: #000;
 }
 /*# sourceMappingURL=main.css.map */
