@@ -164,6 +164,126 @@
                                     ></a>
                                 </li>
                             </ul>
+
+                            <h2>Pagination</h2>
+                            <div class="pagination">
+                                <a class="pagination__left-arrow" href="#"></a>
+                                <a class="pagination__link" href="#">1</a>
+                                <a
+                                    class="pagination__link pagination__link_active"
+                                    href="#"
+                                    >2</a
+                                >
+                                <a class="pagination__link" href="#">3</a>
+                                <a class="pagination__link" href="#">4</a>
+                                <a class="pagination__link" href="#">5</a>
+                                <a class="pagination__right-arrow" href="#"></a>
+                            </div>
+
+                            <h1 style="margin-top: 70px">Формы</h1>
+
+                            <h2>Input type-text</h2>
+
+                            <div class="form-input">
+                                <label
+                                    class="form-input__label"
+                                    for="form-input1"
+                                    >Форма собственности*</label
+                                >
+                                <input
+                                    class="form-input__input"
+                                    type="text"
+                                    name=""
+                                    id="form-input1"
+                                    placeholder="Форма собственности"
+                                />
+                                <div class="form-input__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+
+                            <div class="form-input">
+                                <label
+                                    class="form-input__label"
+                                    for="form-input4"
+                                    >Форма собственности*</label
+                                >
+
+                                <input
+                                    class="form-input__input form-input__input_invalid"
+                                    type="text"
+                                    name=""
+                                    id="form-input4"
+                                    placeholder="Форма собственности"
+                                    value=""
+                                />
+                                <div class="form-input__error">
+                                    Поле не заполнено
+                                </div>
+                            </div>
+                            <fieldset>
+                                <legend>Легенда</legend>
+                                <div class="form-input">
+                                    <label
+                                        class="form-input__label"
+                                        for="form-input4"
+                                        >Пароль*</label
+                                    >
+
+                                    <div class="form-input__password">
+                                        <input
+                                            id="password-input"
+                                            class="form-input__input"
+                                            type="password"
+                                            name=""
+                                            id="form-input4"
+                                            placeholder="Введите пароль"
+                                            value=""
+                                        />
+
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                        <a
+                                            class="form-input__password-icon"
+                                            onclick="return show_hide_password(this); "
+                                        >
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-select">
+                                    <label class="form-text__label" for=""
+                                        >Выберите регион*</label
+                                    >
+                                    <select
+                                        class="form-select__select"
+                                        type=""
+                                        name=""
+                                        id=""
+                                        placeholder="Выберите регион"
+                                    >
+                                        <option value="">Хороший</option>
+                                        <option value="">Срдений</option>
+                                        <option value="">Плохой</option>
+                                    </select>
+                                </div>
+                                <div class="form-input">
+                                    <label
+                                        class="form-input__label"
+                                        for="form-input4"
+                                        >Многострочный текст*</label
+                                    >
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        class="form-input__input"
+                                    ></textarea>
+
+                                    <div class="form-input__error">
+                                        Поле не заполнено
+                                    </div>
+                                </div>
+                            </fieldset>
                             <h2>Input type radio</h2>
                             <ul>
                                 <div class="form-radio">
@@ -198,6 +318,7 @@
                                     <label for="radio-3">ТОО</label>
                                 </div>
                             </ul>
+
                             <h2>Input type checkbox</h2>
                             <ul>
                                 <div class="form-checkbox">
@@ -243,84 +364,6 @@
                                     <label for="checkbox-4">ТОО</label>
                                 </div>
                             </ul>
-                            <h2>Pagination</h2>
-                            <div class="pagination">
-                                <a class="pagination__left-arrow" href="#"></a>
-                                <a class="pagination__link" href="#">1</a>
-                                <a
-                                    class="pagination__link pagination__link_active"
-                                    href="#"
-                                    >2</a
-                                >
-                                <a class="pagination__link" href="#">3</a>
-                                <a class="pagination__link" href="#">4</a>
-                                <a class="pagination__link" href="#">5</a>
-                                <a class="pagination__right-arrow" href="#"></a>
-                            </div>
-                            <h2>Input type</h2>
-                            <div class="form-text">
-                                <label class="form-text__label" for="form-text1"
-                                    >Форма собственности*</label
-                                >
-                                <input
-                                    class="form-text__input"
-                                    type="text"
-                                    name="form-text"
-                                    id="form-text1"
-                                    placeholder="Форма собственности"
-                                />
-                                <div class="form-text__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
-                            <div class="form-text">
-                                <label class="form-text__label" for="form-text2"
-                                    >Форма собственности*</label
-                                >
-                                <input
-                                    class="form-text__input form-text__input_valid"
-                                    type="text"
-                                    name="form-text"
-                                    id="form-text2"
-                                    placeholder="Форма собственности"
-                                    value="Форма собственности"
-                                />
-                                <div class="form-text__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
-                            <div class="form-text">
-                                <label class="form-text__label" for="form-text3"
-                                    >Форма собственности*</label
-                                >
-                                <input
-                                    class="form-text__input"
-                                    type="text"
-                                    name="form-text"
-                                    id="form-text3"
-                                    placeholder="Форма собственности"
-                                />
-                                <div class="form-text__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
-                            <div class="form-text">
-                                <label class="form-text__label" for="form-text4"
-                                    >Форма собственности*</label
-                                >
-
-                                <input
-                                    class="form-text__input form-text__input_invalid"
-                                    type="text"
-                                    name="form-text"
-                                    id="form-text4"
-                                    placeholder="Форма собственности"
-                                    value="Полное наименование"
-                                />
-                                <div class="form-text__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
                         </form>
                         <h2>Notificatons</h2>
                         <div class="alert-block">
@@ -351,8 +394,8 @@
                                 <p>Вы сделали что то не верно!</p>
                             </div>
                         </div>
-                        <h2>Pop-up</h2>
-                        <div class=" popup-wrapper">
+                        <h2>Pop-ups</h2>
+                        <div class="popup-wrapper">
                             <div class="popup popup-question">
                                 <div class="popup__close-button"></div>
                                 <p class="popup__title">Хотите lorem Ipsum?</p>
@@ -370,13 +413,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class=" popup-wrapper">
+                        <div class="popup-wrapper">
                             <div class="popup popup-ok">
                                 <div class="popup__close-button"></div>
-                                <p class="popup__title">Вы успешно зарегистрировались на платформе сервисов stsl.kz</p>
+                                <p class="popup__title">
+                                    Вы успешно зарегистрировались на платформе
+                                    сервисов stsl.kz
+                                </p>
 
                                 <div class="popup__buttons">
-                                    <button class="popup__button">Продолжить</button>
+                                    <button class="popup__button">
+                                        Продолжить
+                                    </button>
                                 </div>
                             </div>
                         </div>

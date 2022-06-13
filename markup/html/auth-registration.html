@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Каталог</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="auth-background auth-registration">
+                <div class="container">
+                    <div class="auth-modal">
+                        <div class="auth-modal__links">
+                            <a href="/auth-entry.html" class="auth-modal__name">
+                                Войти
+                            </a>
+                            <a
+                                href="/auth-registration.html"
+                                class="auth-modal__name auth-modal__name_active"
+                            >
+                                Регистрация
+                            </a>
+                        </div>
+
+                        <div class="auth-modal__content">
+                            <form action="" class="form form-auth">
+                                <h4 class="auth-modal__title">
+                                    Регистрация нового пользователя
+                                </h4>
+                                <div class="form-input">
+                                    <label class="form-input__label" for=""
+                                        >Имя*</label
+                                    >
+                                    <input
+                                        class="form-input__input"
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="Иван"
+                                    />
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-input__label" for=""
+                                        >Фамилия*</label
+                                    >
+                                    <input
+                                        class="form-input__input"
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="Иванов"
+                                    />
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-input__label" for=""
+                                        >Телефон*</label
+                                    >
+                                    <input
+                                        class="form-input__input"
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="+7 777 777 77 77"
+                                    />
+                                </div>
+                                <div class="form-input">
+                                    <label
+                                        class="form-input__label"
+                                        for="form-input4"
+                                        >Пароль*</label
+                                    >
+
+                                    <div class="form-input__password">
+                                        <input
+                                            id="password-input"
+                                            class="form-input__input"
+                                            type="password"
+                                            name=""
+                                            id="form-input4"
+                                            placeholder="Введите пароль"
+                                            value=""
+                                        />
+
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                        <a
+                                            class="form-input__password-icon"
+                                            onclick="return show_hide_password(this); "
+                                        >
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label
+                                        class="form-input__label"
+                                        for="form-input4"
+                                        >Подтвердите пароль*</label
+                                    >
+
+                                    <div class="form-input__password">
+                                        <input
+                                            id="password-input"
+                                            class="form-input__input"
+                                            type="password"
+                                            name=""
+                                            id="form-input4"
+                                            placeholder="Повторите пароль"
+                                            value=""
+                                        />
+
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                        <a
+                                            class="form-input__password-icon"
+                                            onclick="return show_hide_password(this); "
+                                        >
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="form-select">
+                                    <label class="form-input__label" for=""
+                                        >Выберите регион*</label
+                                    >
+                                    <select
+                                        class="form-select__select"
+                                        type=""
+                                        name=""
+                                        id=""
+                                        placeholder="Выберите регион"
+                                    >
+                                        <option selected value="" disabled>
+                                            Выберите вариант
+                                        </option>
+                                        <option value="">Хороший</option>
+                                        <option value="">Срдений</option>
+                                        <option value="">Плохой</option>
+                                    </select>
+                                </div>
+                                <div class="form-auth__buttons">
+                                    <button class="button form-auth__button">
+                                        Зарегистрироваться
+                                    </button>
+                                    <a
+                                        href=""
+                                        class="button-outline form-auth__button"
+                                        >Отмена</a
+                                    >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
+</html>

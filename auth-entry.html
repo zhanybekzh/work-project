@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Каталог</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="auth-background auth-entry">
+                <div class="container">
+                    <div class="auth-modal">
+                        <div class="auth-modal__links">
+                            <a
+                                href="/auth-entry.html"
+                                class="auth-modal__name auth-modal__name_active"
+                            >
+                                Войти
+                            </a>
+                            <a
+                                href="/auth-registration.html"
+                                class="auth-modal__name"
+                            >
+                                Регистрация
+                            </a>
+                        </div>
+
+                        <div class="auth-modal__content">
+                            <form action="" class="form form-auth">
+                                <h4 class="auth-modal__title">
+                                    Вход в личный кабинет
+                                </h4>
+
+                                <div class="form-input">
+                                    <label class="form-input__label" for=""
+                                        >Телефон*</label
+                                    >
+                                    <input
+                                        class="form-input__input"
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="+7 777 777 77 77"
+                                    />
+                                </div>
+                                <div class="form-input">
+                                    <label
+                                        class="form-input__label"
+                                        for="form-input4"
+                                        >Пароль*</label
+                                    >
+
+                                    <div class="form-input__password">
+                                        <input
+                                            id="password-input"
+                                            class="form-input__input"
+                                            type="password"
+                                            name=""
+                                            id="form-input4"
+                                            placeholder="Введите пароль"
+                                            value=""
+                                        />
+
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                        <a
+                                            class="form-input__password-icon"
+                                            onclick="return show_hide_password(this); "
+                                        >
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input id="remember-me" type="checkbox" />
+                                    <label for="remember-me"
+                                        >Запомнить меня на этом
+                                        устройстве</label
+                                    >
+                                </div>
+
+                                <div class="form-auth__buttons">
+                                    <button class="button form-auth__button">
+                                        Войти
+                                    </button>
+                                    <a
+                                        href=""
+                                        class="button-outline form-auth__button"
+                                        >Отмена</a
+                                    >
+                                </div>
+                                <div class="form-auth__forget">
+                                    <p>
+                                        Нет аккаунта? <a href="">Зарегистрироваться</a>
+                                    </p>
+                                    <p>
+                                        <a href="">Забыли свой пароль?</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__columns">
+                        <div
+                            class="footer__column footer-column footer-column__links"
+                        >
+                            <div class="footer-column__link">
+                                <a href="">Реквизиты</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Контакты</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Публичная оферта</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Помощь</a>
+                            </div>
+                        </div>
+                        <div
+                            class="footer__column footer-column footer-column__contacts"
+                        >
+                            <div class="footer-column__contact">
+                                <a href="">+7 (723) 270 48 08</a>
+                            </div>
+                            <div class="footer-column__contact">
+                                <a href="">+7 (707) 470 48 08</a>
+                            </div>
+                            <div class="footer-column__contact">
+                                <a href="">info@stsl.kz</a>
+                            </div>
+                        </div>
+                        <div
+                            class="footer__column footer-column footer-column__infos"
+                        >
+                            <div class="footer-column__info">
+                                Товарищество с ограниченной ответственностью
+                                "1С-Рейтинг"
+                            </div>
+                            <div class="footer-column__info">
+                                Юридический адрес: 070004, г. Усть-Каменогорск,
+                                ул. Казахстан, д. 27
+                            </div>
+                            <div class="footer-column__info">
+                                БИН: 020640002269
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        © Все права защищены. 1С-Рейтинг, 2022
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
