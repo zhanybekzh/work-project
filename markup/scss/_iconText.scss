@@ -1,0 +1,22 @@
+.icon-text {
+    position: relative;
+    padding-left: 40px;
+    font-weight: bold;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.check-circle {
+        &::before {
+            @include icon-text('check-circle');
+        }
+    }
+}

@@ -78,14 +78,13 @@
   }
 
   &__link {
-    @include button('outline');
+    @include button("outline");
     border: $color-white;
-    min-width: fit-content;
+    min-width: fit-content !important;
     line-height: 1.18rem;
     font-weight: 400;
 
     &_active {
-
       font-weight: 700;
     }
   }
@@ -106,7 +105,7 @@
     }
 
     &__link {
-      @include button('button');
+      @include button("button");
       min-width: fit-content;
       line-height: 1.18rem;
       font-weight: 400;
@@ -116,6 +115,5 @@
         font-weight: 700;
       }
     }
-
   }
 }

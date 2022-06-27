@@ -11,16 +11,16 @@
 
 @mixin button($button-type: "button") {
   @if ($button-type == "button") {
-    display: inline-block;
-    min-width: $button-min-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
     padding: $button-padding-y $button-padding-x;
     font-size: $button-font-size;
     font-weight: $button-font-weight;
     line-height: $button-line-height;
     color: $button-color;
-    text-align: center;
     text-decoration: $text-decoration-none;
-    vertical-align: middle;
     cursor: $button-cursor;
     background-color: $button-background-color;
     border: $border-width solid $button-border-color;
@@ -28,11 +28,12 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     user-select: none;
-
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }
-
+    @media (min-width: 540px) {
+      min-width: $button-min-width;
+      }
     &:hover {
       color: $button-hover-color;
       text-decoration: $text-decoration-none;
@@ -166,8 +167,12 @@
 }
 
 @mixin form() {
+  ul {
+    padding-left: 0;
+  }
   &-radio {
     margin-bottom: 10px;
+    list-style: none;
 
     input[type="radio"] {
       display: none;
@@ -211,6 +216,7 @@
   }
 
   &-checkbox {
+    list-style: none;
     margin-bottom: 10px;
 
     input[type="checkbox"] {
@@ -256,8 +262,7 @@
   fieldset {
     border: 1px solid $color-gray-300;
     border-radius: 5px;
-    padding:10px;
-
+    padding: 10px;
   }
   &-input {
     &__label {
@@ -266,7 +271,7 @@
       color: $color-gray-400;
     }
     &__input {
-      min-height:45px;
+      min-height: 45px;
       display: block;
       border-radius: 5px;
       border: 1px solid $color-gray-300;
@@ -393,9 +398,8 @@
     &__select {
       position: relative;
       appearance: none;
-      background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px
-        bottom 10px no-repeat;
-      margin-bottom: 20px;
+      background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
+        right 9px bottom 10px no-repeat;
       display: block;
       border-radius: 5px;
       border: 1px solid $color-gray-300;
@@ -406,8 +410,8 @@
       background-color: $color-white;
       &:focus {
         border-color: $color-black-text;
-        background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px
-        bottom 10px no-repeat;
+        background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
+          right 9px bottom 10px no-repeat;
       }
     }
   }
@@ -415,8 +419,11 @@
 @mixin alert() {
   display: block;
   min-height: 135px;
-  padding: 2rem;
+  padding: 20px;
   color: $color-black-text;
+  @media (min-width: 540px) {
+    padding: 2rem;
+  }
   & > p {
     line-height: 1.2;
     &:last-child {
@@ -486,6 +493,16 @@
   color: $color-green-300;
   text-decoration: none;
   &:hover {
-    color:$color-green-500;
+    color: $color-green-500;
   }
+}
+@mixin mb($range) {
+  margin-bottom: #{$range}px;
+}
+@mixin mt($range) {
+  margin-top: #{$range}px;
+}
+@mixin icon-text($feature-icon) {
+  background: url("../../assets/icons/feather/#{$feature-icon}.svg") center
+    no-repeat;
 }

@@ -1,0 +1,23 @@
+.catalog-landing {
+  &__banner {
+    background: url("../../assets/img/catalog-landing.webp") center no-repeat;
+    background-size: cover;
+    min-height: 650px;
+    &-content {
+      max-width: 50%;
+      display: flex;
+      padding-top: 110px;
+      flex-direction: column;
+      gap: 40px;
+      align-items: baseline;
+    }
+
+  }
+  &__content {
+      margin-top: -160px;
+      background-color: white;
+      padding: 40px 70px;
+      margin-bottom: 100px;
+      @include shadow();
+  }
+}

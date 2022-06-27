@@ -1,0 +1,89 @@
+.subscribe {
+  margin-bottom: 100px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__form {
+    @include shadow();
+  }
+  &__steps {
+    display: flex;
+    flex-direction: row;
+    counter-reset: step;
+    padding: 0;
+    margin: 0;
+  }
+  &__step {
+    min-height: 135px;
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: $color-gray-400;
+    display: none;
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    &::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 60px;
+      height: 60px;
+      flex: 0 0 60px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $color-gray-400;
+      background-color: $color-gray-300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    &_active {
+      border-bottom: 2px solid $color-green-300;
+      color: $color-green-300;
+      display: flex;
+      &::before {
+        color: $color-white;
+        background-color: $color-green-300;
+      }
+    }
+    & span {
+      flex: 0 0 110px;
+    }
+  }
+
+  form {
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__radio-list {
+      display: flex;
+      flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        gap:30px;
+    }
+  }
+  &__buttons {
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    & a:last-child {
+      grid-column: 2;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+  }
+}

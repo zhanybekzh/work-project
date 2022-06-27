@@ -65,3 +65,24 @@
     }
   }
 }
+
+.fx-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-div {
+  margin: 0 auto;
+  width:fit-content;
+}
+
+@each $margin-range in $margin-ranges {
+  .mb-#{$margin-range} {
+    @include mb($margin-range);
+  }
+  .mt-#{$margin-range} {
+    @include mt($margin-range);
+  }
+
+}

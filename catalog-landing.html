@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Каталог</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header">
+                    <div class="header-menu">
+                        <div class="header-menu__icon">
+                            <span></span>
+                        </div>
+                        <ul class="header-menu__list">
+                            <li>
+                                <a class=" header-menu__link" href="./index.html"
+                                    >Главная</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./catalog.html">
+                                    Каталог</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./my-services.html"
+                                    >Мои сервисы</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./balance.html">
+                                    Баланс</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./profiles.html">
+                                    Профили</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./soft.html">
+                                    Софт</a
+                                >
+                            </li>
+                            <li>
+                                <a class="header-menu__link" href="./faq.html">
+                                    Вопрос-ответ</a
+                                >
+                            </li>
+        
+        
+                        </ul>
+                    </div>
+                    <div class="header-user">
+                        <div class="header-user__menu user-menu">
+                            <div class="user-menu__account">
+                                <div
+                                    class="user-menu__avatar header-user__avatar"
+                                ></div>
+                                <div class="user-menu__profile">
+                                    <div class="user-menu__profile-name">
+                                        Костантин Р.
+                                    </div>
+                                    <div class="user-menu__profile-text">
+                                        Текущий профиль
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-menu__profile-actions">
+                                <form
+                                    action=""
+                                    class="user-menu__change-profile change-profile"
+                                >
+                                    <div class="change-profile__block" data-state="">
+                                        <div class="change-profile__title">
+                                            Сменить профиль
+                                        </div>
+                                        <div class="change-profile__content">
+                                            <!-- 0 option -->
+                                            <input
+                                                type="radio"
+                                                name="singleSelect"
+                                                id="singleSelect0"
+                                                class="change-profile__input"
+                                            />
+                                            <label
+                                                for="singleSelect0"
+                                                class="change-profile__label"
+                                            >
+                                                Дядя Федя
+                                            </label>
+                                            <!-- end 0 option -->
+                                            <!-- 1 option -->
+                                            <input
+                                                type="radio"
+                                                name="singleSelect"
+                                                id="singleSelect1"
+                                                class="change-profile__input"
+                                                checked
+                                            />
+                                            <label
+                                                for="singleSelect1"
+                                                class="change-profile__label"
+                                            >
+                                                Константин Романов
+                                            </label>
+                                            <!-- end 1 option -->
+                                            <!-- 2 option -->
+                                            <input
+                                                type="radio"
+                                                name="singleSelect"
+                                                id="singleSelect2"
+                                                class="change-profile__input"
+                                            />
+                                            <label
+                                                for="singleSelect2"
+                                                class="change-profile__label"
+                                            >
+                                                Иван Иванов
+                                            </label>
+                                            <!-- end 2 option -->
+                                            <!-- 3 option -->
+                                            <input
+                                                type="radio"
+                                                name="singleSelect"
+                                                id="singleSelect3"
+                                                class="change-profile__input"
+                                            />
+                                            <label
+                                                for="singleSelect3"
+                                                class="change-profile__label"
+                                            >
+                                                Тетя Дуся
+                                            </label>
+                                            <!-- end 3 option -->
+                                        </div>
+                                    </div>
+                                </form>
+        
+                                <a href="" class="user-menu__add-profile">
+                                    <i
+                                        data-feather="user-plus"
+                                        class="icon-18 green-300"
+                                    ></i>
+                                    Добавить профиль
+                                </a>
+                                <a href="" class="user-menu__edit-profile">
+                                    <i
+                                        data-feather="settings"
+                                        class="icon-18 green-300"
+                                    ></i>
+                                    Редактировать профиль
+                                </a>
+                                <a href="" class="user-menu__exit-profile">
+                                    <i
+                                        data-feather="log-out"
+                                        class="icon-18 green-300"
+                                    ></i>
+                                    Выйти
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-user__profile">
+                            <div class="header-user__profile-text _none-mobile">
+                                Профиль:
+                            </div>
+                            <div class="header-user__profile-name">Константин Р.</div>
+                        </div>
+                        <div class="header-user__account">
+                            <div class="header-user__avatar"></div>
+                            <div class="header-user__arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-balance-wrapper">
+                <div class="container">
+                    <div class="header-balance">
+                        <div class="header-balance__balance">
+                            <div class="header-balance__text">Баланс:</div>
+                            <div class="header-balance__value">0.00т</div>
+                        </div>
+                        <div class="header-balance__button">
+                            <span>Пополнить</span
+                            ><span class="_none-mobile">/Получить счет</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="catalog-landing">
+                <div class="catalog-landing__banner">
+                    <div class="container">
+                        <div class="catalog-landing__banner-content">
+                            <div class="catalog-landing__text">Сервис</div>
+                            <h1 class="catalog-landing__title">
+                                Дистанционный тренинг по основам бухгалтерского
+                                учета
+                            </h1>
+                            <a href="/subscribe.html" class="button catalog-landing__button">
+                                Подключить сервис
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="catalog-landing__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati autem quos, odit reprehenderit iusto earum rerum fugiat quis corporis quo quibusdam fugit animi aperiam! Saepe ad nostrum accusamus consectetur eius.
+                        Quam est, reprehenderit molestiae veniam necessitatibus soluta eos optio quibusdam magnam reiciendis! Quisquam, voluptatum ut, architecto et suscipit dolores placeat culpa magnam repellendus repellat reiciendis asperiores cumque dicta, quas explicabo!
+                        Inventore sed facere reiciendis, eveniet excepturi in nobis. Cupiditate nulla nisi, excepturi corporis animi iste quaerat exercitationem, possimus deserunt tempore voluptatem dolorum non similique quas, beatae et sint ipsam voluptates.
+                        Nesciunt alias at neque esse tempora porro accusantium doloribus distinctio quis quaerat non architecto ipsam, perferendis quidem impedit ab suscipit nulla! Porro et quaerat laborum natus quos est itaque cupiditate!
+                        Amet mollitia nulla molestiae reiciendis in odit ex, facilis pariatur aliquam voluptatem sequi aliquid impedit aspernatur harum illum sapiente eos delectus ut eum optio unde adipisci corporis totam rerum. Nesciunt!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ea est illum possimus maiores fuga cupiditate ipsa cum quia dolore, delectus dolorum doloribus enim veniam incidunt porro tempore distinctio rem.
+                    Modi, tempora, dolore labore commodi delectus necessitatibus assumenda veritatis alias tempore incidunt autem laboriosam dolorum veniam fugit quaerat. Eligendi autem necessitatibus ipsam quidem numquam magni nostrum incidunt voluptatibus tempora omnis?
+                    Inventore, possimus atque fuga harum accusantium dignissimos quod esse voluptatum iste ab aliquam illum enim voluptate sint incidunt laborum doloribus magnam delectus assumenda quaerat nam eligendi dolores ullam aperiam. Repellendus.
+                    Aut aliquam esse animi suscipit nobis obcaecati, officiis, tenetur eligendi quo ipsa debitis facilis nemo velit quibusdam qui sit aspernatur alias odio rem! Dignissimos possimus inventore commodi reprehenderit, perspiciatis fugiat.
+                    Amet asperiores quasi nam, repudiandae officia neque optio eius quia pariatur possimus alias necessitatibus. Reprehenderit impedit voluptatibus quo non quasi tenetur voluptates labore, alias, ab iusto eveniet doloribus! Soluta, eveniet!
+                </p>
+                <a href="/subscribe.html" class="button center-div mt-40 mb-100">Подключить сервис</a>
+                <p class="mb-100" style="columns: 2 auto;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci culpa magnam ex numquam repudiandae recusandae voluptatum vero omnis sequi quos, nesciunt distinctio dicta eos ab. Nesciunt natus sed vel obcaecati!
+                Aliquid consequatur, sit ducimus repudiandae sapiente debitis, illum doloribus impedit vel nesciunt obcaecati. Tempora natus eaque est aliquid officiis porro, sapiente beatae assumenda sit impedit provident, labore odio. Consequatur, eos!
+                Iste repellat culpa odio aperiam? Ipsam itaque, deserunt quas inventore repellat, eaque harum velit omnis mollitia fuga tenetur dolor corrupti nihil. Dolorem aliquid laborum debitis explicabo magnam unde eum illo.
+                Consequatur perferendis nisi aut eum asperiores quod, modi provident nulla soluta iure dolorem temporibus magnam aperiam cupiditate necessitatibus adipisci hic, ratione natus numquam. Dolorem consequatur ipsam quaerat provident quasi odit.
+                Iste praesentium, veritatis voluptatibus ipsa delectus nisi expedita, aliquid laboriosam non in distinctio cupiditate quae. Enim, ab maxime illum omnis tempore laboriosam nulla culpa quos voluptatum magnam rem voluptatibus dicta!
+                Consequatur veniam quis excepturi similique ut nisi, deserunt, dolorem aspernatur amet quas qui ipsa dicta tenetur fugit repellat odio? Ex numquam ratione atque facere, illo nostrum non facilis suscipit at!
+                Reiciendis fuga excepturi ad, earum delectus dolorum repellendus dignissimos vitae nostrum totam. Accusamus cupiditate perspiciatis repudiandae voluptatum at, ratione iure in, ad laudantium doloribus porro architecto nulla quasi assumenda vel.
+                Laborum accusantium voluptate soluta ex dolorem. Ipsam atque sit aliquam illum, ad ex minima aliquid, eveniet reprehenderit adipisci, quidem modi tempore laboriosam rem iure hic repellendus delectus assumenda! Perspiciatis, laudantium.
+                Quisquam, perferendis illo. Soluta minus necessitatibus quia amet tempora aspernatur eos animi nulla perspiciatis deleniti obcaecati architecto nostrum aliquid at reiciendis exercitationem quaerat non repellendus odit, sed nemo voluptatum. Delectus.
+                Ullam molestiae velit culpa amet dolor fugit magnam a quia sed adipisci eligendi sapiente nobis cumque laudantium et, soluta ab voluptatibus aliquam quas? A optio quam, laborum quis sapiente sequi.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__columns">
+                        <div
+                            class="footer__column footer-column footer-column__links"
+                        >
+                            <div class="footer-column__link">
+                                <a href="">Реквизиты</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Контакты</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Публичная оферта</a>
+                            </div>
+                            <div class="footer-column__link">
+                                <a href="">Помощь</a>
+                            </div>
+                        </div>
+                        <div
+                            class="footer__column footer-column footer-column__contacts"
+                        >
+                            <div class="footer-column__contact">
+                                <a href="">+7 (723) 270 48 08</a>
+                            </div>
+                            <div class="footer-column__contact">
+                                <a href="">+7 (707) 470 48 08</a>
+                            </div>
+                            <div class="footer-column__contact">
+                                <a href="">info@stsl.kz</a>
+                            </div>
+                        </div>
+                        <div
+                            class="footer__column footer-column footer-column__infos"
+                        >
+                            <div class="footer-column__info">
+                                Товарищество с ограниченной ответственностью
+                                "1С-Рейтинг"
+                            </div>
+                            <div class="footer-column__info">
+                                Юридический адрес: 070004, г. Усть-Каменогорск,
+                                ул. Казахстан, д. 27
+                            </div>
+                            <div class="footer-column__info">
+                                БИН: 020640002269
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copyright">
+                        © Все права защищены. 1С-Рейтинг, 2022
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
