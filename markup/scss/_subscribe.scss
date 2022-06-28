@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   &__form {
     @include shadow();
   }
+
   &__steps {
     display: flex;
     flex-direction: row;
@@ -14,6 +16,7 @@
     padding: 0;
     margin: 0;
   }
+
   &__step {
     min-height: 135px;
     padding: 20px;
@@ -26,9 +29,11 @@
     font-weight: 700;
     color: $color-gray-400;
     display: none;
+border-bottom: 2px solid $color-gray-200;
     @media (min-width: 768px) {
-        display: flex;
+      display: flex;
     }
+
     &::before {
       counter-increment: step;
       content: counter(step);
@@ -38,52 +43,72 @@
       font-weight: 700;
       font-size: 1.2rem;
       color: $color-gray-400;
-      background-color: $color-gray-300;
+      background-color: $color-gray-200;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50%;
     }
+
     &_active {
       border-bottom: 2px solid $color-green-300;
       color: $color-green-300;
       display: flex;
+
       &::before {
         color: $color-white;
         background-color: $color-green-300;
       }
     }
+
     & span {
       flex: 0 0 110px;
     }
   }
 
-  form {
+  .form {
+
     padding: 35px 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  &__radio-list {
+
+    &__input-list {
       display: flex;
       flex-direction: column;
-    @media (min-width: 768px) {
-        flex-direction: row;
-        gap:30px;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media (min-width: 1200px) {
+
+        max-height: 400px;
+      }
     }
   }
+
+  &__radio-list {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+
   &__buttons {
     margin-top: 40px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
+
     & a:last-child {
       grid-column: 2;
     }
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: flex-end;
 
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

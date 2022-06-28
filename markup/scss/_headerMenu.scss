@@ -12,7 +12,6 @@
 
   align-items: center;
   padding-right: 20px;
-  cursor: pointer;
 
   &__icon {
     z-index: 5;
@@ -109,6 +108,7 @@
       min-width: fit-content;
       line-height: 1.18rem;
       font-weight: 400;
+      cursor: pointer;
       &_active {
         color: $color-green-300;
         background-color: $color-white;

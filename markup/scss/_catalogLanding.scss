@@ -4,12 +4,15 @@
     background-size: cover;
     min-height: 650px;
     &-content {
-      max-width: 50%;
+      width:100%;
       display: flex;
       padding-top: 110px;
       flex-direction: column;
       gap: 40px;
       align-items: baseline;
+      @media (min-width: 992px) {
+        max-width: 50%;
+      }
     }
 
   }
