@@ -18,28 +18,31 @@
             font-weight: bold;
             border: 1px solid $color-gray-300;
             color: unset;
-            text-decoration: none;
             &:hover {
               color: unset;
               text-decoration: none;
             }
             &_active {
               border: none;
+              order:1;
               border-top: 4px solid $color-green-300;
               background-color: $color-white;
+              @media (min-width: 768px) {
+                order:unset
+              }
             }
           }
         @media (min-width: 768px) {
-            
+
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
           }
-        
+
     }
     &-content {
         padding: 10px 20px 30px;
-        
+
         @media (min-width: 400px) {
             padding: 30px;
             padding-top: 10px;

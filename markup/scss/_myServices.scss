@@ -1,0 +1,33 @@
+.my-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  &__pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+  &__tabs-content {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    &__tabs-content {
+      padding: 40px;
+    }
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1440px) {
+    grid-template-columns: 1fr;
+    &__tabs-content {
+      padding: 70px;
+    }
+  }
+}

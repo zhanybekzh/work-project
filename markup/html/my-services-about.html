@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Мои сервисы</title>
+    </head>
+
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="container">
+                <div class="page">
+                    <h1 class="page__title mb-40">Мои Сервисы</h1>
+                    <div class="tabs">
+                        <div class="tabs-list">
+                            <a href="/my-services-history.html" class="tabs-list__tab">
+                                История подписки
+                            </a>
+                            <a href="/my-services-archive.html" class="tabs-list__tab">
+                                Архив подписок
+                            </a>
+                            <a
+                                href="/my-services.html"
+                                class="tabs-list__tab tabs-list__tab_active"
+                            >
+                                Активные подписки
+                            </a>
+                        </div>
+                        <div class="tabs__content my-services__tabs-content">
+                            <div class="my-services my-services-about">
+                                <div class="my-services__item-about item-about">
+                                    <div class="item-about__title">
+                                        Дистанционный тренинг по основам
+                                        бухгалтерского учета
+                                    </div>
+                                    <div class="item-about__info">
+                                        <div class="item__description item-about__description">
+                                            <div class="item__price item-about__price">
+                                                Стоимость:
+                                                <span class="">
+                                                    30 000 тг.
+                                                </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Тариф:
+                                                <span> Доступ на 3 месяца </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Остаток времени:
+                                                <span> 1,5 месяца </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Уровень предоставления сервиса:
+                                                <span> Стандарт </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Дата активации подписки:
+                                                <span> 16.02.2022 </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Количество пользователей:
+                                                <span> 1 </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Номер телефона PRO1С:
+                                                <span> +7 (777) 777-70-77 </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="item-about__buttons">
+                                            <a href="/my-services-table.html" class="button"> История списаний </a>
+                                            <a href="" class="button-outline">
+                                                Изменить
+                                            </a>
+                                            <a href="" class="button-outline">
+                                                Отменить
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item-about__back-button">
+                                    <a href="/my-services.html" class="button"> Назад </a>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+
+    </body>
+</html>

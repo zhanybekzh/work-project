@@ -9,7 +9,7 @@
     border-width: $table-border-width 0;
 
     > * {
-      padding: $table-cell-padding-y $table-cell-padding-x;
+      padding: 20px $table-cell-padding-x;
       background-color: $table-background;
       border-width: 0 $table-border-width;
     }
@@ -21,8 +21,15 @@
 
   > thead {
     vertical-align: bottom;
+     td, th {
+      color:$color-gray-400;
+    }
+    > tr > * {
+      vertical-align: middle;
+    }
   }
 }
+
 
 .table-sm {
   > :not(caption) > * > * {
@@ -34,6 +41,9 @@
   > :not(caption) > * > * {
     border-right-width: 0;
     border-left-width: 0;
+  }
+  > :not(caption) > *  {
+    border-width: 0;
   }
 }
 
@@ -54,7 +64,7 @@
 .table-hover {
   > tbody > tr:hover > * { // sass-lint:disable-line force-pseudo-nesting
     color: $table-hover-color;
-    background-color: $table-hover-background;
+    background-color: $color-green-100;
   }
 }
 

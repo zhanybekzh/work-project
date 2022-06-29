@@ -18,15 +18,15 @@
                     <h1 class="page__title mb-40">Мои Сервисы</h1>
                     <div class="tabs">
                         <div class="tabs-list">
-                            <a href="/my-services-history.html" class="tabs-list__tab ">
+                            <a href="/my-services-history.html" class="tabs-list__tab  ">
                                 История подписки
                             </a>
-                            <a href="/my-services-archive.html" class="tabs-list__tab">
+                            <a href="/my-services-archive.html" class="tabs-list__tab tabs-list__tab_active">
                                 Архив подписок
                             </a>
                             <a
                                 href="/my-services.html"
-                                class="tabs-list__tab tabs-list__tab_active"
+                                class="tabs-list__tab"
                             >
                                 Активные подписки
                             </a>
@@ -57,22 +57,13 @@
                                                 <span> 3 месяца </span>
                                             </div>
                                         </div>
-                                        <div class="item__show-button">
-                                            <a href="" class="button">
-                                                Смотреть
-                                            </a>
-                                        </div>
+
                                     </div>
                                     <div class="item__buttons">
-                                        <a href="" class="button-outline">
-                                            Отменить
+                                        <a href="" class="button">
+                                            Возобновить
                                         </a>
-                                        <a href="/my-services-about.html" class="button-outline">
-                                            Подробнее
-                                        </a>
-                                        <a href="" class="button-outline">
-                                            Изменить
-                                        </a>
+
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +98,7 @@
                 const serviceItem =
                     myServices.querySelector(".my-services__item");
                 const fragment = document.createDocumentFragment();
-                for (let i = 1; i < 7; i += 1) {
+                for (let i = 1; i < 3; i += 1) {
                     fragment.appendChild(serviceItem.cloneNode(true));
                 }
                 myServices.appendChild(fragment);

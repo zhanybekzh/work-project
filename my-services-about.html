@@ -201,7 +201,7 @@
                     <h1 class="page__title mb-40">Мои Сервисы</h1>
                     <div class="tabs">
                         <div class="tabs-list">
-                            <a href="/my-services-history.html" class="tabs-list__tab ">
+                            <a href="/my-services-history.html" class="tabs-list__tab">
                                 История подписки
                             </a>
                             <a href="/my-services-archive.html" class="tabs-list__tab">
@@ -215,69 +215,63 @@
                             </a>
                         </div>
                         <div class="tabs__content my-services__tabs-content">
-                            <div class="my-services">
-                                <div class="my-services__item item">
-                                    <div class="item__image">
-                                        <img
-                                            src="../../assets/img/no-image-service.jpg"
-                                            alt=""
-                                        />
+                            <div class="my-services my-services-about">
+                                <div class="my-services__item-about item-about">
+                                    <div class="item-about__title">
+                                        Дистанционный тренинг по основам
+                                        бухгалтерского учета
                                     </div>
-                                    <div class="item__info">
-                                        <div class="item__title">
-                                            Дистанционный тренинг по основам
-                                            бухгалтерского учета
-                                        </div>
-                                        <div class="item__description">
-                                            <div class="item__price">
+                                    <div class="item-about__info">
+                                        <div class="item__description item-about__description">
+                                            <div class="item__price item-about__price">
                                                 Стоимость:
                                                 <span class="">
                                                     30 000 тг.
                                                 </span>
                                             </div>
-                                            <div class="item__tarif">
+                                            <div class="item__tarif item-about__tarif">
                                                 Тариф:
-                                                <span> 3 месяца </span>
+                                                <span> Доступ на 3 месяца </span>
                                             </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Остаток времени:
+                                                <span> 1,5 месяца </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Уровень предоставления сервиса:
+                                                <span> Стандарт </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Дата активации подписки:
+                                                <span> 16.02.2022 </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Количество пользователей:
+                                                <span> 1 </span>
+                                            </div>
+                                            <div class="item__tarif item-about__tarif">
+                                                Номер телефона PRO1С:
+                                                <span> +7 (777) 777-70-77 </span>
+                                            </div>
+
                                         </div>
-                                        <div class="item__show-button">
-                                            <a href="" class="button">
-                                                Смотреть
+                                        <div class="item-about__buttons">
+                                            <a href="/my-services-table.html" class="button"> История списаний </a>
+                                            <a href="" class="button-outline">
+                                                Изменить
+                                            </a>
+                                            <a href="" class="button-outline">
+                                                Отменить
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="item__buttons">
-                                        <a href="" class="button-outline">
-                                            Отменить
-                                        </a>
-                                        <a href="/my-services-about.html" class="button-outline">
-                                            Подробнее
-                                        </a>
-                                        <a href="" class="button-outline">
-                                            Изменить
-                                        </a>
-                                    </div>
+                                    <div class="item-about__back-button">
+                                    <a href="/my-services.html" class="button"> Назад </a>
                                 </div>
-                            </div>
-                            <div class="my-services__pagination-wrapper">
-                                <div class="pagination my-services__pagination">
-                                    <a class="pagination__left-arrow" href="#"></a>
-                                    <a class="pagination__link" href="#">1</a>
-                                    <a
-                                        class="pagination__link pagination__link_active"
-                                        href="#"
-                                        >2</a
-                                    >
-                                    <a class="pagination__link" href="#">3</a>
-                                    <a class="pagination__link" href="#">4</a>
-                                    <a class="pagination__link" href="#">5</a>
-                                    <a class="pagination__right-arrow" href="#"></a>
                                 </div>
                             </div>
 
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -338,18 +332,6 @@
             </div>
         </footer>
         <script src="./script.js"></script>
-        <script>
-            (() => {
-                const myServices = document.querySelector(".my-services");
-                const serviceItem =
-                    myServices.querySelector(".my-services__item");
-                const fragment = document.createDocumentFragment();
-                for (let i = 1; i < 7; i += 1) {
-                    fragment.appendChild(serviceItem.cloneNode(true));
-                }
-                myServices.appendChild(fragment);
 
-            })();
-        </script>
     </body>
 </html>

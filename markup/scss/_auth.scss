@@ -3,7 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
+  min-height: 100%;
+  background: url(../../assets/img/img4.webp) center no-repeat;
+  background-size: cover;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;
@@ -14,82 +18,19 @@
     background-color: rgba(0, 137, 141, 0.2);
     z-index: -1;
   }
-  width: 100%;
-  min-height: 100%;
-  background: url(../../assets/img/img4.webp) center no-repeat;
-  background-size: cover;
-  z-index: 1;
+
 }
 .auth-modal {
   max-width: 750px;
   margin: 0 auto;
-  @include shadow();
   background-color: $color-white;
   margin-bottom: 80px;
   margin-top: 80px;
 
-  &__links {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    .auth-entry & {
-      flex-direction: column-reverse;
-    }
-
-    @media (min-width: 768px) {
-      .auth-entry & {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  &__name {
-    flex: 1 1 50%;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
-    background-color: $color-gray-200;
-    font-weight: bold;
-    border: 1px solid $color-gray-300;
-    color: unset;
-    text-decoration: none;
-    &:hover {
-      color: unset;
-      text-decoration: none;
-    }
-    &_active {
-      border: none;
-      border-top: 4px solid $color-green-300;
-      background-color: $color-white;
-    }
-  }
   &__title {
     margin-bottom: 20px;
   }
   &__content {
-    padding: 10px 20px 30px;
-    @media (min-width: 400px) {
-      padding: 30px;
-      padding-top: 10px;
-    }
-    @media (min-width: 576px) {
-      padding: 10px 40px 50px;
-    }
-    @media (min-width: 768px) {
-      padding: 30px 40px 50px;
-    }
-    @media (min-width: 1440px) {
-      padding: 65px;
-      padding-top: 30px;
-    }
     .form-auth {
       display: flex;
       flex-direction: column;
@@ -120,7 +61,6 @@
         a {
           @include link-green();
         }
-
       }
     }
   }
