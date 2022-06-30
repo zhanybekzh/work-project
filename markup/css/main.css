@@ -1004,6 +1004,10 @@ progress {
   content: "— ";
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .figure {
   display: inline-block;
 }
@@ -2214,9 +2218,6 @@ header.unauthorized .header {
   background-color: #fff;
 }
 
-.catalog {
-  padding: 20px 0 40px;
-}
 .catalog__subtitle {
   color: #2a2f30;
   font-size: 18px;
@@ -2590,6 +2591,37 @@ header.unauthorized .header {
   transform: translateY(-50%);
   right: 11px;
   background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye-off%22%3E%3Cpath%20d%3D%22M17.94%2017.94A10.07%2010.07%200%200%201%2012%2020c-7%200-11-8-11-8a18.45%2018.45%200%200%201%205.06-5.94M9.9%204.24A9.12%209.12%200%200%201%2012%204c7%200%2011%208%2011%208a18.5%2018.5%200%200%201-2.16%203.19m-6.72-1.07a3%203%200%201%201-4.24-4.24%22%3E%3C%2Fpath%3E%3Cline%20x1%3D%221%22%20y1%3D%221%22%20x2%3D%2223%22%20y2%3D%2223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E") 0 0 no-repeat;
+  background-size: cover;
+}
+.form-input__with-icon {
+  position: relative;
+}
+.form-input__with-icon-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f3f3;
+  display: block;
+  border: 1px solid #c6c9cb;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  width: 45px;
+  height: 45px;
+  z-index: 2;
+}
+.form-input__with-icon-icon::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 11px;
+  background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E") 0 0 no-repeat;
   background-size: cover;
 }
 .form-select label {
@@ -3244,7 +3276,26 @@ header.unauthorized .header {
 }
 
 .page {
-  padding: 20px 0 40px;
+  padding: 40px 0 40px;
+}
+.page-section {
+  padding: 20px;
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+}
+@media (min-width: 576px) {
+  .page-section {
+    padding: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .page-section {
+    padding: 50px 60px;
+  }
+}
+@media (min-width: 768px) {
+  .page-section {
+    padding: 60px 70px;
+  }
 }
 
 .tabs {

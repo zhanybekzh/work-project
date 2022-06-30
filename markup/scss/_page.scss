@@ -1,3 +1,16 @@
 .page {
-    padding: 20px 0 40px;
+    padding: 40px 0 40px;
+    &-section {
+        padding:20px;
+        @include shadow();
+        @media (min-width: 576px) {
+            padding:40px;
+        }
+        @media (min-width: 768px) {
+            padding: 50px 60px;
+        }
+        @media (min-width: 768px) {
+            padding:60px 70px;
+        }
+    }
 }
