@@ -9,7 +9,7 @@
     border-width: $table-border-width 0;
 
     > * {
-      padding: 20px $table-cell-padding-x;
+      padding: 20px 20px;
       background-color: $table-background;
       border-width: 0 $table-border-width;
     }
@@ -48,9 +48,19 @@
 }
 
 .table-striped {
-  > tbody > tr:nth-of-type(odd) > * { // sass-lint:disable-line force-pseudo-nesting
+  > tbody > tr:not(.group):nth-of-type(odd) > td { // sass-lint:disable-line force-pseudo-nesting
     color: $table-striped-color;
     background-color: $table-striped-background;
+  }
+  >tbody th {
+    background-color: $color-green-100;
+    p {
+      margin: 0;
+    }
+    span {
+      font-weight: normal;
+      font-size: 0.9rem;
+    }
   }
 }
 

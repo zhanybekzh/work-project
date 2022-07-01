@@ -1,290 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./markup/css/main.css" />
-        <link rel="stylesheet" href="./markup/css/main.css.map" />
-        <script src="./feather.min.js"></script>
-        <title>Баланс</title>
-    </head>
 
-    <body>
-        <header>
-            <div class="container">
-                <div class="header">
-                    <div class="header-menu">
-                        <div class="header-menu__icon">
-                            <span></span>
-                        </div>
-                        <ul class="header-menu__list">
-                            <li>
-                                <a class=" header-menu__link" href="./index.html"
-                                    >Главная</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./catalog.html">
-                                    Каталог</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./my-services.html"
-                                    >Мои сервисы</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./balance.html">
-                                    Баланс</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./profiles.html">
-                                    Профили</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./soft.html">
-                                    Софт</a
-                                >
-                            </li>
-                            <li>
-                                <a class="header-menu__link" href="./faq.html">
-                                    Вопрос-ответ</a
-                                >
-                            </li>
-        
-        
-                        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./markup/css/main.css" />
+    <link rel="stylesheet" href="./markup/css/main.css.map" />
+    <script src="./feather.min.js"></script>
+    <title>Баланс</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header-menu">
+                    <div class="header-menu__icon">
+                        <span></span>
                     </div>
-                    <div class="header-user">
-                        <div class="header-user__menu user-menu">
-                            <div class="user-menu__account">
-                                <div
-                                    class="user-menu__avatar header-user__avatar"
-                                ></div>
-                                <div class="user-menu__profile">
-                                    <div class="user-menu__profile-name">
-                                        Костантин Р.
-                                    </div>
-                                    <div class="user-menu__profile-text">
-                                        Текущий профиль
-                                    </div>
+                    <ul class="header-menu__list">
+                        <li>
+                            <a class=" header-menu__link" href="./index.html"
+                                >Главная</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./catalog.html">
+                                Каталог</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./my-services.html"
+                                >Мои сервисы</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./balance.html">
+                                Баланс</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./profiles.html">
+                                Профили</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./soft.html">
+                                Софт</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header-menu__link" href="./faq.html">
+                                Вопрос-ответ</a
+                            >
+                        </li>
+    
+    
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <div class="header-user__menu user-menu">
+                        <div class="user-menu__account">
+                            <div
+                                class="user-menu__avatar header-user__avatar"
+                            ></div>
+                            <div class="user-menu__profile">
+                                <div class="user-menu__profile-name">
+                                    Костантин Р.
+                                </div>
+                                <div class="user-menu__profile-text">
+                                    Текущий профиль
                                 </div>
                             </div>
-                            <div class="user-menu__profile-actions">
-                                <form
-                                    action=""
-                                    class="user-menu__change-profile change-profile"
-                                >
-                                    <div class="change-profile__block" data-state="">
-                                        <div class="change-profile__title">
-                                            Сменить профиль
-                                        </div>
-                                        <div class="change-profile__content">
-                                            <!-- 0 option -->
-                                            <input
-                                                type="radio"
-                                                name="singleSelect"
-                                                id="singleSelect0"
-                                                class="change-profile__input"
-                                            />
-                                            <label
-                                                for="singleSelect0"
-                                                class="change-profile__label"
-                                            >
-                                                Дядя Федя
-                                            </label>
-                                            <!-- end 0 option -->
-                                            <!-- 1 option -->
-                                            <input
-                                                type="radio"
-                                                name="singleSelect"
-                                                id="singleSelect1"
-                                                class="change-profile__input"
-                                                checked
-                                            />
-                                            <label
-                                                for="singleSelect1"
-                                                class="change-profile__label"
-                                            >
-                                                Константин Романов
-                                            </label>
-                                            <!-- end 1 option -->
-                                            <!-- 2 option -->
-                                            <input
-                                                type="radio"
-                                                name="singleSelect"
-                                                id="singleSelect2"
-                                                class="change-profile__input"
-                                            />
-                                            <label
-                                                for="singleSelect2"
-                                                class="change-profile__label"
-                                            >
-                                                Иван Иванов
-                                            </label>
-                                            <!-- end 2 option -->
-                                            <!-- 3 option -->
-                                            <input
-                                                type="radio"
-                                                name="singleSelect"
-                                                id="singleSelect3"
-                                                class="change-profile__input"
-                                            />
-                                            <label
-                                                for="singleSelect3"
-                                                class="change-profile__label"
-                                            >
-                                                Тетя Дуся
-                                            </label>
-                                            <!-- end 3 option -->
-                                        </div>
+                        </div>
+                        <div class="user-menu__profile-actions">
+                            <form
+                                action=""
+                                class="user-menu__change-profile change-profile"
+                            >
+                                <div class="change-profile__block" data-state="">
+                                    <div class="change-profile__title">
+                                        Сменить профиль
                                     </div>
-                                </form>
-        
-                                <a href="" class="user-menu__add-profile">
-                                    <i
-                                        data-feather="user-plus"
-                                        class="icon-18 green-300"
-                                    ></i>
-                                    Добавить профиль
-                                </a>
-                                <a href="" class="user-menu__edit-profile">
-                                    <i
-                                        data-feather="settings"
-                                        class="icon-18 green-300"
-                                    ></i>
-                                    Редактировать профиль
-                                </a>
-                                <a href="" class="user-menu__exit-profile">
-                                    <i
-                                        data-feather="log-out"
-                                        class="icon-18 green-300"
-                                    ></i>
-                                    Выйти
-                                </a>
-                            </div>
+                                    <div class="change-profile__content">
+                                        <!-- 0 option -->
+                                        <input
+                                            type="radio"
+                                            name="singleSelect"
+                                            id="singleSelect0"
+                                            class="change-profile__input"
+                                        />
+                                        <label
+                                            for="singleSelect0"
+                                            class="change-profile__label"
+                                        >
+                                            Дядя Федя
+                                        </label>
+                                        <!-- end 0 option -->
+                                        <!-- 1 option -->
+                                        <input
+                                            type="radio"
+                                            name="singleSelect"
+                                            id="singleSelect1"
+                                            class="change-profile__input"
+                                            checked
+                                        />
+                                        <label
+                                            for="singleSelect1"
+                                            class="change-profile__label"
+                                        >
+                                            Константин Романов
+                                        </label>
+                                        <!-- end 1 option -->
+                                        <!-- 2 option -->
+                                        <input
+                                            type="radio"
+                                            name="singleSelect"
+                                            id="singleSelect2"
+                                            class="change-profile__input"
+                                        />
+                                        <label
+                                            for="singleSelect2"
+                                            class="change-profile__label"
+                                        >
+                                            Иван Иванов
+                                        </label>
+                                        <!-- end 2 option -->
+                                        <!-- 3 option -->
+                                        <input
+                                            type="radio"
+                                            name="singleSelect"
+                                            id="singleSelect3"
+                                            class="change-profile__input"
+                                        />
+                                        <label
+                                            for="singleSelect3"
+                                            class="change-profile__label"
+                                        >
+                                            Тетя Дуся
+                                        </label>
+                                        <!-- end 3 option -->
+                                    </div>
+                                </div>
+                            </form>
+    
+                            <a href="" class="user-menu__add-profile">
+                                <i
+                                    data-feather="user-plus"
+                                    class="icon-18 green-300"
+                                ></i>
+                                Добавить профиль
+                            </a>
+                            <a href="" class="user-menu__edit-profile">
+                                <i
+                                    data-feather="settings"
+                                    class="icon-18 green-300"
+                                ></i>
+                                Редактировать профиль
+                            </a>
+                            <a href="" class="user-menu__exit-profile">
+                                <i
+                                    data-feather="log-out"
+                                    class="icon-18 green-300"
+                                ></i>
+                                Выйти
+                            </a>
                         </div>
-                        <div class="header-user__profile">
-                            <div class="header-user__profile-text _none-mobile">
-                                Профиль:
-                            </div>
-                            <div class="header-user__profile-name">Константин Р.</div>
+                    </div>
+                    <div class="header-user__profile">
+                        <div class="header-user__profile-text _none-mobile">
+                            Профиль:
                         </div>
-                        <div class="header-user__account">
-                            <div class="header-user__avatar"></div>
-                            <div class="header-user__arrow"></div>
-                        </div>
+                        <div class="header-user__profile-name">Константин Р.</div>
+                    </div>
+                    <div class="header-user__account">
+                        <div class="header-user__avatar"></div>
+                        <div class="header-user__arrow"></div>
                     </div>
                 </div>
             </div>
-            <div class="header-balance-wrapper">
-                <div class="container">
-                    <div class="header-balance">
-                        <div class="header-balance__balance">
-                            <div class="header-balance__text">Баланс:</div>
-                            <div class="header-balance__value">0.00т</div>
-                        </div>
-                        <div class="header-balance__button">
-                            <span>Пополнить</span
-                            ><span class="_none-mobile">/Получить счет</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="page">
+        </div>
+        <div class="header-balance-wrapper">
             <div class="container">
-
+                <div class="header-balance">
+                    <div class="header-balance__balance">
+                        <div class="header-balance__text">Баланс:</div>
+                        <div class="header-balance__value">0.00т</div>
+                    </div>
+                    <a href="/balance-pay.html" class="header-balance__button">
+                        <span>Пополнить</span
+                        ><span class="_none-mobile">/Получить счет</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page">
+            <div class="container">
+                <div class="balance">
                     <h1 class="page__title mb-40">Баланс</h1>
-                    <section class="page-section">
-                        <div class="alert-block">
-                            <div class="alert alert_warning">
-                                <p class="alert-heading">Внимание!</p>
-                                <p class="bold">
-                                    Средств на балансе профиля не достаточно для
-                                    следующего автоматического списания.
-                                </p>
-                                <p class="bold">Необходимо пополнить баланс на 60 000 тг.</p>
+                    <section class="section balance__section">
+                        <div class="balance__value">
+                            Баланс: <span><span>60 000</span>тг</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="./balance-pay.html" class="button">
+                                Пополнить
+                            </a>
+                            <a href="./balance-pay.html" class="button-outline">
+                                Возврат средств
+                            </a>
+                        </div>
+                    </section>
+                    <section class="section section-tabs tabs">
+                        <div class="tabs-list">
+                            <a class="tabs-list__tab tabs-list__tab_active">
+                                Начисление по сервисам
+                            </a>
+                            <a class="tabs-list__tab">
+                                История платежей
+                            </a>
+                        </div>
+                        <div class="tabs-content">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-borderless table-hover">    
+                                    <thead>
+                                        <tr>
+                                            <td style="width:70px;">
+                                                №,
+п/п
+                                            </td>
+                                            <td>Наименование сервиса /
+                                                тарифа</td>
+                                            <td>Начислено</td>
+                                            <td>Период
+                                                представления</td>
+                                            <td>Оплачено</td>
+                                            <td>К списанию</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="group">
+                                            <th colspan="2">
+                                                <p>Февраль 2022</p>
+                                                <span>Начисление оплаты №000001014</span>
+                                            </th>
+                                            <th>55 000 тг</th>
+                                            <th></th>
+                                            <th>30 000 тг</th>
+                                            <th>25 000 тг</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Курс для перепубликации / Доступ на 3 месяца</td>
+                                            <td>25 000 тг</td>
+                                            <td>16.02.2022 – 16.02.2022</td>
+                                            <td>30 000 тг</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                        <td>2</td>
+                                        <td>Перепубликации / Доступ на 3 месяца</td>
+                                        <td>25 000 тг</td>
+                                        <td>16.02.2022 – 16.02.2022</td>
+                                        <td>_</td>
+                                        <td>25 000 тг</td>
+                                    </tr>
+                                    <tr class="group">
+                                        <th colspan="2">
+                                            <p>Март 2022</p>
+                                            <p>Начисление оплаты №000001014</p>
+                                        </th>
+                                        <th>130 000 тг</th>
+                                        <th></th>
+                                        <th>30 000 тг</th>
+                                        <th>25 000 тг</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Перепубликации / Доступ на 3 месяца</td>
+                                        <td>25 000 тг</td>
+                                        <td>16.02.2022 – 16.02.2022</td>
+                                        <td>-</td>
+                                        <td>25 000 тг</td>
+                                    </tr>
+                                    <tr>
+                                    <td>2</td>
+                                    <td>Перепубликации / Доступ на 3 месяца</td>
+                                    <td>25 000 тг</td>
+                                    <td>16.02.2022 – 16.02.2022</td>
+                                    <td>_</td>
+                                    <td>25 000 тг</td>
+                                </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pagination-wrapper " >
+                                
+                            <div class="pagination">
+                                <a class="pagination__left-arrow" href="#"></a>
+                                <a class="pagination__link" href="#">1</a>
+                                <a
+                                    class="pagination__link pagination__link_active"
+                                    href="#"
+                                    >2</a
+                                >
+                                <a class="pagination__link" href="#">3</a>
+                                <a class="pagination__link" href="#">4</a>
+                                <a class="pagination__link" href="#">5</a>
+                                <a class="pagination__right-arrow" href="#"></a>
                             </div>
                         </div>
-                        <form action="" class="form">
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input4">Сумма пополнения</label>
 
-                                <div class="form-input__width-icon">
-                                    <input id="text-input" class="form-input__input" type="number" name="form-input4" required placeholder="">
-
-                                    <div class="form-input__error">
-                                        Поле не заполнено
-                                    </div>
-                                    <div class="form-input__width-icon-icon">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                    </div>
+                        
                     </section>
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="container">
-                <div class="footer">
-                    <div class="footer__columns">
-                        <div
-                            class="footer__column footer-column footer-column__links"
-                        >
-                            <div class="footer-column__link">
-                                <a href="">Реквизиты</a>
-                            </div>
-                            <div class="footer-column__link">
-                                <a href="">Контакты</a>
-                            </div>
-                            <div class="footer-column__link">
-                                <a href="">Публичная оферта</a>
-                            </div>
-                            <div class="footer-column__link">
-                                <a href="">Помощь</a>
-                            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer__columns">
+                    <div
+                        class="footer__column footer-column footer-column__links"
+                    >
+                        <div class="footer-column__link">
+                            <a href="">Реквизиты</a>
                         </div>
-                        <div
-                            class="footer__column footer-column footer-column__contacts"
-                        >
-                            <div class="footer-column__contact">
-                                <a href="">+7 (723) 270 48 08</a>
-                            </div>
-                            <div class="footer-column__contact">
-                                <a href="">+7 (707) 470 48 08</a>
-                            </div>
-                            <div class="footer-column__contact">
-                                <a href="">info@stsl.kz</a>
-                            </div>
+                        <div class="footer-column__link">
+                            <a href="">Контакты</a>
                         </div>
-                        <div
-                            class="footer__column footer-column footer-column__infos"
-                        >
-                            <div class="footer-column__info">
-                                Товарищество с ограниченной ответственностью
-                                "1С-Рейтинг"
-                            </div>
-                            <div class="footer-column__info">
-                                Юридический адрес: 070004, г. Усть-Каменогорск,
-                                ул. Казахстан, д. 27
-                            </div>
-                            <div class="footer-column__info">
-                                БИН: 020640002269
-                            </div>
+                        <div class="footer-column__link">
+                            <a href="">Публичная оферта</a>
+                        </div>
+                        <div class="footer-column__link">
+                            <a href="">Помощь</a>
                         </div>
                     </div>
-                    <div class="footer__copyright">
-                        © Все права защищены. 1С-Рейтинг, 2022
+                    <div
+                        class="footer__column footer-column footer-column__contacts"
+                    >
+                        <div class="footer-column__contact">
+                            <a href="">+7 (723) 270 48 08</a>
+                        </div>
+                        <div class="footer-column__contact">
+                            <a href="">+7 (707) 470 48 08</a>
+                        </div>
+                        <div class="footer-column__contact">
+                            <a href="">info@stsl.kz</a>
+                        </div>
+                    </div>
+                    <div
+                        class="footer__column footer-column footer-column__infos"
+                    >
+                        <div class="footer-column__info">
+                            Товарищество с ограниченной ответственностью
+                            "1С-Рейтинг"
+                        </div>
+                        <div class="footer-column__info">
+                            Юридический адрес: 070004, г. Усть-Каменогорск,
+                            ул. Казахстан, д. 27
+                        </div>
+                        <div class="footer-column__info">
+                            БИН: 020640002269
+                        </div>
                     </div>
                 </div>
+                <div class="footer__copyright">
+                    © Все права защищены. 1С-Рейтинг, 2022
+                </div>
             </div>
-        </footer>
-        <script src="./script.js"></script>
-    </body>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
 </html>

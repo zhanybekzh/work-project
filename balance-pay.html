@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +8,7 @@
         <link rel="stylesheet" href="./markup/css/main.css" />
         <link rel="stylesheet" href="./markup/css/main.css.map" />
         <script src="./feather.min.js"></script>
-        <title>Мои сервисы</title>
+        <title>Баланс</title>
     </head>
 
     <body>
@@ -196,80 +197,61 @@
             </div>
         </header>
         <main>
+            <div class="page">
             <div class="container">
-                <div class="page">
-                    <h1 class="page__title mb-40">Мои Сервисы</h1>
-                    <div class="tabs">
-                        <div class="tabs-list">
-                            <a href="/my-services-history.html" class="tabs-list__tab tabs-list__tab_active">
-                                История подписки
-                            </a>
-                            <a href="/my-services-archive.html" class="tabs-list__tab">
-                                Архив подписок
-                            </a>
-                            <a
-                                href="/my-services.html"
-                                class="tabs-list__tab "
-                            >
-                                Активные подписки
-                            </a>
+
+                    <h1 class="page__title mb-40">Баланс</h1>
+                    <section class="balance-pay__section">
+                        <h3 class="mb-40"> Пополнение баланса</h3>
+                        <div class="alert-block">
+                            <div class="alert alert_warning mb-40">
+                                <p class="alert-heading">Внимание!</p>
+                                <p class="bold">
+                                    Средств на балансе профиля не достаточно для
+                                    следующего автоматического списания.
+                                </p>
+                                <p class="bold">Необходимо пополнить баланс на 60 000 тг.</p>
+                            </div>
                         </div>
-                        <div class="tabs__content my-services__tabs-content">
-                            <div class="my-services">
-                                <div class="my-services__item item">
-                                    <div class="item__image">
-                                        <img
-                                            src="../../assets/img/no-image-service.jpg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item__info">
-                                        <div class="item__title">
-                                            Дистанционный тренинг по основам
-                                            бухгалтерского учета
-                                        </div>
-                                        <div class="item__description">
-                                            <div class="item__price">
-                                                Стоимость:
-                                                <span class="">
-                                                    30 000 тг.
-                                                </span>
-                                            </div>
-                                            <div class="item__tarif">
-                                                Тариф:
-                                                <span> 3 месяца </span>
-                                            </div>
-                                        </div>
+                        <form action="" class="form">
+                            <div class="form-input">
+                                <label class="form-input__label" for="form-input4">Сумма пополнения</label>
 
-                                    </div>
-                                    <div class="item__buttons">
-                                        <a href="" class="button">
-                                            Возобновить
-                                        </a>
+                                <div class="form-input__with">
+                                    <input id="text-input" class="form-input__input" type="text" name="form-input4" required placeholder="">
 
+                                    <div class="form-input__error">
+                                        Поле не заполнено
+                                    </div>
+                                    <div class="form-input__with-icon form-input__with-tenge-icon">
                                     </div>
                                 </div>
                             </div>
-                            <div class="my-services__pagination-wrapper">
-                                <div class="pagination my-services__pagination">
-                                    <a class="pagination__left-arrow" href="#"></a>
-                                    <a class="pagination__link" href="#">1</a>
-                                    <a
-                                        class="pagination__link pagination__link_active"
-                                        href="#"
-                                        >2</a
-                                    >
-                                    <a class="pagination__link" href="#">3</a>
-                                    <a class="pagination__link" href="#">4</a>
-                                    <a class="pagination__link" href="#">5</a>
-                                    <a class="pagination__right-arrow" href="#"></a>
-                                </div>
+                            <div class="buttons">
+                                <button type="sumbit" class="button">
+                                    Оплата картой
+                                </button>
+                                <button type="button" class="button" disabled>
+                                    Счет на оплату
+                                </button>
                             </div>
+                            
+                        </form>
+                        <div class="alert-block">
+                            <div class="alert alert_warning mb-40">
+                                
+                                <p class="bold">
+                                    Оплата по Счету доступна только юридическим лицам.
 
+
+                                </p>
+                                <p ><span class="bold">Для получения счета</span> — <a href="">измените текущий</a> профиль на юридическое лицо.</p>
+                            </div>
                         </div>
-
-
-                    </div>
+                        <p>При пополнении Баланса с использованием платежных карт — зачисление денежных средств осуществляется моментально;
+                        </p>
+                        <p>При пополнении Баланса посредством банковского перевода срок зачисления денежных средств зависит от банка, может составлять до 3х рабочих дней.</p>
+                    </section>
                 </div>
             </div>
         </main>
@@ -329,18 +311,5 @@
             </div>
         </footer>
         <script src="./script.js"></script>
-        <script>
-            (() => {
-                const myServices = document.querySelector(".my-services");
-                const serviceItem =
-                    myServices.querySelector(".my-services__item");
-                const fragment = document.createDocumentFragment();
-                for (let i = 1; i < 3; i += 1) {
-                    fragment.appendChild(serviceItem.cloneNode(true));
-                }
-                myServices.appendChild(fragment);
-
-            })();
-        </script>
     </body>
 </html>

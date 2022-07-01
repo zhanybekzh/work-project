@@ -10,7 +10,8 @@
 }
 
 @mixin button($button-type: "button") {
-  @if ($button-type == "button") {
+  @if ($button-type =="button") {
+    width:fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,12 +28,15 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     user-select: none;
+
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }
+
     @media (min-width: 540px) {
       min-width: $button-min-width;
     }
+
     &:hover {
       color: $button-hover-color;
       text-decoration: $text-decoration-none;
@@ -69,7 +73,7 @@
     }
   }
 
-  @if ($button-type == "red") {
+  @if ($button-type =="red") {
     @include button("button");
     color: $button-red-color;
     background-color: $button-red-background-color;
@@ -99,7 +103,7 @@
     }
   }
 
-  @if ($button-type == "outline") {
+  @if ($button-type =="outline") {
     @include button("button");
 
     color: $button-outline-color;
@@ -118,6 +122,7 @@
       color: $button-outline-active-color;
       background-color: $button-outline-active-background-color;
       border-color: $button-outline-active-border-color;
+
       &:hover {
         color: $button-outline-hover-color;
         background-color: $color-green-500;
@@ -126,7 +131,7 @@
     }
   }
 
-  @if ($button-type == "square") {
+  @if ($button-type =="square") {
     &_plus {
       @include button("outline");
       @include button-square-form();
@@ -169,6 +174,7 @@
   ul {
     padding-left: 0;
   }
+
   &-radio {
     margin-bottom: 10px;
     list-style: none;
@@ -176,17 +182,16 @@
     input[type="radio"] {
       display: none;
 
-      &:checked + label::before {
-        background: url("../../assets/icons/custom/radio-button_active.svg")
-          center no-repeat;
+      &:checked+label::before {
+        background: url("../../assets/icons/custom/radio-button_active.svg") center no-repeat;
       }
 
       &:disabled {
-        & + label {
+        &+label {
           cursor: default;
         }
 
-        & + label::before {
+        &+label::before {
           background: none;
           cursor: default;
           border: 1px solid $color-gray-300;
@@ -208,8 +213,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: url("../../assets/icons/custom/radio-button.svg") center
-          no-repeat;
+        background: url("../../assets/icons/custom/radio-button.svg") center no-repeat;
       }
     }
   }
@@ -221,17 +225,16 @@
     input[type="checkbox"] {
       display: none;
 
-      &:checked + label::before {
-        background: url("../../assets/icons/custom/checkbox-button_active.svg")
-          center no-repeat;
+      &:checked+label::before {
+        background: url("../../assets/icons/custom/checkbox-button_active.svg") center no-repeat;
       }
 
       &:disabled {
-        & + label {
+        &+label {
           cursor: default;
         }
 
-        & + label::before {
+        &+label::before {
           background: none;
           cursor: default;
           border: 1px solid $color-gray-300;
@@ -253,22 +256,24 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: url("../../assets/icons/custom/checkbox-button.svg") center
-          no-repeat;
+        background: url("../../assets/icons/custom/checkbox-button.svg") center no-repeat;
       }
     }
   }
+
   fieldset {
     border: 1px solid $color-gray-300;
     border-radius: 5px;
     padding: 10px;
   }
+
   &-input {
     &__label {
       display: block;
       padding-bottom: 0.3rem;
       color: $color-gray-400;
     }
+
     &__input {
       min-height: 45px;
       display: block;
@@ -279,27 +284,33 @@
       outline: 0;
       transition: border-color 0.15s ease-in-out;
       background-color: $color-white;
-      & ~ .form-input__error {
+
+      &~.form-input__error {
         display: none;
       }
+
       &::placeholder {
         color: $color-gray-300;
       }
+
       &:focus {
         outline: 0;
         border-color: $color-black-text;
         box-shadow: 0px 5px 15px rgba(76, 86, 86, 0.2);
-        & ~ .form-input__password-icon {
+        &~.form-input__with-icon {
           border-color: $color-black-text;
+        }
+        &~.form-input__password-icon {
+          border-color: $color-black-text;
+
           &::after {
-            background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E")
-              0 0 no-repeat;
+            background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E") 0 0 no-repeat;
             background-size: cover;
           }
+
           &.view {
             &::after {
-              background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye-off%22%3E%3Cpath%20d%3D%22M17.94%2017.94A10.07%2010.07%200%200%201%2012%2020c-7%200-11-8-11-8a18.45%2018.45%200%200%201%205.06-5.94M9.9%204.24A9.12%209.12%200%200%201%2012%204c7%200%2011%208%2011%208a18.5%2018.5%200%200%201-2.16%203.19m-6.72-1.07a3%203%200%201%201-4.24-4.24%22%3E%3C%2Fpath%3E%3Cline%20x1%3D%221%22%20y1%3D%221%22%20x2%3D%2223%22%20y2%3D%2223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E")
-                0 0 no-repeat;
+              background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye-off%22%3E%3Cpath%20d%3D%22M17.94%2017.94A10.07%2010.07%200%200%201%2012%2020c-7%200-11-8-11-8a18.45%2018.45%200%200%201%205.06-5.94M9.9%204.24A9.12%209.12%200%200%201%2012%204c7%200%2011%208%2011%208a18.5%2018.5%200%200%201-2.16%203.19m-6.72-1.07a3%203%200%201%201-4.24-4.24%22%3E%3C%2Fpath%3E%3Cline%20x1%3D%221%22%20y1%3D%221%22%20x2%3D%2223%22%20y2%3D%2223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E") 0 0 no-repeat;
               background-size: cover;
             }
           }
@@ -314,7 +325,8 @@
         border-color: $color-red;
         position: relative;
         z-index: 2;
-        & ~ .form-input__error {
+
+        &~.form-input__error {
           display: flex;
           padding: 0.5rem 0.8rem;
           align-items: center;
@@ -328,17 +340,21 @@
           background-color: $color-red;
           transform: translateY(-4px);
         }
-        & ~ .form-input__password-icon {
+
+        &~.form-input__password-icon {
           border-color: $color-red;
         }
+
         &:focus {
           box-shadow: none;
           border-color: $color-red;
         }
       }
     }
+
     &__password {
       position: relative;
+
       &-icon {
         cursor: pointer;
         position: absolute;
@@ -364,10 +380,10 @@
           top: 50%;
           transform: translateY(-50%);
           right: 11px;
-          background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E")
-            0 0 no-repeat;
+          background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E") 0 0 no-repeat;
           background-size: cover;
         }
+
         &.view {
           &::after {
             content: "";
@@ -379,15 +395,16 @@
             transform: translateY(-50%);
             right: 11px;
 
-            background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye-off%22%3E%3Cpath%20d%3D%22M17.94%2017.94A10.07%2010.07%200%200%201%2012%2020c-7%200-11-8-11-8a18.45%2018.45%200%200%201%205.06-5.94M9.9%204.24A9.12%209.12%200%200%201%2012%204c7%200%2011%208%2011%208a18.5%2018.5%200%200%201-2.16%203.19m-6.72-1.07a3%203%200%201%201-4.24-4.24%22%3E%3C%2Fpath%3E%3Cline%20x1%3D%221%22%20y1%3D%221%22%20x2%3D%2223%22%20y2%3D%2223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E")
-              0 0 no-repeat;
+            background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye-off%22%3E%3Cpath%20d%3D%22M17.94%2017.94A10.07%2010.07%200%200%201%2012%2020c-7%200-11-8-11-8a18.45%2018.45%200%200%201%205.06-5.94M9.9%204.24A9.12%209.12%200%200%201%2012%204c7%200%2011%208%2011%208a18.5%2018.5%200%200%201-2.16%203.19m-6.72-1.07a3%203%200%201%201-4.24-4.24%22%3E%3C%2Fpath%3E%3Cline%20x1%3D%221%22%20y1%3D%221%22%20x2%3D%2223%22%20y2%3D%2223%22%3E%3C%2Fline%3E%3C%2Fsvg%3E") 0 0 no-repeat;
             background-size: cover;
           }
         }
       }
     }
-    &__with-icon {
+
+    &__with {
       position: relative;
+
       &-icon {
         cursor: pointer;
         position: absolute;
@@ -407,109 +424,121 @@
         &::after {
           content: "";
           display: block;
-          width: 20px;
-          height: 20px;
           position: absolute;
+          left:50%;
           top: 50%;
-          transform: translateY(-50%);
-          right: 11px;
-          background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-eye%22%3E%3Cpath%20d%3D%22M1%2012s4-8%2011-8%2011%208%2011%208-4%208-11%208-11-8-11-8z%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%223%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E")
-            0 0 no-repeat;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &-tenge-icon {
+        &::after {
+          width: 12px;
+          height: 12px;
+          background: url('../../assets/icons/custom/tenge.svg') 0 0 no-repeat;
           background-size: cover;
         }
       }
     }
-  }
 
-  &-select {
-    label {
-      display: block;
-      padding-bottom: 0.3rem;
-      color: $color-gray-400;
-    }
-    &__select {
-      position: relative;
-      appearance: none;
-      background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
-        right 9px bottom 10px no-repeat;
-      display: block;
-      border-radius: 5px;
-      border: 1px solid $color-gray-300;
-      padding: 0.5rem 0.8rem;
-      width: 100%;
-      outline: 0;
-      transition: border-color 0.15s ease-in-out;
-      background-color: $color-white;
-      &:focus {
-        border-color: $color-black-text;
-        background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
-          right 9px bottom 10px no-repeat;
+    &-select {
+      label {
+        display: block;
+        padding-bottom: 0.3rem;
+        color: $color-gray-400;
+      }
+
+      &__select {
+        position: relative;
+        appearance: none;
+        background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
+        display: block;
+        border-radius: 5px;
+        border: 1px solid $color-gray-300;
+        padding: 0.5rem 0.8rem;
+        width: 100%;
+        outline: 0;
+        transition: border-color 0.15s ease-in-out;
+        background-color: $color-white;
+
+        &:focus {
+          border-color: $color-black-text;
+          background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
+        }
       }
     }
   }
 }
+
 @mixin alert() {
   display: block;
   min-height: 135px;
   padding: 20px;
   color: $color-black-text;
+
   @media (min-width: 540px) {
     padding: 2rem;
   }
-  & > p {
+
+  &>p {
     line-height: 1.2;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   &-heading {
     position: relative;
     padding-left: 40px;
     font-weight: bold;
   }
+
   &_success {
     background-color: $color-green-100;
+
     .alert-heading::before {
       content: "";
       display: block;
       position: absolute;
       width: 30px;
       height: 30px;
-      background: url("../../assets/icons/feather/alert-octagon.svg") center
-        no-repeat;
+      background: url("../../assets/icons/feather/alert-octagon.svg") center no-repeat;
       background-size: cover;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
     }
   }
+
   &_warning {
     background-color: $color-yellow;
+
     .alert-heading::before {
       content: "";
       display: block;
       position: absolute;
       width: 30px;
       height: 30px;
-      background: url("../../assets/icons/feather/alert-octagon.svg") center
-        no-repeat;
+      background: url("../../assets/icons/feather/alert-octagon.svg") center no-repeat;
       background-size: cover;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
     }
   }
+
   &_error {
     background-color: $color-red;
     color: $color-white;
+
     .alert-heading::before {
       content: "";
       display: block;
       position: absolute;
       width: 30px;
       height: 30px;
-      background: url("../../assets/icons/custom/alert-octagon_white.svg")
-        center no-repeat;
+      background: url("../../assets/icons/custom/alert-octagon_white.svg") center no-repeat;
       background-size: cover;
       left: 0;
       top: 50%;
@@ -518,23 +547,28 @@
     }
   }
 }
+
 @mixin shadow() {
   box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
 }
+
 @mixin link-green() {
   color: $color-green-300;
   text-decoration: none;
+
   &:hover {
     color: $color-green-500;
   }
 }
+
 @mixin mb($range) {
   margin-bottom: #{$range}px;
 }
+
 @mixin mt($range) {
   margin-top: #{$range}px;
 }
+
 @mixin icon-text($feature-icon) {
-  background: url("../../assets/icons/feather/#{$feature-icon}.svg") center
-    no-repeat;
+  background: url("../../assets/icons/feather/#{$feature-icon}.svg") center no-repeat;
 }

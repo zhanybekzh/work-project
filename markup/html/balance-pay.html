@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Баланс</title>
+    </head>
+
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="page">
+            <div class="container">
+
+                    <h1 class="page__title mb-40">Баланс</h1>
+                    <section class="balance-pay__section">
+                        <h3 class="mb-40"> Пополнение баланса</h3>
+                        <div class="alert-block">
+                            <div class="alert alert_warning mb-40">
+                                <p class="alert-heading">Внимание!</p>
+                                <p class="bold">
+                                    Средств на балансе профиля не достаточно для
+                                    следующего автоматического списания.
+                                </p>
+                                <p class="bold">Необходимо пополнить баланс на 60 000 тг.</p>
+                            </div>
+                        </div>
+                        <form action="" class="form">
+                            <div class="form-input">
+                                <label class="form-input__label" for="form-input4">Сумма пополнения</label>
+
+                                <div class="form-input__with">
+                                    <input id="text-input" class="form-input__input" type="text" name="form-input4" required placeholder="">
+
+                                    <div class="form-input__error">
+                                        Поле не заполнено
+                                    </div>
+                                    <div class="form-input__with-icon form-input__with-tenge-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button type="sumbit" class="button">
+                                    Оплата картой
+                                </button>
+                                <button type="button" class="button" disabled>
+                                    Счет на оплату
+                                </button>
+                            </div>
+                            
+                        </form>
+                        <div class="alert-block">
+                            <div class="alert alert_warning mb-40">
+                                
+                                <p class="bold">
+                                    Оплата по Счету доступна только юридическим лицам.
+
+
+                                </p>
+                                <p ><span class="bold">Для получения счета</span> — <a href="">измените текущий</a> профиль на юридическое лицо.</p>
+                            </div>
+                        </div>
+                        <p>При пополнении Баланса с использованием платежных карт — зачисление денежных средств осуществляется моментально;
+                        </p>
+                        <p>При пополнении Баланса посредством банковского перевода срок зачисления денежных средств зависит от банка, может составлять до 3х рабочих дней.</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
+</html>
