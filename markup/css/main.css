@@ -1114,12 +1114,13 @@ progress {
   border-width: 0;
 }
 
-.table-striped > tbody > tr:not(.group):nth-of-type(odd) > td {
+.table-striped > tbody > tr:not(.group):nth-child(odd) > td {
   color: #2a2f30;
   background-color: #f8f8f8;
 }
 .table-striped > tbody th {
   background-color: #d8f2ef;
+  vertical-align: middle;
 }
 .table-striped > tbody th p {
   margin: 0;

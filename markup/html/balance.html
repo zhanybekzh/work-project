@@ -1,145 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Баланс</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./markup/css/main.css" />
-    <link rel="stylesheet" href="./markup/css/main.css.map" />
-    <script src="./feather.min.js"></script>
-    <title>Баланс</title>
-</head>
-
-<body>
-    //= ./templates/header.html
-    <main>
-        <div class="page">
-            <div class="container">
-                <div class="balance">
-                    <h1 class="page__title mb-40">Баланс</h1>
-                    <section class="section balance__section">
-                        <div class="balance__value">
-                            Баланс: <span><span>60 000</span>тг</span>
-                        </div>
-                        <div class="buttons">
-                            <a href="./balance-pay.html" class="button">
-                                Пополнить
-                            </a>
-                            <a href="./balance-pay.html" class="button-outline">
-                                Возврат средств
-                            </a>
-                        </div>
-                    </section>
-                    <section class="section section-tabs tabs">
-                        <div class="tabs-list">
-                            <a class="tabs-list__tab tabs-list__tab_active">
-                                Начисление по сервисам
-                            </a>
-                            <a class="tabs-list__tab">
-                                История платежей
-                            </a>
-                        </div>
-                        <div class="tabs-content">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-borderless table-hover">    
-                                    <thead>
-                                        <tr>
-                                            <td style="width:70px;">
-                                                №,
-п/п
-                                            </td>
-                                            <td>Наименование сервиса /
-                                                тарифа</td>
-                                            <td>Начислено</td>
-                                            <td>Период
-                                                представления</td>
-                                            <td>Оплачено</td>
-                                            <td>К списанию</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="group">
-                                            <th colspan="2">
-                                                <p>Февраль 2022</p>
-                                                <span>Начисление оплаты №000001014</span>
-                                            </th>
-                                            <th>55 000 тг</th>
-                                            <th></th>
-                                            <th>30 000 тг</th>
-                                            <th>25 000 тг</th>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Курс для перепубликации / Доступ на 3 месяца</td>
-                                            <td>25 000 тг</td>
-                                            <td>16.02.2022 – 16.02.2022</td>
-                                            <td>30 000 тг</td>
-                                            <td>-</td>
-                                        </tr>
-                                        <tr>
-                                        <td>2</td>
-                                        <td>Перепубликации / Доступ на 3 месяца</td>
-                                        <td>25 000 тг</td>
-                                        <td>16.02.2022 – 16.02.2022</td>
-                                        <td>_</td>
-                                        <td>25 000 тг</td>
-                                    </tr>
-                                    <tr class="group">
-                                        <th colspan="2">
-                                            <p>Март 2022</p>
-                                            <p>Начисление оплаты №000001014</p>
-                                        </th>
-                                        <th>130 000 тг</th>
-                                        <th></th>
-                                        <th>30 000 тг</th>
-                                        <th>25 000 тг</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Перепубликации / Доступ на 3 месяца</td>
-                                        <td>25 000 тг</td>
-                                        <td>16.02.2022 – 16.02.2022</td>
-                                        <td>-</td>
-                                        <td>25 000 тг</td>
-                                    </tr>
-                                    <tr>
-                                    <td>2</td>
-                                    <td>Перепубликации / Доступ на 3 месяца</td>
-                                    <td>25 000 тг</td>
-                                    <td>16.02.2022 – 16.02.2022</td>
-                                    <td>_</td>
-                                    <td>25 000 тг</td>
-                                </tr>
-                                    </tbody>
-                                </table>
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="page">
+                <div class="container">
+                    <div class="balance">
+                        <h1 class="page__title mb-40">Баланс</h1>
+                        <section class="section balance__section">
+                            <div class="balance__value">
+                                Баланс: <span><span>60 000</span>тг</span>
                             </div>
-                            <div class="pagination-wrapper " >
-                                
-                            <div class="pagination">
-                                <a class="pagination__left-arrow" href="#"></a>
-                                <a class="pagination__link" href="#">1</a>
+                            <div class="buttons">
+                                <a href="./balance-pay.html" class="button">
+                                    Пополнить
+                                </a>
                                 <a
-                                    class="pagination__link pagination__link_active"
-                                    href="#"
-                                    >2</a
+                                    href="./balance-pay.html"
+                                    class="button-outline"
                                 >
-                                <a class="pagination__link" href="#">3</a>
-                                <a class="pagination__link" href="#">4</a>
-                                <a class="pagination__link" href="#">5</a>
-                                <a class="pagination__right-arrow" href="#"></a>
+                                    Возврат средств
+                                </a>
                             </div>
-                        </div>
-
+                        </section>
+                        <section class="section section-tabs tabs">
+                            <div class="tabs-list">
+                                <a class="tabs-list__tab tabs-list__tab_active">
+                                    Начисление по сервисам
+                                </a>
+                                <a class="tabs-list__tab"> История платежей </a>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="form-input">
+                                    <label for="date">Выберите период</label> <br>
+                                    <input class="form-input__date" id="date" type="date" style="padding:10px;width:200px;border-radius:10px;"/>
+                                </div>
+                                <div class="table-responsive">
+                                    <table
+                                        class="table table-striped table-borderless"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <td style="width: 70px">
+                                                    №, п/п
+                                                </td>
+                                                <td>
+                                                    Наименование сервиса /
+                                                    тарифа
+                                                </td>
+                                                <td>Начислено</td>
+                                                <td>Период представления</td>
+                                                <td>Оплачено</td>
+                                                <td>К списанию</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="group">
+                                                <th colspan="2">
+                                                    <p>Февраль 2022</p>
+                                                    <span
+                                                        >Начисление оплаты
+                                                        №000001014</span
+                                                    >
+                                                </th>
+                                                <th>55 000 тг</th>
+                                                <th></th>
+                                                <th>30 000 тг</th>
+                                                <th>25 000 тг</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Курс для перепубликации /
+                                                    Доступ на 3 месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>30 000 тг</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>_</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr class="group">
+                                                <th colspan="2">
+                                                    <p>Март 2022</p>
+                                                    <p>
+                                                        Начисление оплаты
+                                                        №000001014
+                                                    </p>
+                                                </th>
+                                                <th>130 000 тг</th>
+                                                <th></th>
+                                                <th>30 000 тг</th>
+                                                <th>25 000 тг</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>-</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>_</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>_</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>_</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    Перепубликации / Доступ на 3
+                                                    месяца
+                                                </td>
+                                                <td>25 000 тг</td>
+                                                <td>16.02.2022 – 16.02.2022</td>
+                                                <td>_</td>
+                                                <td>25 000 тг</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="pagination-wrapper">
+                                    <div class="pagination">
+                                        <a
+                                            class="pagination__left-arrow"
+                                            href="#"
+                                        ></a>
+                                        <a class="pagination__link" href="#"
+                                            >1</a
+                                        >
+                                        <a
+                                            class="pagination__link pagination__link_active"
+                                            href="#"
+                                            >2</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >3</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >4</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >5</a
+                                        >
+                                        <a
+                                            class="pagination__right-arrow"
+                                            href="#"
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                        
-                    </section>
                 </div>
             </div>
-        </div>
-    </main>
-    //= ./templates/footer.html
-    <script src="./script.js"></script>
-</body>
-
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
 </html>

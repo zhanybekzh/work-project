@@ -23,6 +23,7 @@
     vertical-align: bottom;
      td, th {
       color:$color-gray-400;
+
     }
     > tr > * {
       vertical-align: middle;
@@ -48,12 +49,15 @@
 }
 
 .table-striped {
-  > tbody > tr:not(.group):nth-of-type(odd) > td { // sass-lint:disable-line force-pseudo-nesting
+  > tbody > tr:not(.group):nth-child(odd) > td { // sass-lint:disable-line force-pseudo-nesting
     color: $table-striped-color;
     background-color: $table-striped-background;
+
   }
+
   >tbody th {
     background-color: $color-green-100;
+    vertical-align: middle;
     p {
       margin: 0;
     }
