@@ -1,5 +1,6 @@
 .table {
   width: 100%;
+  min-width: max-content;
   margin-bottom: $spacer;
   color: $table-color;
   vertical-align: $table-cell-vertical-align;
