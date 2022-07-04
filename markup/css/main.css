@@ -1114,7 +1114,7 @@ progress {
   border-width: 0;
 }
 
-.table-striped > tbody > tr:not(.group):nth-child(odd) > td {
+.table-striped > tbody > tr:not(.group):nth-child(even) > td {
   color: #2a2f30;
   background-color: #f8f8f8;
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./markup/css/main.css" />
+        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <script src="./feather.min.js"></script>
+        <title>Баланс</title>
+    </head>
+
+    <body>
+        //= ./templates/header.html
+        <main>
+            <div class="page">
+                <div class="container">
+                    <div class="balance">
+                        <h1 class="page__title mb-40">Баланс</h1>
+                        <section class="section balance__section">
+                            <div class="balance__value">
+                                Баланс: <span><span>60 000</span>тг</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="./balance-pay.html" class="button">
+                                    Пополнить
+                                </a>
+                                <a
+                                    href="./balance-pay.html"
+                                    class="button-outline"
+                                >
+                                    Возврат средств
+                                </a>
+                            </div>
+                        </section>
+                        <section class="section section-tabs tabs">
+                            <div class="tabs-list">
+                                <a href="/balance.html" class="tabs-list__tab ">
+                                    Начисление по сервисам
+                                </a>
+                                <a href="/pay-history.html" class="tabs-list__tab_active tabs-list__tab"> История платежей </a>
+                            </div>
+                            <div class="tabs-content">
+                                
+                                <div class="table-responsive">
+                                    <table
+                                        class="table table-striped table-borderless"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <td></td>
+                                                <td>Наименование</td>
+                                                <td>Дата</td>
+                                                <td>Сумма</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+                                             
+                                            </tr>
+                                            
+                                        </tbody>
+                                       
+                                    </table>
+                                </div>
+                                <div class="pagination-wrapper">
+                                    <div class="pagination">
+                                        <a
+                                            class="pagination__left-arrow"
+                                            href="#"
+                                        ></a>
+                                        <a class="pagination__link" href="#"
+                                            >1</a
+                                        >
+                                        <a
+                                            class="pagination__link pagination__link_active"
+                                            href="#"
+                                            >2</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >3</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >4</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >5</a
+                                        >
+                                        <a
+                                            class="pagination__right-arrow"
+                                            href="#"
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        //= ./templates/footer.html
+        <script src="./script.js"></script>
+    </body>
+</html>

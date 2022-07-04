@@ -49,7 +49,7 @@
 }
 
 .table-striped {
-  > tbody > tr:not(.group):nth-child(odd) > td { // sass-lint:disable-line force-pseudo-nesting
+  > tbody > tr:not(.group):nth-child(even) > td { // sass-lint:disable-line force-pseudo-nesting
     color: $table-striped-color;
     background-color: $table-striped-background;
 
