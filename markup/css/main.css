@@ -1151,13 +1151,14 @@ progress {
   border-width: 0 1px;
 }
 .table > tbody {
-  vertical-align: inherit;
+  vertical-align: middle;
 }
 .table > thead {
   vertical-align: bottom;
 }
 .table > thead td, .table > thead th {
   color: #626b6d;
+  border-bottom: 1px solid #c6c9cb;
 }
 .table > thead > tr > * {
   vertical-align: middle;
@@ -1278,7 +1279,7 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #00898d;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #00898d;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1350,7 +1351,7 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #dc3747;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #dc3747;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1424,9 +1425,9 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #00898d;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #00898d;
-  min-width: unset;
+  min-width: unset !important;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -1510,9 +1511,9 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #dc3747;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #dc3747;
-  min-width: unset;
+  min-width: unset !important;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -1716,7 +1717,7 @@ body footer::after {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #00898d;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #00898d;
   border: #fff;
   min-width: fit-content !important;
@@ -2179,6 +2180,16 @@ header.unauthorized .header {
   height: 18px;
 }
 
+.icon-44 {
+  width: 44px;
+  height: 44spx;
+}
+
+.icon-55 {
+  width: 55px;
+  height: 55px;
+}
+
 .header-balance {
   min-height: 70px;
   display: flex;
@@ -2216,7 +2227,7 @@ header.unauthorized .header {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #00898d;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #00898d;
   display: flex;
   justify-content: center;
@@ -2706,12 +2717,12 @@ header.unauthorized .header {
   background: url("../../assets/icons/custom/tenge.svg") 0 0 no-repeat;
   background-size: cover;
 }
-.form-input-select label {
+.form-select label {
   display: block;
   padding-bottom: 0.3rem;
   color: #626b6d;
 }
-.form-input-select__select {
+.form-select__select {
   position: relative;
   appearance: none;
   background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
@@ -2724,7 +2735,7 @@ header.unauthorized .header {
   transition: border-color 0.15s ease-in-out;
   background-color: #fff;
 }
-.form-input-select__select:focus {
+.form-select__select:focus {
   border-color: #2a2f30;
   background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
 }
@@ -2733,6 +2744,10 @@ header.unauthorized .header {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+.pagination-wrapper-right {
+  display: flex;
+  justify-content: end;
 }
 .pagination__left-arrow, .pagination__right-arrow {
   display: block;
@@ -2918,7 +2933,7 @@ header.unauthorized .header {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     user-select: none;
     color: #00898d;
-    background-color: #fff;
+    background-color: transparent;
     border-color: #00898d;
     min-width: 100px !important;
   }
@@ -3031,7 +3046,7 @@ header.unauthorized .header {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   user-select: none;
   color: #00898d;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #00898d;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3724,5 +3739,139 @@ header.unauthorized .header {
 
 .gray-100 {
   color: #f8f8f8;
+}
+
+.profiles__name {
+  color: #004f56;
+  font-weight: 700;
+}
+.profiles__info {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f3f3f3;
+}
+.profiles__info .profiles__type,
+.profiles__info .profiles__bin {
+  color: #626b6d;
+}
+.profiles__info .profiles__type span,
+.profiles__info .profiles__bin span {
+  font-weight: 700;
+}
+.profiles__buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.profiles__buttons .button,
+.profiles__buttons .button-outline {
+  width: 10.625rem;
+}
+.profiles__form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.profiles__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.profiles__list .profiles__item {
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 50px;
+  align-items: center;
+}
+@media (min-width: 540px) {
+  .profiles__list .profiles__item {
+    padding: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .profiles__list .profiles__item {
+    flex-direction: row;
+  }
+}
+.profiles__list .profiles__item .item__title {
+  margin-bottom: 20px;
+}
+.profiles__list .profiles__item .item__image {
+  background-color: #d8f2ef;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 120px;
+}
+.profiles__list .profiles__item .item__descriptions {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.profiles__list .profiles__item .item__descriptions .item__description {
+  color: #626b6d;
+}
+.profiles__list .profiles__item .item__descriptions .item__description span {
+  font-weight: 700;
+}
+.profiles__list .profiles__item .item__buttons .button,
+.profiles__list .profiles__item .item__buttons .button-red {
+  width: 10.625rem;
+}
+@media (min-width: 992px) {
+  .profiles__list .profiles__item .item__buttons {
+    margin-left: auto;
+  }
+}
+.profiles__dropdown {
+  position: relative;
+}
+.profiles__dropdown-button {
+  border: none;
+  background-color: unset;
+  padding: 0;
+  margin: 0;
+  padding-right: 20px;
+  position: relative;
+}
+.profiles__dropdown-button::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: center url("../../assets/icons/feather/chevron-down.svg") no-repeat;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.profiles__dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  top: calc(100% + 10px);
+  align-items: baseline;
+  background-color: #fff;
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+}
+.profiles__dropdown-menu button {
+  background-color: transparent;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+}
+.profiles__dropdown-menu button:hover {
+  background-color: #00898d;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

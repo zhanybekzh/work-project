@@ -17,14 +17,14 @@
   }
 
   > tbody {
-    vertical-align: inherit;
+    vertical-align: middle;
   }
 
   > thead {
     vertical-align: bottom;
      td, th {
       color:$color-gray-400;
-
+      border-bottom: 1px solid $color-gray-300;
     }
     > tr > * {
       vertical-align: middle;

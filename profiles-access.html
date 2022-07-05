@@ -201,19 +201,19 @@
                     <h1 class="page__title mb-40">Профили</h1>
                     <div class="tabs">
                         <div class="tabs-list">
-                            <a
-                            href="/profiles.html"
-                            class="tabs-list__tab tabs-list__tab_active"
-                        >
-                            Реквизиты
-                        </a>
+                            <a href="/profiles.html" class="tabs-list__tab">
+                                Реквизиты
+                            </a>
                             <a
                                 href="/profiles-bills.html"
                                 class="tabs-list__tab"
                             >
                                 Расчётные счета
                             </a>
-                            <a href="/profiles-access.html" class="tabs-list__tab">
+                            <a
+                                href="/profiles-access.html"
+                                class="tabs-list__tab tabs-list__tab_active"
+                            >
                                 Доступ к профилю
                             </a>
                         </div>
@@ -226,88 +226,142 @@
                                     Тип профиля:
                                     <span>Юридическое лицо/ИП</span>
                                 </div>
-                                <div class="profiles__bin">
-                                    БИН/ИИН: <span>0000 0000 0000 KZ</span>
-                                </div>
                             </div>
-                            <form action="" class="form mt-30 profiles__form">
-                                <div class="form-input">
-                                    <label
-                                        class="form-input__label"
-                                        for="form-input1"
-                                        >БИН/ИИН*</label
-                                    >
-                                    <input
-                                        class="form-input__input"
-                                        type="text"
-                                        name=""
-                                        id="form-input1"
-                                        placeholder="0000 0000 0000 KZ"
-                                    />
-                                    <div class="form-input__error">
-                                        Поле не заполнено
-                                    </div>
-                                </div>
-
-                                <div class="form-input">
-                                    <label
-                                        class="form-input__label"
-                                        for="form-input1"
-                                        >Полное наименование*</label
-                                    >
-                                    <input
-                                        class="form-input__input"
-                                        type="text"
-                                        name=""
-                                        id="form-input1"
-                                        placeholder="Полное наименование"
-                                    />
-                                    <div class="form-input__error">
-                                        Поле не заполнено
-                                    </div>
-                                </div>
-
-                                <div class="form-select">
-                                    <label class="form-text__label" for=""
-                                        >Номер счёта*</label
-                                    >
-                                    <select
-                                        class="form-select__select"
-                                        type=""
-                                        name=""
-                                        id=""
-                                    >
-                                        <option value="" disabled selected>
-                                            1
-                                        </option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                    </select>
-                                </div>
-                                <div class="form-input">
-                                    <label
-                                        class="form-input__label"
-                                        for="form-input1"
-                                        >Адрес электронной почты</label
-                                    >
-                                    <input
-                                        class="form-input__input"
-                                        type="text"
-                                        name=""
-                                        id="form-input1"
-                                        placeholder="example@mail.com"
-                                    />
-                                    <div class="form-input__error">
-                                        Поле не заполнено
-                                    </div>
-                                </div>
-                                <div class="profiles__buttons mt-10">
-                                    <a href="" class="button">Сохранить</a>
-                                    <a href="" class="button-outline"
-                                        >Отменить</a
-                                    >
-                                </div>
-                            </form>
+                            <a href="" class="button mt-50 mb-20"
+                                >Добавить пользователя</a
+                            >
+                            <div class="table-responsive">
+                                <table
+                                    class="table table-borderless table-striped"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <td>Имя пользователя</td>
+                                            <td>Номер телефона</td>
+                                            <td>Уровень доступа</td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ТОО “Название предприятия”</td>
+                                            <td>+7 777 777 77 77</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Иван Иванов</td>
+                                            <td>+7 777 888 88 88</td>
+                                            <td>
+                                                <div class="profiles__dropdown">
+                                                    <button
+                                                        class="profiles__dropdown-button"
+                                                        type="button"
+                                                    >
+                                                        Владелец профиля
+                                                    </button>
+                                                    <div
+                                                        class="profiles__dropdown-menu"
+                                                    >
+                                                        <button
+                                                            type="button"
+                                                            name="PROFILE_USERS_LIST "
+                                                        >
+                                                            Владелец профиля
+                                                        </button>
+                                                        <button
+                                                            type="submit"
+                                                            name="PROFILE_USERS_LIST"
+                                                        >
+                                                            Уполномоченный
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a
+                                                    href=""
+                                                    class="button-square_cancel"
+                                                ></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Константиновский Роман</td>
+                                            <td>+7 777 999 99 99</td>
+                                            <td>
+                                                <div class="profiles__dropdown">
+                                                    <button
+                                                        class="profiles__dropdown-button"
+                                                        type="button"
+                                                    >
+                                                        Уполномоченный
+                                                    </button>
+                                                    <div
+                                                        class="profiles__dropdown-menu"
+                                                        style="display: none"
+                                                    >
+                                                        <button
+                                                            type="button"
+                                                            name="PROFILE_USERS_LIST"
+                                                        >
+                                                            Владелец профиля
+                                                        </button>
+                                                        <button
+                                                            type="submit"
+                                                            name="PROFILE_USERS_LIST"
+                                                        >
+                                                            Уполномоченный
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a
+                                                    href=""
+                                                    class="button-square_cancel"
+                                                ></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Федеров Петр</td>
+                                            <td>+7 777 000 00 00</td>
+                                            <td>
+                                                <div class="profiles__dropdown">
+                                                    <button
+                                                        class="profiles__dropdown-button"
+                                                        type="button"
+                                                    >
+                                                        Уполномоченный
+                                                    </button>
+                                                    <div
+                                                        class="profiles__dropdown-menu"
+                                                        style="display: none"
+                                                    >
+                                                        <button
+                                                            type="button"
+                                                            name="PROFILE_USERS_LIST"
+                                                        >
+                                                            Владелец профиля
+                                                        </button>
+                                                        <button
+                                                            type="submit"
+                                                            name="PROFILE_USERS_LIST"
+                                                        >
+                                                            Уполномоченный
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a
+                                                    href=""
+                                                    class="button-square_cancel"
+                                                ></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -369,5 +423,6 @@
             </div>
         </footer>
         <script src="./script.js"></script>
+
     </body>
 </html>

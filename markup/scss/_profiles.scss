@@ -1,0 +1,131 @@
+.profiles {
+  &__name {
+    color: $color-green-500;
+    font-weight: 700;
+  }
+  &__info {
+    padding-bottom: 30px;
+    border-bottom: 2px solid $color-gray-200;
+    .profiles__type,
+    .profiles__bin {
+      color: $color-gray-400;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .button,
+    .button-outline {
+      width: $button-min-width;
+    }
+  }
+  &__form {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    .profiles__item {
+      @include shadow();
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 50px;
+      align-items: center;
+
+      @media (min-width: 540px) {
+        padding: 40px;
+      }
+      @media (min-width: 992px) {
+        flex-direction: row;
+      }
+      .item__title {
+        margin-bottom: 20px;
+      }
+      .item__image {
+        background-color: $color-green-100;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 120px;
+      }
+      .item__descriptions {
+        display: flex;
+        gap: 20px;
+
+        flex-direction: column;
+        .item__description {
+          color: $color-gray-400;
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+      .item__buttons {
+        .button,
+        .button-red {
+          width: $button-min-width;
+        }
+        @media (min-width: 992px) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  &__dropdown {
+      position: relative;
+    &-button {
+      border: none;
+      background-color: unset;
+      padding: 0;
+      margin: 0;
+      padding-right: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: center url("../../assets/icons/feather/chevron-down.svg") no-repeat;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &-menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        top:calc(100% + 10px);
+        align-items: baseline;
+        background-color: $color-white;
+        @include shadow();
+        button {
+            background-color: transparent;
+            margin: 0;
+            width:100%;
+            padding:10px;text-align: left;
+            border:none;
+            &:hover {
+                background-color: $color-green-300;
+                color:$color-white;
+            }
+        }
+    }
+  }
+}
