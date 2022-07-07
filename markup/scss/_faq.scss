@@ -1,7 +1,7 @@
 .faq {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap:$item-offsets;
     & &__question,
      & &__answer {
         margin: 0;
@@ -12,7 +12,7 @@
     & &__list {
         display: flex;
         flex-direction: column;
-        gap:20px;
+        gap:$item-offsets;
     }
     & &__answer {
         max-height: 0;

@@ -27,7 +27,7 @@
   }
   &__form {
     display: flex;
-    gap: 20px;
+    gap: $item-offsets;
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -35,7 +35,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 20px;
+    gap: $item-offsets;
     .profiles__item {
       @include shadow();
       display: flex;

@@ -13,10 +13,7 @@
         display: grid;
         grid-template-columns: 1fr;
         padding:0;
-        gap: 20px;
-        &__item {
-
-        }
+        gap: $item-offsets;
     }
 }
 @media (min-width: 568px) {

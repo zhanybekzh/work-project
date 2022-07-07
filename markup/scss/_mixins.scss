@@ -360,7 +360,9 @@
 
     &__password {
       position: relative;
-
+      & .form-input__input {
+        padding-right: 55px;
+      }
       &-icon {
         cursor: pointer;
         position: absolute;

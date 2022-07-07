@@ -1594,25 +1594,14 @@ body {
   flex-direction: column;
 }
 body header {
-  background-color: #00898d;
   box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
   z-index: 3;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 body header.unauthorized {
   background-color: #fff;
-}
-body header.unauthorized + main {
-  margin-top: 50px;
-}
-body header + main {
-  margin-top: 120px;
-}
-@media (min-width: 1200px) {
-  body header + main {
-    margin-top: 130px;
-  }
 }
 body main {
   flex-grow: 1;
@@ -1874,6 +1863,10 @@ header.unauthorized .header {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  min-height: 70px;
+}
+.header-wrapper {
+  background-color: #00898d;
 }
 .header .header__comein-button {
   margin-left: auto;
@@ -2027,8 +2020,7 @@ header.unauthorized .header {
   position: absolute;
   top: 110%;
   right: 0;
-  min-width: 290px;
-  min-height: 340px;
+  width: 290px;
   background-color: #fff;
   box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
   padding: 30px;
@@ -2066,7 +2058,6 @@ header.unauthorized .header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-height: 220px;
 }
 .user-menu__profile-actions a {
   display: block;
@@ -2075,6 +2066,9 @@ header.unauthorized .header {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+.user-menu__profile-actions a:last-child {
+  margin-top: 40px;
 }
 .user-menu__exit-profile {
   position: relative;
@@ -2315,8 +2309,9 @@ header.unauthorized .header {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0;
-  gap: 20px;
+  gap: 30px;
 }
+
 @media (min-width: 568px) {
   .catalog-list {
     grid-template-columns: 1fr 1fr;
@@ -2527,7 +2522,7 @@ header.unauthorized .header {
 .list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .list {
@@ -2773,6 +2768,9 @@ header.unauthorized .header {
 }
 .form-input__password {
   position: relative;
+}
+.form-input__password .form-input__input {
+  padding-right: 55px;
 }
 .form-input__password-icon {
   cursor: pointer;
@@ -3604,7 +3602,7 @@ header.unauthorized .header {
 .my-services {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
 }
 .my-services__pagination-wrapper {
   display: flex;
@@ -3900,7 +3898,7 @@ header.unauthorized .header {
 }
 .profiles__form {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -3908,7 +3906,7 @@ header.unauthorized .header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .profiles__list .profiles__item {
   box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
@@ -4030,7 +4028,7 @@ header.unauthorized .header {
 .faq {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .faq .faq__question, .faq .faq__answer {
   margin: 0;
@@ -4041,7 +4039,7 @@ header.unauthorized .header {
 .faq .faq__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .faq .faq__answer {
   max-height: 0;

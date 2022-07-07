@@ -10,7 +10,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 50px;
+    min-height: 70px;
   }
+  &-wrapper {
+    background-color: $color-green-300;
+}
   & &__comein-button {
     margin-left: auto;
     margin-right: 10px;

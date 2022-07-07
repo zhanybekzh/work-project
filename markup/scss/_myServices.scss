@@ -1,7 +1,7 @@
 .my-services {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: $item-offsets;
   &__pagination-wrapper {
     display: flex;
     justify-content: center;
