@@ -2496,6 +2496,136 @@ header.unauthorized .header {
   margin-bottom: 40px;
 }
 
+.button-links {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+}
+@media (min-width: 540px) {
+  .button-links {
+    padding: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .button-links {
+    padding: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .button-links {
+    padding: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .button-links {
+    padding: 50px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+.list .list__item {
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .list .list__item {
+    flex-direction: row;
+  }
+}
+.list .list__item .item__content {
+  flex-grow: 1;
+  flex-basis: 250px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (min-width: 1200px) {
+  .list .list__item .item__content {
+    flex-direction: row;
+    padding: 30px 40px;
+  }
+}
+.list .list__item .item__title {
+  margin-bottom: 20px;
+}
+.list .list__item .item__image {
+  flex: 0 1 250px;
+  max-height: 250px;
+  width: 100%;
+}
+.list .list__item .item__image img {
+  display: block;
+  object-fit: cover;
+}
+.list .list__item .item__icon {
+  background-color: #d8f2ef;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 120px;
+  margin: 20px;
+}
+@media (min-width: 540px) {
+  .list .list__item .item__icon {
+    margin: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .list .list__item .item__icon {
+    margin: 40px;
+  }
+}
+.list .list__item .item__descriptions {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.list .list__item .item__descriptions .item__description {
+  color: #626b6d;
+}
+.list .list__item .item__descriptions .item__description span {
+  font-weight: 700;
+}
+.list .list__item .item__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.list .list__item .item__buttons .button,
+.list .list__item .item__buttons .button-red {
+  width: 10.625rem;
+}
+@media (min-width: 1440px) {
+  .list .list__item .item__buttons {
+    margin-left: auto;
+  }
+}
+
 .form ul {
   padding-left: 0;
 }
@@ -3822,6 +3952,11 @@ header.unauthorized .header {
 .profiles__list .profiles__item .item__descriptions .item__description span {
   font-weight: 700;
 }
+.profiles__list .profiles__item .item__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .profiles__list .profiles__item .item__buttons .button,
 .profiles__list .profiles__item .item__buttons .button-red {
   width: 10.625rem;
@@ -3873,5 +4008,70 @@ header.unauthorized .header {
 .profiles__dropdown-menu button:hover {
   background-color: #00898d;
   color: #fff;
+}
+
+.edit-profiles__this-profile {
+  color: #00898d;
+  padding-left: 30px;
+  position: relative;
+}
+.edit-profiles__this-profile::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  background: url("../../assets/icons/custom/promo_yellow.svg") center no-repeat;
+  background-size: contain;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq .faq__question, .faq .faq__answer {
+  margin: 0;
+}
+.faq .faq__question span, .faq .faq__answer span {
+  color: #00898d;
+}
+.faq .faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq .faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.faq .faq__item {
+  box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+  background-color: #fff;
+  padding: 20px 40px 20px 20px;
+  position: relative;
+  cursor: pointer;
+}
+.faq .faq__item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  background: url("../../assets/icons/feather/chevron-down.svg") center no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+.faq .faq__item_active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.faq .faq__item_active .faq__answer {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */

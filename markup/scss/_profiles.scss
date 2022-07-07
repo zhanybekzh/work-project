@@ -76,6 +76,9 @@
         }
       }
       .item__buttons {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
         .button,
         .button-red {
           width: $button-min-width;
@@ -126,6 +129,26 @@
                 color:$color-white;
             }
         }
+    }
+  }
+}
+
+.edit-profiles {
+  &__this-profile {
+    color:$color-green-300;
+    padding-left:30px;
+    position: relative;
+    &::before {
+      content:'';
+      position: absolute;
+      width:14px;
+      height:16px;
+      background: url('../../assets/icons/custom/promo_yellow.svg') center no-repeat;
+      background-size: contain;
+      top:50%;
+      left:0;
+      transform: translateY(-50%) rotate(90deg);
+
     }
   }
 }
