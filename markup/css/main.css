@@ -1101,6 +1101,10 @@ progress {
   font-size: 0.875em;
 }
 
+.black-link {
+  color: #2a2f30;
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -1989,16 +1993,37 @@ header.unauthorized .header {
   gap: 20px;
 }
 .header-user__profile {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-.header-user__profile-text {
   display: none;
 }
-.header-user__profile-name {
-  width: max-content;
+@media (min-width: 390px) {
+  .header-user__profile {
+    display: block;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+  }
+}
+@media (min-width: 540px) {
+  .header-user__profile {
+    max-width: 330px;
+  }
+}
+@media (min-width: 768px) {
+  .header-user__profile {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .header-user__profile {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-user__profile {
+    max-width: 270px;
+  }
 }
 .header-user__account {
   display: flex;
@@ -2011,6 +2036,7 @@ header.unauthorized .header {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  flex-shrink: 0;
   background: center #d8f2ef url("../../assets/icons/custom/user_green.svg") no-repeat;
 }
 .header-user__arrow {
@@ -2438,14 +2464,19 @@ header.unauthorized .header {
 .item__price_promo .item__price-values {
   transform: translateX(30px);
 }
+.item__price_promo .item__price-current {
+  position: relative;
+}
 .item__price_promo .item__price-current::before {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   left: -30px;
-  top: 4px;
+  top: 50%;
+  transform: translateY(-50%);
   background: url("../../assets/icons/custom/promo_yellow.svg") no-repeat;
+  background-size: contain;
 }
 .item__about {
   width: fit-content;

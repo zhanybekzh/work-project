@@ -53,14 +53,17 @@
         transform: translateX(30px);
       }
       .item__price-current {
+        position: relative;
         &::before {
           content: "";
-          width: 20px;
-          height: 20px;
+          width: 15px;
+          height: 15px;
           position: absolute;
           left: -30px;
-          top: 4px;
+          top: 50%;
+          transform: translateY(-50%);
           background: url("../../assets/icons/custom/promo_yellow.svg") no-repeat;
+          background-size: contain;
 
         }
       }

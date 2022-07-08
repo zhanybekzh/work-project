@@ -30,6 +30,10 @@
   @extend %mark;
 }
 
+.black-link {
+  color: $color-black-text;
+
+}
 .list-unstyled {
   padding-left: 0;
   list-style: none;

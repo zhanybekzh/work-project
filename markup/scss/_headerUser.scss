@@ -1,47 +1,57 @@
 .header-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  &__profile {
+   display: none;
+    @media(min-width: 390px) {
+        display: block;
+        max-width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $color-white;
+    }
+    @media(min-width: 540px) {
+        max-width: 330px;
+    }
+    @media(min-width: 768px) {
+        max-width: 500px;
+    }
+    @media(min-width: 992px) {
+        max-width: 600px;
+    }
+    @media(min-width: 1200px) {
+        max-width: 270px;
+    }
+  }
+
+  &__account {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 6px;
+    cursor: pointer;
+  }
 
-    // transform: translateX(-20px);
-    &__profile {
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: center $color-green-100
+      url("../../assets/icons/custom/user_green.svg") no-repeat;
+  }
 
-    color: $color-white;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-
-        &-text {
-            display: none;
-        }
-
-        &-name {
-            width: max-content;
-        }
-    }
-
-    &__account {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 6px;
-        cursor: pointer;
-    }
-
-    &__avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: center $color-green-100 url('../../assets/icons/custom/user_green.svg') no-repeat;
-    }
-
-    &__arrow {
-        width: 15px;
-        height: 15px;
-        background: center url('../../assets/icons/custom/chevron-down_white.svg') no-repeat;
-    }
+  &__arrow {
+    width: 15px;
+    height: 15px;
+    background: center url("../../assets/icons/custom/chevron-down_white.svg")
+      no-repeat;
+  }
 }
 
-
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
