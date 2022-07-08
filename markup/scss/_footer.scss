@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1;
   padding: 40px  0;
+  font-size:$blockquote-footer-font-size;
   &__columns {
     display: flex;
     flex-direction: column;

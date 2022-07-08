@@ -2,4 +2,7 @@
     .#{$color-name} {
         color:$color-value;
     }
+    .text-#{$color-name} {
+        color:$color-value;
+    }
 }
