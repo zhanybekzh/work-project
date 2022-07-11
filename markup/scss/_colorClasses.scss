@@ -1,8 +1,8 @@
 @each $color-name, $color-value in $colors {
-    .#{$color-name} {
+    .#{'' + $color-name} {
         color:$color-value;
     }
-    .text-#{$color-name} {
+    .text-#{'' + $color-name} {
         color:$color-value;
     }
 }

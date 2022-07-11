@@ -53,8 +53,8 @@
     &.active,
     &_active {
       color: $button-active-color;
-      background-color: $button-background-color;
-      border-color: $button-border-color;
+      background-color:$button-hover-background-color;
+      border-color: $button-hover-background-color;
 
       &:focus {
         box-shadow: $button-focus-box-shadow;
@@ -99,6 +99,11 @@
 
       &:focus {
         box-shadow: $button-red-focus-box-shadow;
+      }
+      &:hover {
+        color: $button-red-active-color;
+        background-color: $button-red-active-hover-background-color;
+        border-color: $button-red-active-hover-background-color;
       }
     }
   }
@@ -523,7 +528,7 @@
   }
 
   &_warning {
-    background-color: $color-yellow;
+    background-color: $color-light-yellow;
 
     .alert-heading::before {
       content: "";
@@ -541,7 +546,7 @@
   }
 
   &_error {
-    background-color: $color-red;
+    background-color: $color-light-red;
     color: $color-white;
 
     .alert-heading::before {

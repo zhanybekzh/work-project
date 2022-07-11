@@ -1,9 +1,12 @@
 $color-black: #000;
 $color-black-text: #2a2f30;
 $color-red: #dc3747;
+$color-light-red: #F4606E;
 $color-orange: #ff9d56;
 $color-yellow: #ffee9e;
+$color-light-yellow: #FFF7CF;
 $color-white: #fff;
+
 $color-green-500: #004f56;
 $color-green-400: #095d64;
 $color-green-300: #00898d;
@@ -17,7 +20,9 @@ $colors: (
   black: $color-black,            // sass-lint:disable-line no-color-keywords
   black-text: $color-black-text,
   red: $color-red,                // sass-lint:disable-line no-color-keywords
+  light-red: $color-light-red,
   orange: $color-orange,          // sass-lint:disable-line no-color-keywords
+  light-yellow: $color-light-yellow,
   yellow: $color-yellow,          // sass-lint:disable-line no-color-keywords
   white: $color-white,            // sass-lint:disable-line no-color-keywords
   green-500: $color-green-500,

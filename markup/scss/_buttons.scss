@@ -12,7 +12,7 @@ $button-disabled-color: $button-color;
 $button-active-color: $button-color;
 
 $button-background-color: $color-green-300;
-$button-hover-background-color: $color-green-300;
+$button-hover-background-color: $color-green-500;
 $button-disabled-background-color: $color-gray-300;
 $button-active-background-color: lighten($button-hover-background-color, 20%);
 
@@ -34,8 +34,8 @@ $button-outline-hover-color: $button-color;
 $button-outline-hover-background-color: $button-background-color;
 $button-outline-hover-border-color: $button-border-color;
 $button-outline-active-color: $button-hover-color;
-$button-outline-active-background-color: $button-hover-background-color;
-$button-outline-active-border-color: $button-hover-border-color;
+$button-outline-active-background-color: $button-background-color;
+$button-outline-active-border-color: $button-background-color;
 
 $button-red-color:  $color-red;
 $button-red-background-color: $color-white;
@@ -45,8 +45,12 @@ $button-red-hover-color:  $color-white;
 $button-red-hover-background-color: $color-red;
 $button-red-hover-border-color: $button-red-hover-background-color;
 $button-red-active-color: $color-white;
-$button-red-active-background-color:  darken($button-red-color, 20%);
+$button-red-active-background-color:  $button-red-color;
 $button-red-active-border-color: $button-red-active-background-color;
+$button-red-active-hover-background-color:   darken($button-red-color, 20%);
+
+$button-red-active-hover-border-color:  darken($button-red-color, 20%);
+
 $button-red-focus-box-shadow: 0 0 0 0.2rem rgba($color-red,  0.25);
 
 .button {
