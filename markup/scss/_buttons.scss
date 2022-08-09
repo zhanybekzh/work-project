@@ -48,9 +48,7 @@ $button-red-active-color: $color-white;
 $button-red-active-background-color:  $button-red-color;
 $button-red-active-border-color: $button-red-active-background-color;
 $button-red-active-hover-background-color:   darken($button-red-color, 20%);
-
 $button-red-active-hover-border-color:  darken($button-red-color, 20%);
-
 $button-red-focus-box-shadow: 0 0 0 0.2rem rgba($color-red,  0.25);
 
 .button {

@@ -12,9 +12,7 @@ header.unauthorized {
         background-color: $color-green-300;
       }
     }
-  }
-  @media (min-width: 1200px) {
-    .header-menu {
+    @media (min-width: 1200px) {
       &__link {
         @include button("outline");
         border: $color-white;

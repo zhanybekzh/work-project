@@ -2,16 +2,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  align-items: center;
   flex: 0 0 auto;
   position: relative;
   min-height: 50px;
-  header.unauthorized & {
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    min-height: 70px;
-  }
+
   &-wrapper {
     background-color: $color-green-300;
 }
@@ -23,17 +18,17 @@
     text-decoration: none;
     color: unset;
     &::before {
-      content: "";
-      width:15px;
-      height: 15px;
-      display: block;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       left: 0;
+      display: block;
+      width:15px;
+      height: 15px;
       background: url("../../assets/icons/custom/user_green.svg") center
         no-repeat;
       background-size: cover;
+      content: "";
+      transform: translateY(-50%);
     }
   }
   &__phone,

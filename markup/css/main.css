@@ -1891,6 +1891,11 @@ body footer::after {
   height: 16px;
   cursor: pointer;
 }
+@media (min-width: 1200px) {
+  .header-menu__icon {
+    display: none;
+  }
+}
 .header-menu__icon span {
   top: 50%;
   -webkit-transform: scale(1) translate(0px, -50%);
@@ -1923,29 +1928,42 @@ body footer::after {
           transform: rotate(-45deg) translate(0px, 50%);
 }
 .header-menu__list {
+  display: none;
+  position: absolute;
+  top: 100%;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 20px 20px 30px 20px;
+  min-width: 260px;
+  list-style-type: none;
+  margin: 0;
+  gap: 5px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  top: 100%;
-  padding: 20px 20px 30px 20px;
-  min-width: 260px;
-  list-style-type: none;
-  margin: 0;
-  gap: 5px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  display: none;
   -webkit-box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
           box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
+}
+@media (min-width: 1200px) {
+  .header-menu__list {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: transparent;
+    padding: 10px 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 .header-menu__list._active {
   display: -webkit-box;
@@ -1987,7 +2005,7 @@ body footer::after {
   color: #00898d;
   background-color: transparent;
   border-color: #00898d;
-  border: #fff;
+  border-color: #fff;
   min-width: -webkit-fit-content !important;
   min-width: -moz-fit-content !important;
   min-width: fit-content !important;
@@ -2049,28 +2067,7 @@ body footer::after {
   background-color: #004f56;
   border-color: #004f56;
 }
-.header-menu__link_active {
-  font-weight: 700;
-}
-
 @media (min-width: 1200px) {
-  .header-menu__icon {
-    display: none;
-  }
-  .header-menu__list {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    background-color: transparent;
-    padding: 10px 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
   .header-menu__link {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -2163,10 +2160,13 @@ body footer::after {
   .header-menu__link_active {
     color: #00898d;
     background-color: #fff;
-    font-weight: 700;
     border-color: #fff;
   }
 }
+.header-menu__link_active {
+  font-weight: 700;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2178,21 +2178,14 @@ body footer::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   position: relative;
   min-height: 50px;
-}
-header.unauthorized .header {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 50px;
-  min-height: 70px;
 }
 .header-wrapper {
   background-color: #00898d;
@@ -2206,18 +2199,18 @@ header.unauthorized .header {
   color: unset;
 }
 .header .header__comein-button::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  display: block;
   position: absolute;
   top: 50%;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("../../assets/icons/custom/user_green.svg") center no-repeat;
+  background-size: cover;
+  content: "";
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 0;
-  background: url("../../assets/icons/custom/user_green.svg") center no-repeat;
-  background-size: cover;
 }
 .header__phone, .header__mail {
   display: none;
@@ -2489,7 +2482,6 @@ header.unauthorized .header {
   gap: 20px;
 }
 .user-menu__profile-actions a {
-  display: block;
   text-decoration: none;
   color: #2a2f30;
   display: -webkit-box;
