@@ -9,6 +9,12 @@
   background-position: center;
 }
 
+@mixin button-colors($color: $button-color, $background-color: $button-background-color, $border-color: $button-border-color) {
+  color: $color;
+  background-color: $background-color;
+  border: $border-width solid $border-color;
+}
+
 @mixin button($button-type: "button") {
   @if ($button-type == "button") {
     width: fit-content;
