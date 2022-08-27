@@ -76,7 +76,21 @@
   margin: 0 auto;
   width:fit-content;
 }
-
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block;
+}
+.d-inline-block  {
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
 @each $margin-range in $margin-ranges {
   .mb-#{$margin-range} {
     @include mb($margin-range);

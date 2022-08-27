@@ -63,3 +63,24 @@ $button-red-focus-box-shadow: 0 0 0 0.2rem rgba($color-red,  0.25);
 .button-square {
   @include button('square');
 }
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+  }
+  a.button, a.button-outline, a.button-red {
+    width:100%;
+    @media (min-width: 400px) {
+      width: 250px;
+
+    }
+@media (min-width: 768px) {
+  width: unset;
+
+  }
+  }
+}

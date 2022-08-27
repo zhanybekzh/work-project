@@ -17,13 +17,16 @@
             background-color: $color-gray-200;
             font-weight: bold;
             border: 1px solid $color-gray-300;
-            color: unset;
+            color: $color-gray-400;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
             &:hover {
-              color: unset;
+              color: $color-gray-400;
               text-decoration: none;
             }
             &_active {
               border: none;
+              color:$color-black-text;
               order:1;
               border-top: 4px solid $color-green-300;
               background-color: $color-white;

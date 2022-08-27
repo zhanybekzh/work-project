@@ -27,7 +27,7 @@
   }
   &__form {
     display: flex;
-    gap: $item-offsets;
+    gap: 30px;
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -36,6 +36,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: $item-offsets;
+    align-content: center;
     .profiles__item {
       @include shadow();
       display: flex;
@@ -65,7 +66,7 @@
       }
       .item__descriptions {
         display: flex;
-        gap: 20px;
+        gap: 5px;
 
         flex-direction: column;
         .item__description {
@@ -91,7 +92,21 @@
   }
   &__dropdown {
       position: relative;
+      width:fit-content;
+      &_active &-menu {
+        display: flex;
+      }
     &-button {
+      border: none;
+      background-color: unset;
+      padding: 0;
+      margin: 0;
+      cursor: unset !important;
+
+
+
+    }
+    &-button_arrow {
       border: none;
       background-color: unset;
       padding: 0;
@@ -109,9 +124,10 @@
         transform: translateY(-50%);
       }
     }
+
     &-menu {
+      display: none;
         position: absolute;
-        display: flex;
         flex-direction: column;
         z-index: 2;
         top:calc(100% + 10px);
@@ -129,6 +145,7 @@
                 color:$color-white;
             }
         }
+
     }
   }
 }

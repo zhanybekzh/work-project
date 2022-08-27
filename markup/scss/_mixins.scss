@@ -493,7 +493,7 @@
 
 @mixin alert() {
   display: block;
-  min-height: 135px;
+  min-height: 90px;
   padding: 20px;
   color: $color-black-text;
 
