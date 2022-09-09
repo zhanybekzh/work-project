@@ -1,17 +1,25 @@
 .header-balance {
-
   min-height: 70px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 20px;
   align-items: center;
   color: $color-green-300;
+  @media(min-width:576px) {
+    justify-content: flex-end;
+
+  }
   &-wrapper {
     background-color: $color-white;
   }
   &__balance {
     display: flex;
     gap: 5px;
+    flex-direction: column;
+    @media(min-width:400px) {
+      flex-direction: row;
+
+    }
   }
   &__text {
   }
