@@ -61,4 +61,10 @@
             padding-top: 30px;
           }
     }
+    &__pane {
+      display: none;
+      &_show {
+        display: block;
+      }
+    }
 }
