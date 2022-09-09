@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./markup/css/main.css" />
-        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <link rel="stylesheet" href="./markup/css/main.css.map"/>
+        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
         <script src="./feather.min.js"></script>
         <title>Баланс</title>
     </head>
@@ -185,7 +186,7 @@
                     <div class="header-balance">
                         <div class="header-balance__balance">
                             <div class="header-balance__text">Баланс:</div>
-                            <div class="header-balance__value">0.00т</div>
+                            <div class="header-balance__value">1&nbsp;000&nbsp;000,00&nbsp;₸</div>
                         </div>
                         <a href="/balance-pay.html" class="header-balance__button">
                             <span>Пополнить</span>
@@ -217,13 +218,13 @@
                             </div>
                         </section>
                         <section class="section section-tabs tabs">
-                            <div class="tabs-list">
-                                <a href="/balance.html" class="tabs-list__tab tabs-list__tab_active">
+                            <div class="tabs-list ">
+                                <a href="/balance.html" class="tabs-list__tab  tabs-list__tab_active">
                                     Начисление по сервисам
                                 </a>
-                                <a href="/pay-history.html" class="tabs-list__tab"> История платежей </a>
+                                <a href="/pay-history.html" class="tabs-list__tab "> История платежей </a>
                             </div>
-                            <div class="tabs-content">
+                            <div class="tabs-content tabs__pane tabs__pane_show">
                                 <div class="form-input">
                                     <label for="date">Выберите период</label> <br>
                                     <input class="form-input__date mt-10 mb-20" id="date" type="date" style="padding:5px;width:200px;border-radius:10px;"/>
@@ -386,6 +387,136 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tabs-content tabs__pane ">
+
+                                <div class="table-responsive">
+                                    <table
+                                        class="table table-striped table-borderless"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <td>
+
+                                                </td>
+                                                <td>Наименование</td>
+                                                <td>Дата</td>
+                                                <td>Сумма</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-down-circle"
+                                                    class="icon-24 red"
+                                                ></i></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-up-circle"
+                                                    class="icon-24 green-300"
+                                                ></i></td>
+                                                <td>Пополнение баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-down-circle"
+                                                    class="icon-24 red"
+                                                ></i></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-up-circle"
+                                                    class="icon-24 green-300"
+                                                ></i></td>
+                                                <td>Пополнение баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr><tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-down-circle"
+                                                    class="icon-24 red"
+                                                ></i></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-up-circle"
+                                                    class="icon-24 green-300"
+                                                ></i></td>
+                                                <td>Пополнение баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr><tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-down-circle"
+                                                    class="icon-24 red"
+                                                ></i></td>
+                                                <td>Списание с баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">  <i
+                                                    data-feather="arrow-up-circle"
+                                                    class="icon-24 green-300"
+                                                ></i></td>
+                                                <td>Пополнение баланса</td>
+                                                <td>16.02.2022</td>
+                                                <td>-60 000 тг</td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <div class="pagination-wrapper">
+                                    <div class="pagination">
+                                        <a
+                                            class="pagination__left-arrow"
+                                            href="#"
+                                        ></a>
+                                        <a class="pagination__link" href="#"
+                                            >1</a
+                                        >
+                                        <a
+                                            class="pagination__link pagination__link_active"
+                                            href="#"
+                                            >2</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >3</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >4</a
+                                        >
+                                        <a class="pagination__link" href="#"
+                                            >5</a
+                                        >
+                                        <a
+                                            class="pagination__right-arrow"
+                                            href="#"
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -446,6 +577,11 @@
                 </div>
             </div>
         </footer>
-        <script src="./script.js"></script>
+        <script src="./script.js">
+
+        </script>
+           <script src="./tabs.js">
+
+        </script>
     </body>
 </html>

@@ -5,9 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./markup/css/main.css" />
-        <link rel="stylesheet" href="./markup/css/main.css.map" />
+        <link rel="stylesheet" href="./markup/css/main.css.map"/>
+        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
         <script src="./feather.min.js"></script>
         <title>Платформа сервисов</title>
+
     </head>
 
     <body>
@@ -83,8 +85,8 @@
                                     class="ui-colors__item background-red"
                                 ></div>
                                 <div
-                                class="ui-colors__item background-light-red"
-                            ></div>
+                                    class="ui-colors__item background-light-red"
+                                ></div>
                                 <div
                                     class="ui-colors__item background-orange"
                                 ></div>
@@ -93,8 +95,8 @@
                                     class="ui-colors__item background-yellow"
                                 ></div>
                                 <div
-                                class="ui-colors__item background-light-yellow"
-                            ></div>
+                                    class="ui-colors__item background-light-yellow"
+                                ></div>
                             </li>
                             <li class="ui-colors__list">
                                 <div
@@ -116,7 +118,9 @@
                             <ul class="ui-buttons">
                                 <li class="ui-buttons__list">
                                     <button class="button">:normal</button>
-                                    <button class="button button_active">:active</button>
+                                    <button class="button button_active">
+                                        :active
+                                    </button>
                                     <button class="button" disabled>
                                         :disable
                                     </button>
@@ -125,7 +129,9 @@
                                     <button class="button-outline">
                                         :normal
                                     </button>
-                                    <button class="button-outline button-outline_active">
+                                    <button
+                                        class="button-outline button-outline_active"
+                                    >
                                         :active
                                     </button>
                                     <button class="button-outline" disabled>
@@ -134,7 +140,11 @@
                                 </li>
                                 <li class="ui-buttons__list">
                                     <button class="button-red">:normal</button>
-                                    <button class="button-red button-red_active">:active</button>
+                                    <button
+                                        class="button-red button-red_active"
+                                    >
+                                        :active
+                                    </button>
                                     <button class="button-red" disabled>
                                         :disable
                                     </button>
@@ -216,13 +226,16 @@
 
                             <h2>Pagination</h2>
                             <div class="pagination">
-                                <a class="pagination__left-arrow disabled" href="#"></a>
-                                <a class="pagination__link pagination__link_active" href="#">1</a>
                                 <a
-                                    class="pagination__link "
+                                    class="pagination__left-arrow disabled"
                                     href="#"
-                                    >2</a
+                                ></a>
+                                <a
+                                    class="pagination__link pagination__link_active"
+                                    href="#"
+                                    >1</a
                                 >
+                                <a class="pagination__link" href="#">2</a>
                                 <a class="pagination__link" href="#">3</a>
                                 <a class="pagination__link" href="#">4</a>
                                 <a class="pagination__link" href="#">5</a>
@@ -315,6 +328,44 @@
                                         <option value="">Срдений</option>
                                         <option value="">Плохой</option>
                                     </select>
+                                </div>
+
+                                <div class="form-select mb-20 mt-20">
+                                    <label class="form-text__label" for=""
+                                        >Выберите регион*</label
+                                    >
+                                    <div class="form-addition-right-btn">
+                                        <select
+                                            class="form-select__select"
+                                            type=""
+                                            name=""
+                                            id=""
+                                            placeholder="Выберите регион"
+                                        >
+                                            <option value="">Хороший</option>
+                                            <option value="">Срдений</option>
+                                            <option value="">Плохой</option>
+                                        </select>
+                                        <a href="" class="addition-right-btn">
+                                            <i
+                                                data-feather="plus"
+                                                class="icon-20 black"
+                                                style="stroke-width: 2"
+                                            >
+                                            </i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="sd" class="form-input__label">
+                                        Выберите регион:
+                                    </label>
+                                </div>
+                                <div class="form-input-file mb-20">
+                                    <input id="sd" type="file" class="form-input-file__file">
+                                    <label for="sd" class="form-input-file__label" data-browse="Обзор...">
+                                        Выберите файл
+                                    </label>
                                 </div>
                                 <div class="form-input">
                                     <label
@@ -537,5 +588,6 @@
             </div>
         </footer>
         <script src="./script.js"></script>
+        <script src="./inputFile.js"></script>
     </body>
 </html>
