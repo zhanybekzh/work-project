@@ -9,7 +9,11 @@
   background-position: center;
 }
 
-@mixin button-colors($color: $button-color, $background-color: $button-background-color, $border-color: $button-border-color) {
+@mixin button-colors(
+  $color: $button-color,
+  $background-color: $button-background-color,
+  $border-color: $button-border-color
+) {
   color: $color;
   background-color: $background-color;
   border: $border-width solid $border-color;
@@ -59,7 +63,7 @@
     &.active,
     &_active {
       color: $button-active-color;
-      background-color:$button-hover-background-color;
+      background-color: $button-hover-background-color;
       border-color: $button-hover-background-color;
 
       &:focus {
@@ -460,7 +464,58 @@
         }
       }
     }
+    &-file {
+      position: relative;
+      &__file {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        min-height: 45px;
+        margin: 0;
+        opacity: 0;
+      }
+      &__label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        outline: 0;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $color-gray-300;
+        background-color: #fff;
+        border: 1px solid $color-gray-300;
+        min-height: 45px;
+        padding: 0.5rem 0.8rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          z-index: 3;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          color: $color-black;
+          background-color: $color-gray-200;
+          padding: 0.375rem 0.75rem;
+          border-left: inherit;
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
+        .form-input-file__file ~ .form-input-file__label[data-browse]::after {
+           content: attr(data-browse);
+         }
+    }
   }
+
   &-select {
     label {
       display: block;
