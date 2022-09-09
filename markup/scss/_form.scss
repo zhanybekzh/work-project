@@ -1,8 +1,38 @@
 .form {
-    @include form();
-    &__columns {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap:20px;
+  @include form();
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  &-addition-right-btn {
+    display: flex;
+    flex-direction: row;
+    .form-select__select {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      flex:1 1 0%;
     }
+  }
+  .addition-right-btn {
+    cursor: pointer;
+    position: relative;
+    background-color: $color-gray-200;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-gray-300;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    width: 45px;
+    height: 45px;
+    z-index: 2;
+  }
+  .addition-right-btn-plus {
+    position: absolute;
+
+  }
 }
