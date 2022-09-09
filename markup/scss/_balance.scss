@@ -19,10 +19,12 @@
 
     }
     &__value {
+        font-size: 1.4rem;
         span {
-            color: $color-green-500;
+            color: $color-green-300;
             font-weight: bold;
         }
+
     }
 
     .buttons {
