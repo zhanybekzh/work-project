@@ -4370,7 +4370,7 @@ body footer::after {
 .auth-modal {
   max-width: 750px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: transparent;
   margin-bottom: 80px;
   margin-top: 80px;
 }
@@ -4696,7 +4696,6 @@ body footer::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 10px;
 }
 .tabs-list__tab {
   -webkit-box-flex: 1;
@@ -4757,6 +4756,7 @@ body footer::after {
 }
 .tabs-content {
   padding: 10px 20px 30px;
+  background-color: #fff;
 }
 @media (min-width: 400px) {
   .tabs-content {
