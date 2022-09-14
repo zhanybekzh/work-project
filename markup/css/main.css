@@ -3403,6 +3403,9 @@ body footer::after {
 .form ul {
   padding-left: 0;
 }
+.form input[type=text]:disabled, .form input[type=submit]:disabled, .form input[type=reset]:disabled, .form input[type=password]:disabled, .form input[type=file]:disabled, .form input[type=tel]:disabled, .form input[type=number]:disabled {
+  background-color: #f8f8f8;
+}
 .form-radio {
   margin-bottom: 10px;
   list-style: none;
@@ -4355,6 +4358,9 @@ body footer::after {
   background: url(../../assets/img/img4.webp) center no-repeat;
   background-size: cover;
   z-index: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .auth-background::before {
   content: "";
