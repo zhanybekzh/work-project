@@ -189,7 +189,9 @@
   ul {
     padding-left: 0;
   }
-
+  input[type="text"]:disabled,   input[type="submit"]:disabled,  input[type="reset"]:disabled, input[type="password"]:disabled, input[type="file"]:disabled, input[type="tel"]:disabled, input[type="number"]:disabled {
+    background-color: $color-gray-100;
+  }
   &-radio {
     margin-bottom: 10px;
     list-style: none;
