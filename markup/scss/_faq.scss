@@ -15,7 +15,6 @@
     gap: $item-offsets;
   }
   & &__answer {
-    background-color: cadetblue;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -25,7 +24,6 @@
     }
   }
   & &__question {
-    background-color: bisque;
     position: relative;
     padding: 20px;
     cursor: pointer;
