@@ -17,11 +17,14 @@
                                 href=""
                                 class="button-outline button-outline_active"
                                 >Управление подписками</a
-                            ><a href="" class="button-outline"
+                            >
+                            <a href="" class="button-outline"
                                 >Управление профилем</a
-                            ><a href="" class="button-outline"
+                            >
+                            <a href="" class="button-outline"
                                 >Финансы и баланс</a
-                            ><a href="" class="button-outline">Прочее</a>
+                            >
+                            <a href="" class="button-outline">Прочее</a>
                         </div>
                         <div class="faq__list">
                             <div class="faq__item">
@@ -29,31 +32,66 @@
                                     <span>Вопрос - </span>Почему у меня не
                                     активна кнопка Подключить/Изменить сервис?
                                 </p>
-                                <p class="faq__answer">
-                                    <span>Ответ - </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quam provident aspernatur consectetur dolorem earum reiciendis qui rem quia eaque laborum deleniti inventore minima, sunt voluptas optio distinctio similique? Harum.
-                                    Eum at cupiditate quibusdam iste alias enim nobis perspiciatis recusandae deserunt ex expedita sequi, illum odit quae dignissimos adipisci facere veritatis ut ipsa consequuntur? Aspernatur dignissimos aliquid ad magni excepturi!
-                                    Molestiae a neque sed autem atque fuga, sint laboriosam, libero ab quae corporis harum voluptate minus. Aspernatur ratione quam laboriosam, et dolore iste ipsa! Repellendus dolorem sunt facere exercitationem maiores.
-                                    Debitis consectetur hic deleniti amet rem dolores suscipit animi voluptatem repellat inventore, exercitationem libero ea nam. Quibusdam perferendis iusto inventore deserunt dolorem blanditiis quaerat atque necessitatibus ex officia? Modi, tempora.
-                                </p>
+                                <div class="faq__answer">
+                                    <div class="faq__answer-content">
+                                        <span>Ответ - </span> Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit.
+                                        Ut quam provident aspernatur consectetur
+                                        dolorem earum reiciendis qui rem quia
+                                        eaque laborum deleniti inventore minima,
+                                        sunt voluptas optio distinctio
+                                        similique? Harum. Eum at cupiditate
+                                        quibusdam iste alias enim nobis
+                                        perspiciatis recusandae deserunt ex
+                                        expedita sequi, illum odit quae
+                                        dignissimos adipisci facere veritatis ut
+                                        ipsa consequuntur? Aspernatur
+                                        dignissimos aliquid ad magni excepturi!
+                                        Molestiae a neque sed autem atque fuga,
+                                        sint laboriosam, libero ab quae corporis
+                                        harum voluptate minus. Aspernatur
+                                        ratione quam laboriosam, et dolore iste
+                                        ipsa! Repellendus dolorem sunt facere
+                                        exercitationem maiores. Debitis
+                                        consectetur hic deleniti amet rem
+                                        dolores suscipit animi voluptatem
+                                        repellat inventore, exercitationem
+                                        libero ea nam. Quibusdam perferendis
+                                        iusto inventore deserunt dolorem
+                                        blanditiis quaerat atque necessitatibus
+                                        ex officia? Modi, tempora.
+                                    </div>
+                                </div>
                             </div>
                             <div class="faq__item">
                                 <p class="faq__question">
                                     <span>Вопрос - </span>Почему у меня не
                                     активна кнопка Подключить/Изменить сервис?
                                 </p>
-                                <p class="faq__answer">
-                                    <span>Ответ - </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quam provident aspernatur consectetur dolorem earum reiciendis qui rem quia eaque laborum deleniti inventore minima, sunt voluptas optio distinctio similique? Harum.
-                                    Eum at cupiditate quibusdam iste alias enim nobis perspiciatis recusandae deserunte minus. Aspernatur ratione quam laboriosam, et dolore i
-                                </p>
+                                <div class="faq__answer">
+                                    <div class="faq__answer-content">
+                                        <span>Ответ - </span> Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit.
+                                        Ut quam provident aspernatur consectetur
+                                        dolorem earum reiciendis qui rem quia
+                                        eaque labor
+                                    </div>
+                                </div>
                             </div>
                             <div class="faq__item">
                                 <p class="faq__question">
                                     <span>Вопрос - </span>Почему у меня не
                                     активна кнопка Подключить/Изменить сервис?
                                 </p>
-                                <p class="faq__answer">
-                                    <span>Ответ - </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quam provident aspernatur consectetur dolorem earum reiciendis qui rem quia eaque labor
-                                </p>
+                                <div class="faq__answer">
+                                    <div class="faq__answer-content">
+                                        <span>Ответ - </span> Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit.
+                                        Ut quam provident aspernatur consectetur
+                                        dolorem earum reiciendis qui rem quia
+                                        eaque labor
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -64,24 +102,23 @@
         <script src="./script.js"></script>
         <script>
             (() => {
-                const faqItem = document.querySelectorAll(".faq__item");
-                Array.from(faqItem).forEach((element) => {
-                    element.addEventListener("click", (e) => {
-                        const answer = element.querySelector(".faq__answer");
-                        const question = element.querySelector(".faq__question");
-
-                        if (element.classList.contains("faq__item_active")) {
+                const faqQuestions = document.querySelectorAll(".faq__question");
+                Array.from(faqQuestions).forEach((question) => {
+                    question.addEventListener("click", (e) => {
+                        const item = question.parentElement;
+                        const answer = question.nextElementSibling;
+                        if (item.classList.contains("faq__item_active")) {
                             answer.style.maxHeight = "0";
                             answer.style.overflow = "hidden";
                             answer.style.opacity = "0";
 
-                            element.classList.remove("faq__item_active");
+                            item.classList.remove("faq__item_active");
                         } else {
-                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            answer.style.maxHeight = answer.scrollHeight + "px";
                             answer.style.overflow = "visible";
                             answer.style.opacity = "1";
 
-                            element.classList.add("faq__item_active");
+                            item.classList.add("faq__item_active");
                         }
                     });
                 });

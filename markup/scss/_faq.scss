@@ -1,54 +1,57 @@
 .faq {
+  display: flex;
+  flex-direction: column;
+  gap: $item-offsets;
+  & &__question,
+  & &__answer {
+    margin: 0;
+    span {
+      color: $color-green-300;
+    }
+  }
+  & &__list {
     display: flex;
     flex-direction: column;
-    gap:$item-offsets;
-    & &__question,
-     & &__answer {
-        margin: 0;
-        span {
-            color: $color-green-300;
-        }
+    gap: $item-offsets;
+  }
+  & &__answer {
+    background-color: cadetblue;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    &-content {
+        padding: 20px;
     }
-    & &__list {
-        display: flex;
-        flex-direction: column;
-        gap:$item-offsets;
+  }
+  & &__question {
+    background-color: bisque;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../../assets/icons/feather/chevron-down.svg") center
+        no-repeat;
+      background-size: cover;
+      transition: all 0.5s ease;
     }
-    & &__answer {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: all .5s ease-in-out;
-
-
-    }
-    & &__item {
-        @include shadow();
-        background-color: $color-white;
-        padding: 20px 40px 20px 20px ;
-        position: relative;
-        cursor: pointer;
-
+  }
+  & &__item {
+    @include shadow();
+    background-color: $color-white;
+    &_active {
+      .faq__question {
         &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            width:20px;
-            height:20px;
-            transform: translateY(-50%);
-            background: url('../../assets/icons/feather/chevron-down.svg') center no-repeat;
-            background-size: cover;
-            transition: all .5s ease;
+          transform: translateY(-50%) rotate(180deg);
         }
-        &_active {
-            &::after {
-            transform: translateY(-50%) rotate(180deg);
-            }
-
-            .faq__answer {
-                margin-top: 20px;
-            }
-        }
+      }
     }
+  }
 }
