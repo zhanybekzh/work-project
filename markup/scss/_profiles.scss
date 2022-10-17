@@ -136,6 +136,7 @@
         @include shadow();
         button {
             background-color: transparent;
+            white-space: nowrap;
             margin: 0;
             width:100%;
             padding:10px;text-align: left;

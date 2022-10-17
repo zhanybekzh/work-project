@@ -86,7 +86,7 @@
   @if ($button-type == "red") {
     @include button("button");
     color: $button-red-color;
-    background-color: transparent;
+    background-color: $color-white;
     border-color: $button-red-color;
 
     &:hover {
@@ -122,7 +122,7 @@
     @include button("button");
 
     color: $button-outline-color;
-    background-color: transparent;
+    background-color: $color-white;
     border-color: $button-outline-border-color;
 
     &:hover {
@@ -199,9 +199,17 @@
     input[type="radio"] {
       display: none;
 
-      &:checked + label::before {
-        background: url("../../assets/icons/custom/radio-button_active.svg")
-          center no-repeat;
+      &:checked + label::after {
+        content: "";
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 50%;
+        left: 13px;
+        transform: translate(-50%, -50%);
+        z-index:2;
+        background-color:$color-green-300;
       }
 
       &:disabled {
@@ -217,7 +225,18 @@
         }
       }
     }
-
+    &.form-radio_white {
+      label {
+        &:before {
+          border-color: $color-white;
+        }
+      }
+      input[type="radio"] {
+        &:checked + label::after {
+          background-color:$color-white;
+        }
+      }
+    }
     label {
       position: relative;
       padding-left: 35px;
@@ -226,13 +245,15 @@
 
       &:before {
         content: "";
+        border: 1px solid $color-green-300;
+        border-radius: 50%;
         width: 26px;
         height: 26px;
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 0;
-        background: url("../../assets/icons/custom/radio-button.svg") center
-          no-repeat;
+        transform:translateY(-50%);
+
       }
     }
   }

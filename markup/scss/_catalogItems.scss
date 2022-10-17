@@ -1,17 +1,27 @@
 .catalog {
   .item {
-    list-style: none;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    cursor: pointer;
+      list-style: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 500px;
+      cursor: pointer;
     &:hover .item__about {
-      transition: background-color 0.7s ease-out;
+      transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
       background-color: $color-green-500;
       border-color: $color-green-500;
     }
     @include shadow();
+    &__link {
+      display: block;
+      text-decoration: none;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
     &__image {
       flex: 0 0 200px;
       width: 100%;

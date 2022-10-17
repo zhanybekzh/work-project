@@ -1,7 +1,11 @@
 .page {
     padding: 40px 0 40px;
+    &.page-landing {
+    padding: 0;
+    }
     &-section {
         padding:20px;
+        background-color: $color-white;
         @include shadow();
         @media (min-width: 576px) {
             padding:40px;
@@ -13,7 +17,7 @@
             padding:60px 70px;
         }
     }
-    
+
     .section {
         @include shadow();
     }

@@ -1,0 +1,492 @@
+.landing-section {
+  &_top {
+    position: relative;
+    top: -2em;
+  }
+}
+
+// ===========================
+// landing advantages
+.advantages {
+  &__inner {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    @media (min-width: 992px) {
+      gap: 20px;
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &_3columns {
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+      @media (min-width: 992px) {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  &__item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__title {
+    margin: 0;
+    max-height: 65px;
+    font-size: 24px;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__description {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &_drugs {
+      background-image: url("../../assets/icons/forLandings/drugs.svg");
+    }
+    &_tobacco {
+      background-image: url("../../assets/icons/forLandings/tobacco.svg");
+    }
+    &_shoes {
+      background-image: url("../../assets/icons/forLandings/shoes.svg");
+    }
+    &_milk {
+      background-image: url("../../assets/icons/forLandings/milk.svg");
+    }
+    &_sound {
+      background-image: url("../../assets/icons/forLandings/sound.svg");
+    }
+    &_people {
+      background-image: url("../../assets/icons/forLandings/people.svg");
+    }
+    &_database {
+      background-image: url("../../assets/icons/forLandings/database.svg");
+    }
+    &_message {
+      background-image: url("../../assets/icons/forLandings/message.svg");
+    }
+    &_cloud {
+      background-image: url("../../assets/icons/forLandings/cloud.svg");
+    }
+    &_watch {
+      background-image: url("../../assets/icons/forLandings/watch.svg");
+    }
+    &_paper {
+      background-image: url("../../assets/icons/forLandings/paper.svg");
+    }
+    &_guard {
+      background-image: url("../../assets/icons/forLandings/guard.svg");
+    }
+    &_lock {
+      background-image: url("../../assets/icons/forLandings/lock.svg");
+    }
+    &_x {
+      background-image: url("../../assets/icons/forLandings/x.svg");
+    }
+    &_gear {
+      background-image: url("../../assets/icons/forLandings/gear.svg");
+    }
+    &_fullscreen {
+      background-image: url("../../assets/icons/forLandings/fullscreen.svg");
+    }
+    &_experience {
+      background-image: url("../../assets/icons/forLandings/experience.svg");
+    }
+    &_heart {
+      background-image: url("../../assets/icons/forLandings/heart.svg");
+    }
+    &_integration {
+      background-image: url("../../assets/icons/forLandings/integration.svg");
+    }
+    &_uniq {
+      background-image: url("../../assets/icons/forLandings/uniq.svg");
+    }
+    &_time {
+      background-image: url("../../assets/icons/forLandings/time.svg");
+    }
+    &_universal {
+      background-image: url("../../assets/icons/forLandings/universal.svg");
+    }
+  }
+}
+// landing service-img-features
+.service-img-features {
+  & &__items {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  & &__item {
+    display: flex;
+    @include shadow();
+    flex-direction: column;
+    min-height: 340px;
+    @media (min-width: 500px) {
+      flex-direction: row;
+      min-height: auto;
+    }
+  }
+  & &__title {
+    font-weight: 700;
+  }
+  & &__content {
+    min-height: unset;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 60%;
+
+    @media (min-width: 500px) {
+      min-height: 294px;
+    }
+  }
+  & &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  & &__img-block {
+    width: 100%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex: 1 1 40%;
+    min-height: 150px;
+
+    @media (min-width: 500px) {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 1 1 40%;
+    }
+    &_func {
+      background-image: url("./../../assets/img/forLandings/func-min.jpg");
+      @media (min-width: 500px) {
+        background-image: url("./../../assets/img/forLandings/func.jpg");
+      }
+    }
+    &_comfort {
+      background-image: url("./../../assets/img/forLandings/comfort-min.jpg");
+      @media (min-width: 500px) {
+        background-image: url("./../../assets/img/forLandings/comfort.jpg");
+      }
+    }
+    &_updates {
+      background-image: url("./../../assets/img/forLandings/updates-min.jpg");
+      @media (min-width: 500px) {
+        background-image: url("./../../assets/img/forLandings/updates.jpg");
+      }
+    }
+    &_access {
+      background-image: url("./../../assets/img/forLandings/access-min.jpg");
+      @media (min-width: 500px) {
+        background-image: url("./../../assets/img/forLandings/access.jpg");
+      }
+    }
+  }
+}
+// landing vertical-service-img-features
+.vertical-service-img-features {
+  & &__items {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  & &__item {
+    display: flex;
+    @include shadow();
+    flex-direction: column;
+    min-height: auto;
+  }
+  & &__img-block {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 205px;
+
+    &_func {
+      background-image: url("./../../assets/img/forLandings/func-min.jpg");
+    }
+
+    &_comfort {
+      background-image: url("./../../assets/img/forLandings/comfort-min.jpg");
+    }
+    &_updates {
+      background-image: url("./../../assets/img/forLandings/updates-min.jpg");
+    }
+    &_access {
+      background-image: url("./../../assets/img/forLandings/access-min.jpg");
+    }
+    &_accountants {
+      background-image: url("./../../assets/img/forLandings/accountants.jpg");
+    }
+    &_businessmen {
+      background-image: url("./../../assets/img/forLandings/businessmen.jpg");
+    }
+    &_business {
+      background-image: url("./../../assets/img/forLandings/business.jpg");
+    }
+    &_students {
+      background-image: url("./../../assets/img/forLandings/students.jpg");
+    }
+    &_networks {
+      background-image: url("./../../assets/img/forLandings/networks.jpg");
+    }
+    &_calc {
+      background-image: url("./../../assets/img/forLandings/calc.jpg");
+    }
+    &_consultants {
+      background-image: url("./../../assets/img/forLandings/consultants.jpg");
+    }
+    &_specialists {
+      background-image: url("./../../assets/img/forLandings/specialists.jpg");
+    }
+  }
+  & &__content {
+    min-height: unset;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  & &__title {
+    font-weight: 700;
+  }
+}
+// landing feature-list
+.feature-list {
+  list-style: none;
+  &_2column {
+    @media (min-width: 992px) {
+      column-count: 2;
+    }
+  }
+  &_dots {
+    .feature-list__item::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: $color-green-300;
+        border-radius: 50%;
+        align-self: baseline;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 12px;
+        margin-top: 9px;
+      }
+    }
+    &_dashs {
+      .feature-list__item::before {
+          content: '';
+          display: block;
+          width: 13px;
+          height: 2px;
+          background: $color-green-300;
+          align-self: baseline;
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-right: 12px;
+          margin-top: 12px;
+        }
+      }
+  &__item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    &::before {
+      content: url("./../../assets/icons/forLandings/feature-item-bullet.svg");
+      width: 12px;
+      height: 18px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 1em;
+    }
+  }
+}
+// landing section-how-subscribe__steps и section-how-subscribe__steps_horizontal
+.section-how-subscribe__steps {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 40px;
+  padding-left: 0;
+  line-height: 1.3;
+  list-style: none;
+  counter-reset: subscribe-steps;
+  margin-left: 40px;
+  @media (min-width: 992px) {
+    margin-left: 70px;
+  }
+  & li {
+    list-style: none;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+    counter-increment: subscribe-steps;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+    &::before {
+      content: counter(subscribe-steps);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: -7px;
+      left: -35px;
+      margin-right: auto;
+      margin-bottom: 1.333333333em;
+      margin-left: auto;
+      color: $color-green-300;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      @media (min-width: 992px) {
+        width: 60px;
+        height: 60px;
+        top: -20px;
+        left: -70px;
+        font-size: 1.5em;
+        border-width: 2px;
+      }
+    }
+  }
+  &_horizontal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-left: 0;
+    padding-top: 100px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    & li {
+      text-align: center;
+      margin-bottom: 40px;
+      &:not(:last-child) {
+        margin-bottom: 80px;
+        @media (min-width: 1200px) {
+          margin-bottom: 40px;
+        }
+      }
+      &::before {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 2px;
+        @media (min-width: 992px) {
+        }
+      }
+    }
+  }
+}
+
+.section-training {
+  margin-top: -10em;
+  @media (min-width: 576px) {
+    margin-top: -14em;
+  }
+  @media (min-width: 992px) {
+    margin-top: -10em;
+  }
+}
+
+.section-authors {
+  & .authors {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+      @include shadow();
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 25px;
+    }
+    &__img {
+      display: block;
+      border-radius: 50%;
+      width: 144px;
+      height: 144px;
+    }
+    &__title {
+      font-weight: 700;
+      text-align: center;
+    }
+    &__description-list {
+      font-size: 15px;
+    }
+    &__description-items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 10px;
+      li {
+        position: relative;
+        &::before {
+          content: url("./../../assets/icons/forLandings/feature-item-bullet.svg");
+          width: 10px;
+          height: 15px;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -25px;
+        }
+      }
+    }
+  }
+}

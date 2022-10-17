@@ -33,7 +33,8 @@
                         </div>
                     </div>
                     </div>
-                <a href="${this.href}" class="item__about">
+                    <a href="${this.href}" class="item__link">
+                <a href="#" class="item__about">
                     Подробнее
                 </a>
             </div>

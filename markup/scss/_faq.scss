@@ -26,7 +26,11 @@
   & &__question {
     position: relative;
     padding: 20px;
+    padding-right: 60px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &::after {
       content: "";
       position: absolute;
@@ -39,6 +43,39 @@
         no-repeat;
       background-size: cover;
       transition: all 0.5s ease;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 400;
+      color: unset;
+      margin: 0;
+      padding: 0;
+    }
+    .url-copy-button {
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      border:none;
+      width:45px;
+      height: 45px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      transition: opacity .3s ease;
+      border-color: white;
+    }
+  }
+  & &__question:hover {
+    .url-copy-button {
+      opacity: 1;
+      &:hover {
+        border: 1px solid $color-green-300;
+        border-radius: 14px;
+        transition: border-color .2s ease;
+      }
     }
   }
   & &__item {

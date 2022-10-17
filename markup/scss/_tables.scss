@@ -30,6 +30,10 @@
       vertical-align: middle;
     }
   }
+
+  tr:last-child .profiles__dropdown-menu {
+    top: -400%;
+  }
 }
 
 

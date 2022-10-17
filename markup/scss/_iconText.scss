@@ -14,9 +14,10 @@
         transform: translateY(-50%);
     }
 
-    &.check-circle {
+    &.check-circle_green {
         &::before {
-            @include icon-text('check-circle');
+            background:url('./../../assets/icons/custom/check-circle_green.svg') no-repeat center;
+
         }
     }
 }
