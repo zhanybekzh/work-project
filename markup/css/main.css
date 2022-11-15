@@ -2046,8 +2046,8 @@ body header.unauthorized {
 }
 body main {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
   background-color: #fff;
 }
 body footer {
