@@ -3492,7 +3492,13 @@ body footer::after {
 .form ul {
   padding-left: 0;
 }
-.form input[type=text]:disabled, .form input[type=submit]:disabled, .form input[type=reset]:disabled, .form input[type=password]:disabled, .form input[type=file]:disabled, .form input[type=tel]:disabled, .form input[type=number]:disabled {
+.form input[type=text]:disabled,
+.form input[type=submit]:disabled,
+.form input[type=reset]:disabled,
+.form input[type=password]:disabled,
+.form input[type=file]:disabled,
+.form input[type=tel]:disabled,
+.form input[type=number]:disabled {
   background-color: #f8f8f8;
 }
 .form-radio {
@@ -3848,7 +3854,15 @@ body footer::after {
   transition: border-color 0.15s ease-in-out;
   background-color: #fff;
 }
-.form-select__select:focus {
+.form-select__select_invalid {
+  border-color: #dc3747;
+  position: relative;
+  z-index: 2;
+}
+.form-select__select::focus {
+  z-index: 2;
+}
+.form-select__select:invalid {
   border-color: #2a2f30;
   background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
 }

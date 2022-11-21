@@ -189,7 +189,13 @@
   ul {
     padding-left: 0;
   }
-  input[type="text"]:disabled,   input[type="submit"]:disabled,  input[type="reset"]:disabled, input[type="password"]:disabled, input[type="file"]:disabled, input[type="tel"]:disabled, input[type="number"]:disabled {
+  input[type="text"]:disabled,
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled,
+  input[type="password"]:disabled,
+  input[type="file"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="number"]:disabled {
     background-color: $color-gray-100;
   }
   &-radio {
@@ -208,8 +214,8 @@
         top: 50%;
         left: 13px;
         transform: translate(-50%, -50%);
-        z-index:2;
-        background-color:$color-green-300;
+        z-index: 2;
+        background-color: $color-green-300;
       }
 
       &:disabled {
@@ -233,7 +239,7 @@
       }
       input[type="radio"] {
         &:checked + label::after {
-          background-color:$color-white;
+          background-color: $color-white;
         }
       }
     }
@@ -252,8 +258,7 @@
         position: absolute;
         top: 50%;
         left: 0;
-        transform:translateY(-50%);
-
+        transform: translateY(-50%);
       }
     }
   }
@@ -533,9 +538,9 @@
           border-radius: 0px 5px 5px 0px;
         }
       }
-        .form-input-file__file ~ .form-input-file__label[data-browse]::after {
-           content: attr(data-browse);
-         }
+      .form-input-file__file ~ .form-input-file__label[data-browse]::after {
+        content: attr(data-browse);
+      }
     }
   }
 
@@ -559,8 +564,16 @@
       outline: 0;
       transition: border-color 0.15s ease-in-out;
       background-color: $color-white;
+      &_invalid {
+        border-color: #dc3747;
+        position: relative;
+        z-index: 2;
+      }
 
-      &:focus {
+    &::focus {
+      z-index: 2;
+    }
+      &:invalid {
         border-color: $color-black-text;
         background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
           right 9px bottom 10px no-repeat;
