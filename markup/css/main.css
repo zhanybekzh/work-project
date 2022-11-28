@@ -2404,11 +2404,15 @@ body footer::after {
   position: relative;
   text-decoration: none;
   color: unset;
+  line-height: 2;
+}
+.header .header__comein-button:hover {
+  color: #00898d;
 }
 .header .header__comein-button::before {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 2px;
   display: block;
   width: 15px;
   height: 15px;
