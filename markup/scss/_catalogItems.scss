@@ -9,8 +9,8 @@
       cursor: pointer;
     &:hover .item__about {
       transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
-      background-color: $color-green-500;
-      border-color: $color-green-500;
+      background-color: $color-green-heading;
+      border-color: $color-green-heading;
     }
     @include shadow();
     &__link {
