@@ -4632,6 +4632,17 @@ body footer::after {
 .auth-modal__content .form-auth__forget a:hover {
   color: #004f56;
 }
+@media (min-width: 768px) {
+  .auth-modal__content .form-auth__forget {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 
 .catalog-landing__banner {
   background: url("../../assets/img/catalog-landing.webp") center no-repeat;
