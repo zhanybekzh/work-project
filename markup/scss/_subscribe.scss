@@ -8,66 +8,68 @@
   &__form {
     @include shadow();
   }
-
-  &__steps {
+  & &__steps {
+    position: relative;
+    overflow-x: hidden;
+  }
+  & &__steps ol {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
-    counter-reset: step;
-    padding: 0;
-    margin: 0;
+    counter-reset: steps;
+    list-style: none;
+    transition: left 0.25s ease-in-out;
   }
 
-  &__step {
-    min-height: 135px;
-    padding: 20px;
+  & &__steps ol li {
+    padding: 2em 3em;
     list-style: none;
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
     font-weight: 700;
     color: $color-gray-400;
-    display: none;
-border-bottom: 2px solid $color-gray-200;
-    @media (min-width: 768px) {
-      display: flex;
-    }
+    border-bottom: 2px solid $color-gray-200;
+    transition: color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
 
-    &::before {
-      counter-increment: step;
-      content: counter(step);
-      width: 60px;
-      height: 60px;
-      flex: 0 0 60px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: $color-gray-400;
-      background-color: $color-gray-200;
+    span {
       display: flex;
-      justify-content: center;
+      gap: 10px;
       align-items: center;
-      border-radius: 50%;
-    }
 
-    &_active {
+      &::before {
+        counter-increment: steps;
+        content: counter(steps);
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $color-gray-400;
+        background-color: $color-gray-200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+    &._active {
       border-bottom: 2px solid $color-green-300;
       color: $color-green-300;
       display: flex;
 
-      &::before {
+      & span::before {
         color: $color-white;
         background-color: $color-green-300;
       }
     }
-
-    & span {
-      flex: 0 0 110px;
-    }
   }
 
   .form {
-
     padding: 35px 20px;
     display: flex;
     flex-direction: column;
@@ -80,7 +82,6 @@ border-bottom: 2px solid $color-gray-200;
       flex-wrap: wrap;
 
       @media (min-width: 1200px) {
-
         max-height: 400px;
       }
     }

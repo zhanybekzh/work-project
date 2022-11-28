@@ -199,138 +199,224 @@
 
         <main>
             <div class="page">
-            <div class="container">
-                <div class="subscribe">
-                    <div class="text">Сервис</div>
-                    <h1>
-                        Дистанционный тренинг по основам бухгалтерского учета
-                    </h1>
-                    <p class="icon-text check-circle_green">
-                        Чтобы подписаться на сервис пожалуйста заполните
-                        несколько шагов
-                    </p>
-                    <div class="subscribe__form">
-                        <ol class="subscribe__steps">
-                            <li class="subscribe__step subscribe__step_active">
-                                <span>Выбор профиля</span>
-                            </li>
-                            <li class="subscribe__step">
-                                <span>Ввод бизнес-параметров</span>
-                            </li>
-                            <li class="subscribe__step">
-                                <span>Контроль баланса</span>
-                            </li>
-                        </ol>
-                        <form action="" class="form">
-                            <div class="alert alert_warning">
-                                <p class="alert-heading">
-                                    От типа профиля зависят доступные способы
-                                    оплаты:
-                                </p>
-                                <p>
-                                    <b>Юридическим лицам</b> - доступна оплата
-                                    по Счету на оплату и оплата Платежными
-                                    картами.
-                                </p>
-                                <p>
-                                    <b>Физическим лицам</b> - доступна оплата
-                                    Платежными картами.
-                                </p>
+                <div class="container">
+                    <div class="subscribe">
+                        <div class="text">Сервис</div>
+                        <h1>
+                            Дистанционный тренинг по основам бухгалтерского
+                            учета
+                        </h1>
+                        <p class="icon-text check-circle_green">
+                            Чтобы подписаться на сервис пожалуйста заполните
+                            несколько шагов
+                        </p>
+                        <div class="subscribe__form">
+                            <div class="subscribe__steps">
+                                <ol>
+                                    <li >
+                                        <span>Выбор профиля</span>
+                                    </li>
+                                    <li>
+                                        <span>Ввод бизнес-параметров</span>
+                                    </li>
+                                    <li class="_active">
+                                        <span>Контроль баланса</span>
+                                    </li>
+                                    <li>
+                                        <span>Завершение</span>
+                                    </li>
+                                </ol>
                             </div>
-                            <ul class="subscribe__radio-list">
-                                <li class="form-radio">
-                                    <input
-                                        id="radio-1"
-                                        type="radio"
-                                        name="radio"
-                                        value="ur"
-                                        checked
-                                    />
-                                    <label for="radio-1"
-                                        >Юридическое лицо/ИП</label
-                                    >
-                                </li>
-                                <li class="form-radio">
-                                    <input
-                                        id="radio-2"
-                                        type="radio"
-                                        name="radio"
-                                        value="fiz"
-                                    />
-                                    <label for="radio-2">Физическое лицо</label>
-                                </li>
-                            </ul>
-                            <div class="form__input-list">
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input1">БИН/ИИН*</label>
-                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="0000 0000 0000 KZ">
-                                <div class="form-input__error">
-                                    Поле не заполнено
+                            <form action="" class="form">
+                                <div class="alert alert_warning">
+                                    <p class="alert-heading">
+                                        От типа профиля зависят доступные
+                                        способы оплаты:
+                                    </p>
+                                    <p>
+                                        <b>Юридическим лицам</b> - доступна
+                                        оплата по Счету на оплату и оплата
+                                        Платежными картами.
+                                    </p>
+                                    <p>
+                                        <b>Физическим лицам</b> - доступна
+                                        оплата Платежными картами.
+                                    </p>
                                 </div>
-                            </div>
+                                <ul class="subscribe__radio-list">
+                                    <li class="form-radio">
+                                        <input
+                                            id="radio-1"
+                                            type="radio"
+                                            name="radio"
+                                            value="ur"
+                                            checked
+                                        />
+                                        <label for="radio-1"
+                                            >Юридическое лицо/ИП</label
+                                        >
+                                    </li>
+                                    <li class="form-radio">
+                                        <input
+                                            id="radio-2"
+                                            type="radio"
+                                            name="radio"
+                                            value="fiz"
+                                        />
+                                        <label for="radio-2"
+                                            >Физическое лицо</label
+                                        >
+                                    </li>
+                                </ul>
+                                <div class="form__input-list">
+                                    <div class="form-input">
+                                        <label
+                                            class="form-input__label"
+                                            for="form-input1"
+                                            >БИН/ИИН*</label
+                                        >
+                                        <input
+                                            class="form-input__input"
+                                            type="text"
+                                            name=""
+                                            id="form-input1"
+                                            placeholder="0000 0000 0000 KZ"
+                                        />
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                    </div>
 
-                            <div class="form-select">
-                                <label class="form-text__label" for="">Форма собственности*</label>
-                                <select class="form-select__select" type="" name="" id="">
-                                    <option value="" disabled selected>1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input1">Полное наименование*</label>
-                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Полное наименование">
-                                <div class="form-input__error">
-                                    Поле не заполнено
+                                    <div class="form-select">
+                                        <label class="form-text__label" for=""
+                                            >Форма собственности*</label
+                                        >
+                                        <select
+                                            class="form-select__select"
+                                            type=""
+                                            name=""
+                                            id=""
+                                        >
+                                            <option value="" disabled selected>
+                                                1
+                                            </option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input">
+                                        <label
+                                            class="form-input__label"
+                                            for="form-input1"
+                                            >Полное наименование*</label
+                                        >
+                                        <input
+                                            class="form-input__input"
+                                            type="text"
+                                            name=""
+                                            id="form-input1"
+                                            placeholder="Полное наименование"
+                                        />
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label
+                                            class="form-input__label"
+                                            for="form-input1"
+                                            >Юридический адрес*</label
+                                        >
+                                        <input
+                                            class="form-input__input"
+                                            type="text"
+                                            name=""
+                                            id="form-input1"
+                                            placeholder="Юридический адрес"
+                                        />
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                    </div>
+                                    <div class="form-select">
+                                        <label class="form-text__label" for=""
+                                            >Сфера деятельности*</label
+                                        >
+                                        <select
+                                            class="form-select__select"
+                                            type=""
+                                            name=""
+                                            id=""
+                                        >
+                                            <option value="" disabled selected>
+                                                1
+                                            </option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select">
+                                        <label class="form-text__label" for=""
+                                            >Номер счёта*</label
+                                        >
+                                        <select
+                                            class="form-select__select"
+                                            type=""
+                                            name=""
+                                            id=""
+                                        >
+                                            <option value="" disabled selected>
+                                                1
+                                            </option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-input">
+                                        <label
+                                            class="form-input__label"
+                                            for="form-input1"
+                                            >Банк*</label
+                                        >
+                                        <input
+                                            class="form-input__input"
+                                            type="text"
+                                            name=""
+                                            id="form-input1"
+                                            placeholder="Полное наименование"
+                                        />
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                    </div>
+                                    <div class="form-input">
+                                        <label
+                                            class="form-input__label"
+                                            for="form-input1"
+                                            >Адрес электронной почты</label
+                                        >
+                                        <input
+                                            class="form-input__input"
+                                            type="text"
+                                            name=""
+                                            id="form-input1"
+                                            placeholder="example@mail.com"
+                                        />
+                                        <div class="form-input__error">
+                                            Поле не заполнено
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input1">Юридический адрес*</label>
-                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Юридический адрес">
-                                <div class="form-input__error">
-                                    Поле не заполнено
+                                <div class="subscribe__buttons">
+                                    <a href="" class="button-outline">Отмена</a>
+                                    <a href="" class="button-outline">Назад</a>
+                                    <a href="" class="button">Сохранить</a>
                                 </div>
-                            </div>
-                            <div class="form-select">
-                                <label class="form-text__label" for="">Сфера деятельности*</label>
-                                <select class="form-select__select" type="" name="" id="">
-                                    <option value="" disabled selected>1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
-                            <div class="form-select">
-                                <label class="form-text__label" for="">Номер счёта*</label>
-                                <select class="form-select__select" type="" name="" id="">
-                                    <option value="" disabled selected>1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input1">Банк*</label>
-                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Полное наименование">
-                                <div class="form-input__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
-                            <div class="form-input">
-                                <label class="form-input__label" for="form-input1">Адрес электронной почты</label>
-                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="example@mail.com">
-                                <div class="form-input__error">
-                                    Поле не заполнено
-                                </div>
-                            </div>
+                            </form>
                         </div>
-                            <div class="subscribe__buttons">
-                                <a href="" class="button-outline">Отмена</a>
-                                <a href="" class="button-outline">Назад</a>
-                                <a href="" class="button">Сохранить</a>
-                            </div>
-                        </form>
                     </div>
                 </div>
-            </div></div>
+            </div>
         </main>
         <footer>
             <div class="container">
@@ -387,6 +473,226 @@
                 </div>
             </div>
         </footer>
+        <script>
+            ;(function () {
+
+                /**
+                 * В это классе спрятана логика компонента.
+                 *
+                 * Используется синтаксис классов, введённый в ES6.
+                 *
+                 * Так же используется синтаксис закрытых элементов классов, который
+                 * пока в черновике, но уже в основных браузерах.
+                 *
+                 * Все манипуляции с размерами компонента и его элементов выполняем
+                 * в момент, когда браузер готов перерисовывать страницу, дабы
+                 * избежать торможений на клиенте. Изменения ширины заставляют
+                 * браузер пересчитывать позиции элементов на странице и обычно
+                 * это не является безопасными и быстрыми для анимации манипуляциями
+                 * с DOM, которых следует избегать.
+                 *
+                 * @see https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes
+                 * @see https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+                 * @see https://developer.mozilla.org/ru/docs/Web/API/window/requestAnimationFrame
+                 */
+                class Steps
+                {
+                    /**
+                     * @var {object} #breakpoints
+                     *   Определяет количество шагов для разных размеров экрана:
+                     *   ключ - минимальная ширина, значение - количество
+                     *   отображаемых шагов.
+                     * @private
+                     */
+                    #breakpoints = {};
+
+                    /**
+                     * @var {HTMLElement} #steps
+                     *   Корневой элемент компонента - контейнер.
+                     * @private
+                     */
+                    #steps = null;
+
+                    /**
+                     * @var {HTMLElement} #itemsList
+                     *   Список шагов.
+                     * @private
+                     */
+                    #itemsList = null;
+
+                    /**
+                     * @var {HTMLCollection|NodeList} #items
+                     *   Все доступные шаги.
+                     * @private
+                     */
+                    #items = null;
+
+                    /**
+                     * @var {int} #activeItemIndex
+                     *   Индекс текущего шага; по умолчанию - самый первый.
+                     * @private
+                     */
+                    #activeItemIndex = 0;
+
+                    /**
+                     * Конструктор объектов класса Steps
+                     *
+                     * @param {object} breakpoints
+                     *   Определяет количество шагов для разных размеров экрана:
+                     *   ключ - минимальная ширина, значение - количество
+                     *   отображаемых шагов.
+                     */
+                    constructor (breakpoints = {
+                        0: 1,
+                        576: 2,
+                        768: 3,
+                        992: 4,
+                        1200: 5,
+                        1400: 6
+                    }) {
+                        this.#breakpoints = breakpoints;
+
+                        // Сохраняем в приватные поля класса объекты на странице,
+                        // дабы лишний раз нет дёргать dom
+                        this.#steps = document.querySelector('.subscribe__steps');
+                        this.#itemsList = this.#steps.querySelector('ol');
+                        this.#items = this.#itemsList.children;
+
+                        // По наличию класса `active` определяет индекст текущего
+                        // шага, т.к. он может изначально быть совсем не первым
+                        this.#activeItemIndex = (() => {
+                            for (let i = 0; i < this.#items.length; i++) {
+                                if (this.#items.item(i).classList.contains('_active')) {
+                                    return i;
+                                }
+                            }
+                            return 0;
+                        })();
+
+                        // Выполняем инициализацию - расчёт ширины отдельно
+                        // элемента, смещения для отображения текущего шага и т.п.
+                        window.requestAnimationFrame(() => { this.#init(); });
+
+                        // Вешаем повторную инициализацию для перерасчёта параметров
+                        // шагов при изменении размеров клиента
+                        window.addEventListener('resize', () => {
+                            window.requestAnimationFrame(() => { this.#init(); });
+                        });
+                    }
+
+                    /**
+                     * Выполняет расчёт общей ширины блока шагов, размера каждого
+                     * шага, смещения для отображения текущего шага, применение
+                     * всех расчётов к компоненту.
+                     *
+                     * @return {undefined}
+                     * @private
+                     */
+                    #init ()
+                    {
+                        // Максимальная ширина отображаемых шагов, определяется
+                        // шириной родительского элемента, в который вписаны шаги
+                        const maxWidth = this.#steps.parentElement.clientWidth;
+
+                        // Вычисляем количество шагов для отображения на основании
+                        // текущей ширины контейнера и заданных параметров; как
+                        // минимум отображается 1 шаг
+                        const itemsToShow = (() => {
+                            let itemsToShow = 1;
+                            for (let breakpoint in this.#breakpoints) {
+                                if (parseInt(breakpoint) > maxWidth) {
+                                    break;
+                                }
+                                itemsToShow = this.#breakpoints[breakpoint];
+                            }
+                            return itemsToShow;
+                        })();
+
+                        // Ширина отдельного шага (у всех одинаковая)
+                        const itemWidth = Math.floor(maxWidth / itemsToShow);
+
+                        // Общая ширина для всех шагов (может выходить за рамки
+                        // ширины родительского контейнера)
+                        const listWidth = itemWidth * this.#items.length;
+
+                        // Применяем общую ширину шагов
+                        this.#itemsList.style.width = listWidth + 'px';
+
+                        // Задаём высоту для комопонента, т.к. единственный его
+                        // потомок имеет абсолютное позиционирование и выпадает из
+                        // потока dom, то высоты у компонета по умолчанию нет
+                        this.#steps.style.minHeight = this.#itemsList.clientHeight + 'px';
+
+                        // Для всех шагов задаём расчитанную ширину
+                        for (let i = 0; i < this.#items.length; i++) {
+                            this.#items[i].style.width = itemWidth + 'px';
+                        }
+
+
+                        // Расчитываем количество элементов слева от текущего шага
+                        const left = Math.floor((itemsToShow - 1) / 2);
+                        // Расчитываем количество элементов справа от текущего шага
+                        const right = itemsToShow - left - 1;
+                        // Расчитываем отступ, чтобы сдвинуть список шагов для
+                        // отображения текущего
+                        let offset = 0;
+                        if (right + this.#activeItemIndex >= this.#items.length) {
+                            offset = this.#items.length - itemsToShow;
+                        } else {
+                            offset = this.#activeItemIndex - left;
+                        }
+                        if (offset < 0) {
+                            offset = 0;
+                        }
+
+                        // Применяем расчитанный сдвиг
+                        this.#itemsList.style.left = (-1 * offset * itemWidth).toString() + 'px';
+                    }
+
+                    /**
+                     * Задать индекс текущего шага.
+                     *
+                     * @param {int} index
+                     *
+                     * @return {undefined}
+                     */
+                    setActive (index = 0)
+                    {
+                        // Индекс текущего шага не может быть меньше нуля...
+                        if (index < 0) {
+                            index = 0;
+                        }
+                        // ... и больше индекса последнего шага
+                        if (index > this.#items.length - 1) {
+                            index = this.#items.length - 1;
+                        }
+
+                        window.requestAnimationFrame(() => {
+                            // Убираем класс `active` для текущего активного
+                            const current = this.#itemsList.querySelector('._active');
+                            if (current) {
+                                current.classList.remove('_active');
+                            }
+
+                            // Ищем новый текущий и ставим ему класс `active`
+                            for (let i = 0; i < this.#items.length; i++) {
+                                if (i === index) {
+                                    this.#items[i].classList.add('_active');
+                                    break;
+                                }
+                            }
+
+                            // Сохраняем новый индекс текущего шага
+                            this.#activeItemIndex = index;
+                            // Перерисовываем всё, что надо
+                            this.#init();
+                        });
+                    }
+                }
+
+                const steps = new Steps();
+            })();
+        </script>
         <script src="./script.js"></script>
     </body>
 </html>

@@ -2783,7 +2783,7 @@ body footer::after {
 .change-profile__content {
   position: absolute;
   top: 115%;
-  height: 500px;
+  max-height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2804,7 +2804,6 @@ body footer::after {
   gap: 20px;
   color: #626b6d;
   padding: 0;
-  overflow: auto;
 }
 .change-profile__input {
   display: none;
@@ -2831,6 +2830,7 @@ body footer::after {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
+  overflow: hidden;
 }
 .change-profile__label:hover {
   color: #095d64;
@@ -3678,7 +3678,7 @@ body footer::after {
           transform: translateY(-4px);
 }
 .form-input__input_invalid ~ .form-input__password-icon {
-  border-color: #dc3747;
+  border-color: #dc3747 !important;
 }
 .form-input__input_invalid:focus {
   -webkit-box-shadow: none;
@@ -3855,15 +3855,71 @@ body footer::after {
   background-color: #fff;
 }
 .form-select__select_invalid {
-  border-color: #dc3747;
+  border-color: #dc3747 !important;
   position: relative;
   z-index: 2;
 }
-.form-select__select::focus {
+.form-select__select_invalid ~ .form-input__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  z-index: -1;
+  background-color: #dc3747;
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.form-select__select_invalid:focus {
+  border-color: #dc3747;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.form-select__select_invalid:focus ~ .form-input__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  z-index: -1;
+  background-color: #dc3747;
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+.form-select__select:focus {
   z-index: 2;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #c6c9cb;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  outline: 0;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
+  background-color: #fff;
 }
 .form-select__select:invalid {
-  border-color: #2a2f30;
+  border-color: #dc3747;
   background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E") right 9px bottom 10px no-repeat;
 }
 .form__columns {
@@ -4619,7 +4675,17 @@ body footer::after {
   -webkit-box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
           box-shadow: 0px 10px 25px rgba(76, 86, 86, 0.15);
 }
-.subscribe__steps {
+.subscribe .subscribe__steps {
+  position: relative;
+  overflow-x: hidden;
+}
+.subscribe .subscribe__steps ol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4627,40 +4693,40 @@ body footer::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  counter-reset: step;
-  padding: 0;
-  margin: 0;
-}
-.subscribe__step {
-  min-height: 135px;
-  padding: 20px;
+  counter-reset: steps;
   list-style: none;
-  width: 100%;
+  -webkit-transition: left 0.25s ease-in-out;
+  -o-transition: left 0.25s ease-in-out;
+  transition: left 0.25s ease-in-out;
+}
+.subscribe .subscribe__steps ol li {
+  padding: 2em 3em;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 700;
+  color: #626b6d;
+  border-bottom: 2px solid #f3f3f3;
+  -webkit-transition: color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, border-bottom-color 0.15s ease-in-out;
+}
+.subscribe .subscribe__steps ol li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  color: #626b6d;
-  display: none;
-  border-bottom: 2px solid #f3f3f3;
 }
-@media (min-width: 768px) {
-  .subscribe__step {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-.subscribe__step::before {
-  counter-increment: step;
-  content: counter(step);
+.subscribe .subscribe__steps ol li span::before {
+  counter-increment: steps;
+  content: counter(steps);
   width: 60px;
   height: 60px;
   -webkit-box-flex: 0;
@@ -4681,21 +4747,16 @@ body footer::after {
           align-items: center;
   border-radius: 50%;
 }
-.subscribe__step_active {
+.subscribe .subscribe__steps ol li._active {
   border-bottom: 2px solid #00898d;
   color: #00898d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.subscribe__step_active::before {
+.subscribe .subscribe__steps ol li._active span::before {
   color: #fff;
   background-color: #00898d;
-}
-.subscribe__step span {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 110px;
-          flex: 0 0 110px;
 }
 .subscribe .form {
   padding: 35px 20px;

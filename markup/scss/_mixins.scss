@@ -390,7 +390,7 @@
         }
 
         & ~ .form-input__password-icon {
-          border-color: $color-red;
+          border-color: $color-red !important;
         }
 
         &:focus {
@@ -565,16 +565,58 @@
       transition: border-color 0.15s ease-in-out;
       background-color: $color-white;
       &_invalid {
-        border-color: #dc3747;
+        border-color: $color-red !important;
         position: relative;
         z-index: 2;
+        & ~ .form-input__error {
+          display: flex;
+          padding: 0.5rem 0.8rem;
+          align-items: center;
+          color: $color-white;
+
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          width: 100%;
+          z-index: -1;
+          background-color: $color-red;
+          transform: translateY(-4px);
+        }
+        &:focus {
+          border-color: $color-red;
+          box-shadow: none;
+          & ~ .form-input__error {
+            display: flex;
+            padding: 0.5rem 0.8rem;
+            align-items: center;
+            color: $color-white;
+
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            width: 100%;
+            z-index: -1;
+            background-color: $color-red;
+            transform: translateY(-4px);
+          }
+        }
       }
 
-    &::focus {
-      z-index: 2;
-    }
+      &:focus {
+        z-index: 2;
+        position: relative;
+        appearance: none;
+        background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c6c9cb%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
+          right 9px bottom 10px no-repeat;
+        display: block;
+        border-radius: 5px;
+        border: 1px solid $color-gray-300;
+        padding: 0.5rem 0.8rem;
+        width: 100%;
+        outline: 0;
+        transition: border-color 0.15s ease-in-out;
+        background-color: $color-white;
+      }
       &:invalid {
-        border-color: $color-black-text;
+        border-color: $color-red;
         background: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232a2f30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20class%3D%22feather%20feather-chevron-down%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E")
           right 9px bottom 10px no-repeat;
       }

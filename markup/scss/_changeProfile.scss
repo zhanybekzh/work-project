@@ -1,97 +1,91 @@
 .change-profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__block {
     width: 100%;
+    position: relative;
+
+    &[data-state="active"] {
+      .change-profile__content {
+        opacity: 1;
+        max-height: fit-content;
+        padding: 20px;
+      }
+      .change-profile__label {
+        max-height: fit-content;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-white;
+
+    border-radius: 5px;
+    background-color: $color-green-300;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url("../../assets/icons/custom/chevron-down_white.svg") center
+        no-repeat;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 115%;
+    max-height: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px rgba(69, 66, 64, 0.2);
+    transition: height 1s ease;
+    opacity: 0;
+    z-index: 8;
+    gap: 20px;
+    color: $color-gray-400;
+    padding: 0;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + label {
+      color: $color-green-300;
+      font-weight: bold;
+    }
+
+    &:disabled + label {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+    display: flex;
     align-items: center;
+    width: 100%;
+    max-height: 0;
 
-    &__block {
-        width: 100%;
-        position: relative;
-
-        &[data-state="active"] {
-            .change-profile__content {
-                opacity: 1;
-                max-height: fit-content;
-                padding:20px;
-            }
-            .change-profile__label {
-                max-height: fit-content;
-            }
-        }
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+      color: $color-green-400;
     }
-
-
-
-    &__title {
-        color: $color-white;
-
-        border-radius: 5px;
-        background-color: $color-green-300;
-        padding: 10px 15px;
-        cursor: pointer;
-
-        &::before
-        {
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 15px;
-            display: block;
-            width: 15px;
-            height:15px;
-            background: url('../../assets/icons/custom/chevron-down_white.svg') center no-repeat;
-        }
-
-
-
-    }
-
-    &__content {
-        position: absolute;
-        top: 115%;
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: #ffffff;
-        border-radius: 5px;
-        box-shadow: 0px 0px 50px rgba(69, 66, 64, 0.2);
-        transition: height 1s ease;
-        opacity: 0;
-        z-index: 8;
-        gap: 20px;
-        color: $color-gray-400;
-        padding: 0;
-        overflow:auto;
-    }
-
-    &__input {
-        display: none;
-
-        &:checked+label {
-            color: $color-green-300;
-            font-weight: bold;
-        }
-
-        &:disabled+label {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-    }
-
-    &__label {
-        font-size: 1rem;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-height: 0;
-
-        transition: all 0.2s ease-out;
-        cursor: pointer;
-
-        &:hover {
-            color: $color-green-400;
-        }
-    }
+  }
 }
