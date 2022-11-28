@@ -3,6 +3,9 @@
 
 }
 .catalog {
+    &__title {
+        margin-bottom: 40px;
+    }
     &__subtitle {
         color: $color-black-text;
         font-size: 18px;

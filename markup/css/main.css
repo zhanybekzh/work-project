@@ -972,7 +972,7 @@ hr {
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #004f56;
+  color: #1B6B6D;
 }
 
 .h1, h1 {
@@ -3031,6 +3031,9 @@ body footer::after {
   background-color: #fff;
 }
 
+.catalog__title {
+  margin-bottom: 40px;
+}
 .catalog__subtitle {
   color: #2a2f30;
   font-size: 18px;
@@ -3122,7 +3125,7 @@ body footer::after {
   margin-bottom: 0;
 }
 .catalog .item__title {
-  color: #004f56;
+  color: #1B6B6D;
   font-weight: 700;
   font-size: 20px;
 }
