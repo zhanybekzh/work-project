@@ -2,8 +2,11 @@
   @include form();
   &__columns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &-addition-right-btn {
     display: flex;
@@ -19,10 +22,8 @@
     position: relative;
     background-color: $color-gray-200;
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     border: 1px solid $color-gray-300;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -33,6 +34,5 @@
   }
   .addition-right-btn-plus {
     position: absolute;
-
   }
 }

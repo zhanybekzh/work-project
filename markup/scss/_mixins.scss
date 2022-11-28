@@ -187,7 +187,7 @@
 
 @mixin form() {
   ul {
-    padding-left: 0;
+    padding-left: 20px;
   }
   input[type="text"]:disabled,
   input[type="submit"]:disabled,
@@ -540,6 +540,14 @@
       }
       .form-input-file__file ~ .form-input-file__label[data-browse]::after {
         content: attr(data-browse);
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      @media (min-width: 576px) {
+        gap:20px;
       }
     }
   }
