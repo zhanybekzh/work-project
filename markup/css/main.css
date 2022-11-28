@@ -4589,6 +4589,7 @@ body footer::after {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .auth-modal__content .form-auth__buttons {
