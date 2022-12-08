@@ -11,18 +11,13 @@
     &[data-state="active"] {
       .change-profile__content {
         opacity: 1;
-        max-height: fit-content;
         padding: 20px;
-      }
-      .change-profile__label {
-        max-height: fit-content;
       }
     }
   }
 
   &__title {
     color: $color-white;
-
     border-radius: 5px;
     background-color: $color-green-300;
     padding: 10px 15px;
@@ -45,7 +40,7 @@
   &__content {
     position: absolute;
     top: 115%;
-    max-height: 0;
+    max-height: 50vh;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -54,10 +49,12 @@
     box-shadow: 0px 0px 50px rgba(69, 66, 64, 0.2);
     transition: height 1s ease;
     opacity: 0;
+    overflow: auto;
     z-index: 8;
     gap: 20px;
     color: $color-gray-400;
     padding: 0;
+
   }
 
   &__input {
@@ -79,11 +76,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-height: 0;
-
     transition: all 0.2s ease-out;
     cursor: pointer;
-    overflow: hidden;
     &:hover {
       color: $color-green-400;
     }

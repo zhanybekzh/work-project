@@ -21,7 +21,8 @@
 
 @mixin button($button-type: "button") {
   @if ($button-type == "button") {
-    width: fit-content;
+    min-width: $button-min-width;
+    width:fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,10 +42,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       transition: none;
-    }
-
-    @media (min-width: 540px) {
-      min-width: $button-min-width;
     }
 
     &:hover {
@@ -549,6 +546,15 @@
       @media (min-width: 576px) {
         gap:20px;
       }
+    }
+    &__wrapper {
+      display: flex;
+      .form-input__input {
+
+      }
+    }
+    &__right-button {
+
     }
   }
 

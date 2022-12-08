@@ -11,7 +11,8 @@
   &-addition-right-btn {
     display: flex;
     flex-direction: row;
-    .form-select__select {
+    .form-select__select,
+    .form-input__input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       flex:1 1 0%;
