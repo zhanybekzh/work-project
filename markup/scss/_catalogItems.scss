@@ -1,26 +1,53 @@
 .catalog {
   .item {
-      list-style: none;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 500px;
-      cursor: pointer;
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 500px;
+    cursor: pointer;
     &:hover .item__about {
       transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
       background-color: $color-green-heading;
       border-color: $color-green-heading;
     }
     @include shadow();
+    &__promo-bonus {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top:5%;
+      left:0;
+      color:$color-white;
+      padding: 8px 40px 8px 35px;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1;
+      z-index: 2;
+      height:35px;
+      &::before {
+        content:'';
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        width:130px;
+        height:35px;
+        background: url('./../../assets/img/flag.svg') 0 0/cover no-repeat;
+
+        transform: rotate(180deg);
+      }
+    }
     &__link {
       display: block;
       text-decoration: none;
       position: absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
     &__image {
       flex: 0 0 200px;
@@ -38,8 +65,8 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      align-items: flex-start;
-
+      align-items: baseline;
+      padding-bottom:50px;
       & > p {
         margin-bottom: 0;
       }
@@ -49,43 +76,83 @@
       color: $color-green-heading;
       font-weight: 700;
       font-size: 20px;
+      line-height: 1.2;
+    }
+    p.item__preview {
+      color: #626b6d;
+      font-size: 17px;
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
     &__price {
+
+      width:100%;
+
       margin-top: auto;
+      &-promo-flag {
+        display: none;
+      }
       &-values {
+
         position: relative;
-        color: $color-green-500;
+        color: $color-green-300;
         font-weight: 700;
-        margin-top: 20px;
-        font-size: 20px;
+        line-height: 1;
+        min-height: 45px;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: -30px;
+        margin-left: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
       }
       &-old {
         color: $color-gray-300;
         position: absolute;
-        top: -100%;
+        top:5%;
         text-decoration: line-through;
+        font-size: 14px;
+        font-weight: 700;
+
       }
       &_promo {
-        .item__price-values {
-          transform: translateX(30px);
+        .item__price-values::before {
+          content: '';
+          width: 10px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #FF8F3F;
         }
-        .item__price-current {
-          position: relative;
-          &::before {
-            content: "";
-            width: 15px;
-            height: 15px;
+          .item__price-promo-flag {
+            display: block;
             position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: url("../../assets/icons/custom/promo_yellow.svg")
-              no-repeat;
-            background-size: contain;
+            height:45px;
+              top:0;
+              right: 0;
+              bottom: 0;
+              width: 40%;
+              background: url("./../../assets/img/flag.svg");
+              overflow: hidden;
           }
+          .item__price-promo-flag::after {
+              content:'';
+              display: block;
+              width: 118px;
+              position: absolute;
+              background: url("./../../assets/img/percent.svg");
+              top:0;
+              bottom: 0;
+              left: calc(50% + 12px);
+              transform: translateX(-50%);
+          }
+
         }
       }
-    }
+
 
     &__about {
       @include button("button");

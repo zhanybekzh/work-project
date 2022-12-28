@@ -12,6 +12,8 @@
       .change-profile__content {
         opacity: 1;
         padding: 20px;
+        display: flex;
+        z-index: 1;
       }
     }
   }
@@ -41,7 +43,7 @@
     position: absolute;
     top: 115%;
     max-height: 50vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     background-color: #ffffff;
@@ -50,11 +52,9 @@
     transition: height 1s ease;
     opacity: 0;
     overflow: auto;
-    z-index: 8;
     gap: 20px;
     color: $color-gray-400;
     padding: 0;
-
   }
 
   &__input {

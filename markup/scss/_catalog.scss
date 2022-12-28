@@ -19,7 +19,12 @@
         gap: $item-offsets;
     }
 }
-@media (min-width: 568px) {
+@media (min-width: 576px) {
+    .catalog-list {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 768px) {
     .catalog-list {
         grid-template-columns: 1fr 1fr;
     }
