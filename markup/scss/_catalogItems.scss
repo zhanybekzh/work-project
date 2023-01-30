@@ -27,17 +27,20 @@
       line-height: 1;
       z-index: 2;
       height:35px;
+      overflow: hidden;
       &::before {
         content:'';
         position: absolute;
         z-index: -1;
         top:0;
         left:0;
-        width:130px;
+        width:100%;
         height:35px;
         background: url('./../../assets/img/flag.svg') 0 0/cover no-repeat;
-
         transform: rotate(180deg);
+      }
+      span {
+        text-shadow: 0px 0px 0 #f37e28, 1px 1px 0 #f37e28, 2px 2px 0 #f37e28, 3px 3px 0 #f37e28, 4px 4px 0 #f37e28, 5px 5px 0 #f37e28, 6px 6px 0 #f37e28, 7px 7px 0 #f37e28, 8px 8px 0 #f37e28, 9px 9px 0 #f37e28, 10px 10px 0 #f37e28, 11px 11px 0 #f37e28, 12px 12px 0 #f37e28, 13px 13px 0 #f37e28, 14px 14px 0 #f37e28, 15px 15px 0 #f37e28, 16px 16px 0 #f37e28, 17px 17px 0 #f37e28, 18px 18px 0px #f37e28, 19px 19px 0 #f37e28, 20px 20px 0 #f37e28;
       }
     }
     &__link {
