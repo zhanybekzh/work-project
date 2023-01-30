@@ -98,12 +98,16 @@
 .d-grid {
   display: grid;
 }
-@each $margin-range in $margin-ranges {
+
+$margin-range: -200;
+
+@while $margin-range < 200 {
+
   .mb-#{$margin-range} {
     @include mb($margin-range);
   }
   .mt-#{$margin-range} {
     @include mt($margin-range);
   }
-
+  $margin-range: $margin-range + 5;
 }
