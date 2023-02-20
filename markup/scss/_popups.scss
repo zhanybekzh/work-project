@@ -60,6 +60,14 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    &_cancel {
+      .popup__button:last-child {
+        @include button("button");
+      }
+      .popup__button:first-child {
+        @include button("outline");
+      }
+    }
   }
   &-question {
     .popup__button {
