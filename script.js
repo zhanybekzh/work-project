@@ -96,3 +96,43 @@ const show_hide_password = (target) => {
         }
     });
 })();
+
+const openModal = (el) => {
+    const modalName = el.dataset.modal;
+    if (modalName) {
+        const modalEl = document.querySelector(`#${modalName}`);
+        modalEl.classList.add('opened');
+    }
+    return;
+}
+
+(()=> {
+    const openButtons = document.querySelectorAll('.popup__open-button');
+    openButtons.forEach((item) => {
+        item.addEventListener('click', () => {
+            const targetModal = item.dataset.modal;
+            if (targetModal) {
+                const modalEl = document.querySelector(`#${targetModal}`);
+                if(!modalEl.classList.contains('opened')) {
+                    modalEl.classList.add('opened');
+                }
+            }
+            return;
+        })
+        
+    })
+    const closeButtons = document.querySelectorAll('.popup__close-button');
+    closeButtons.forEach((item) => {
+        item.addEventListener('click', () => {
+            const targetModal = item.dataset.modal;
+            if (targetModal) {
+                const modalEl = document.querySelector(`#${targetModal}`);
+                if(modalEl.classList.contains('opened')) {
+                    modalEl.classList.remove('opened');
+                }
+            }
+            return;
+        })
+        
+    })
+})();

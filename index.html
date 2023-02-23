@@ -9,7 +9,6 @@
         <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png">
         <script src="./feather.min.js"></script>
         <title>Платформа сервисов</title>
-
     </head>
 
     <body>
@@ -63,6 +62,136 @@
             <div class="container">
                 <div class="ui-wrap">
                     <div class="ui">
+                        <h2>Открытие модального окна</h2>
+                        <button class="popup__open-button button mb-40" data-modal="cancelModalJS">
+                            Отменить подписку
+                        </button>
+                        <button class="popup__open-button button" data-modal="demoModalJS">
+                            Демо доступ
+                        </button>
+                        <div
+                            tabindex="-1"
+                            aria-hidden="true"
+                            class="modal"
+                            id="cancelModalJS"
+                        >
+                            <div class="popup-wrapper">
+                                <div
+                                    class="popup popup-question"
+                                >
+                                    <button
+                                        type="button"
+                                        class="popup__close-button"
+                                        data-modal="cancelModalJS"
+                                    ></button>
+
+                                    <p class="popup__title">
+                                        Отмена подписки
+                                    </p>
+                                    <p class="popup__text">
+                                        Вы действительно хотите отменить
+                                        подписку?
+                                    </p>
+                                    <div
+                                        class="popup__buttons popup__buttons_cancel"
+                                    >
+                                        <button
+                                            type="button"
+                                            title="Отменить подписку"
+                                            class="popup__button"
+                                        >
+                                            Да
+                                        </button>
+                                        <button
+                                            type="button"
+                                            title="Не отменять подписку"
+                                            class="popup__button"
+                                        >
+                                            Нет
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            tabindex="-1"
+                            aria-hidden="true"
+                            class="cloud modal"
+                            id="demoModalJS"
+                        >
+                            <div class="popup-wrapper">
+                                <div
+                                    class="popup popup-question"
+                                >
+                                    <button
+                                        type="button"
+                                        class="popup__close-button"
+                                        data-modal="demoModalJS"
+                                    ></button>
+
+                                    <p class="popup__title">
+                                        Демо доступ на 7 календарных дней
+                                    </p>
+                                    <p class="popup__text">
+                                        Отправляя эту форму, Вы соглашаетесь на обработку указанных Вами данных компанией "1С-Рейтинг". Учетные данные для доступа к программе будут сгенерированы и отправлены на указанный Вами e-mail.
+                                    </p>
+                                    <form action="" class="form">
+                                        <div class="form-select mb-20">
+                                            <label class="form-text__label" for="">Выберите программный продукт*</label>
+                                            <select class="form-select__select" type="" name="" id="" placeholder="Выберите регион">
+                                                <option value="">Бухгалтерия для Казахстана</option>
+                                                <option value="">Госсектор: Бухгалтерия государственного учреждения</option>
+                                                <option value="">Бухгалтерия государственного предприятия: Учебное заведение</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                        <div class="form-input">
+                                            <label class="form-input__label" for="form-input1">Ваше имя*</label>
+                                            <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Ваше имя">
+                                            <div class="form-input__error">
+                                                Поле не заполнено
+                                            </div>
+                                        </div>
+                                        <div class="form-input">
+                                            <label class="form-input__label" for="form-input1">Телефон*</label>
+                                            <input class="form-input__input" type="text" name="" id="form-input1" placeholder="+7 (7__)___-__-__">
+                                            <div class="form-input__error">
+                                                Поле не заполнено
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="form-input  mb-20">
+                                            <label class="form-input__label" for="form-input1">E-mail*</label>
+                                            <input class="form-input__input" type="text" name="" id="form-input1" placeholder="mail@example.com">
+                                            <div class="form-input__error">
+                                                Поле не заполнено
+                                            </div>
+                                        </div>
+                                        <div class="form-select mb-20">
+                                            <label class="form-text__label" for="">Откуда вы узнали об этом сервисе?</label>
+                                            <select class="form-select__select" type="" name="" id="" placeholder="Выберите регион">
+                                                <option value="">Свой вариант</option>
+                                                <option value="">Социальные сети</option>
+                                                <option value="">PRO1C</option>
+                                            </select>
+                                        </div>
+                                        <textarea name="" id="" placeholder="Ваше сообщение" class="form-input__input"></textarea>
+                                    </form>
+                                    <div
+                                        class="popup__buttons "
+                                    >
+                                        <button
+                                            type="button"
+                                            title="Попробовать сервис"
+                                            class="popup__button"
+                                        >
+                                        Попробовать сервис
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <h2>Colors</h2>
                         <ul class="ui-colors">
                             <li class="ui-colors__list">
@@ -275,7 +404,7 @@
                                     >Форма собственности*</label
                                 >
                                 <input
-                                disabled
+                                    disabled
                                     class="form-input__input"
                                     type="text"
                                     name=""
@@ -316,16 +445,15 @@
                                         name=""
                                         id="promo"
                                         placeholder="Введите промокод"
-                                    >
+                                    />
                                     <div class="form-input__error">
                                         Поле не заполнено
                                     </div>
-                                    <button class="form-input__right-button" >
+                                    <button class="form-input__right-button">
                                         Применить
                                     </button>
                                 </div>
                             </div>
-
 
                             <fieldset>
                                 <legend>Легенда</legend>
@@ -358,14 +486,14 @@
                                     </div>
                                 </div>
                                 <div class="form-select">
-                                    <label class="form-text__label" for=""
+                                    <label class="form-text__label" for="region"
                                         >Выберите регион*</label
                                     >
                                     <select
                                         class="form-select__select"
                                         type=""
                                         name=""
-                                        id=""
+                                        id="region"
                                         placeholder="Выберите регион"
                                     >
                                         <option value="">Хороший</option>
@@ -406,8 +534,16 @@
                                     </label>
                                 </div>
                                 <div class="form-input-file mb-20">
-                                    <input id="sd" type="file" class="form-input-file__file">
-                                    <label for="sd" class="form-input-file__label" data-browse="Обзор...">
+                                    <input
+                                        id="sd"
+                                        type="file"
+                                        class="form-input-file__file"
+                                    />
+                                    <label
+                                        for="sd"
+                                        class="form-input-file__label"
+                                        data-browse="Обзор..."
+                                    >
                                         Выберите файл
                                     </label>
                                 </div>
@@ -462,41 +598,47 @@
                                     <label for="radio-3">ТОО</label>
                                 </li>
                             </ul>
-                            <div class="" style="background-color:  #00898d;padding:20px;">
-                            <ul>
-                                <li class="form-radio form-radio_white">
-                                    <input
-                                        id="radio-1"
-                                        type="radio"
-                                        name="radio-white"
-                                        value="fiz"
-                                        checked
-                                    />
-                                    <label for="radio-1">Физическое лицо</label>
-                                </li>
-                                <li class="form-radio form-radio_white">
-                                    <input
-                                        id="radio-2"
-                                        type="radio"
-                                        name="radio-white"
-                                        value="too"
-                                        disabled
-                                    />
-                                    <label for="radio-2"
-                                        >Юридическое лицо ТОО 'disabled'</label
-                                    >
-                                </li>
-                                <li class="form-radio form-radio_white">
-                                    <input
-                                        id="radio-3"
-                                        type="radio"
-                                        name="radio-white"
-                                        value="ip"
-                                    />
-                                    <label for="radio-3">ТОО</label>
-                                </li>
-                            </ul>
-                        </div>
+                            <div
+                                class=""
+                                style="background-color: #00898d; padding: 20px"
+                            >
+                                <ul>
+                                    <li class="form-radio form-radio_white">
+                                        <input
+                                            id="radio-1"
+                                            type="radio"
+                                            name="radio-white"
+                                            value="fiz"
+                                            checked
+                                        />
+                                        <label for="radio-1"
+                                            >Физическое лицо</label
+                                        >
+                                    </li>
+                                    <li class="form-radio form-radio_white">
+                                        <input
+                                            id="radio-2"
+                                            type="radio"
+                                            name="radio-white"
+                                            value="too"
+                                            disabled
+                                        />
+                                        <label for="radio-2"
+                                            >Юридическое лицо ТОО
+                                            'disabled'</label
+                                        >
+                                    </li>
+                                    <li class="form-radio form-radio_white">
+                                        <input
+                                            id="radio-3"
+                                            type="radio"
+                                            name="radio-white"
+                                            value="ip"
+                                        />
+                                        <label for="radio-3">ТОО</label>
+                                    </li>
+                                </ul>
+                            </div>
                             <h2>Input type checkbox</h2>
                             <ul>
                                 <div class="form-checkbox">
