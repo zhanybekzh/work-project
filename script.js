@@ -24,6 +24,7 @@ const show_hide_password = (target) => {
         if (menuIcon) {
             const menuList = headerMenu.querySelector(".header-menu__list");
             headerMenu.addEventListener("click", (e) => {
+                e.stopPropagation();
                 menuIcon.classList.toggle("_active");
                 menuList.classList.toggle("_active");
             });
@@ -41,7 +42,8 @@ const show_hide_password = (target) => {
             ".change-profile__label"
         );
         // Toggle menu
-        changeProfileTitle.addEventListener("click", () => {
+        changeProfileTitle.addEventListener("click", (evt) => {
+            evt.stopPropagation();
             if (changeProfile.dataset.state === "active") {
                 changeProfile.setAttribute("data-state", "");
             } else {
@@ -67,6 +69,7 @@ const show_hide_password = (target) => {
 
         if (userMenu) {
             userMenuShowButton.addEventListener("click", (evt) => {
+                evt.stopPropagation();
                 userMenu.classList.toggle("_active");
             });
             // document.addEventListener('click', (evt) => {
@@ -107,32 +110,103 @@ const openModal = (el) => {
 }
 
 (()=> {
+    const body = document.body;
+    const lockBodyScroll = () => {
+        body.classList.add('scroll-hidden');
+    };
+    const unlockBodyScroll = () => {
+        if (body.classList.contains('scroll-hidden')) {
+            body.classList.remove('scroll-hidden');
+        }
+
+    }
+    const modalWindows = document.querySelectorAll('.popup-wrapper');
+    modalWindows.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+    })
     const openButtons = document.querySelectorAll('.popup__open-button');
     openButtons.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
             const targetModal = item.dataset.modal;
             if (targetModal) {
                 const modalEl = document.querySelector(`#${targetModal}`);
                 if(!modalEl.classList.contains('opened')) {
                     modalEl.classList.add('opened');
+                    lockBodyScroll();
                 }
             }
-            return;
         })
-        
+
     })
     const closeButtons = document.querySelectorAll('.popup__close-button');
     closeButtons.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
             const targetModal = item.dataset.modal;
             if (targetModal) {
                 const modalEl = document.querySelector(`#${targetModal}`);
                 if(modalEl.classList.contains('opened')) {
                     modalEl.classList.remove('opened');
+                    unlockBodyScroll();
                 }
             }
-            return;
         })
-        
-    })
+
+    });
+    const modalWindow = document.querySelectorAll('.modal');
+    document.addEventListener('keydown', function(event) {
+        const key = event.key; // const {key} = event; in ES6+
+        if (key === "Escape") {
+            if (modalWindow) {
+
+                modalWindow.forEach((item) => {
+                    if (item.classList.contains('opened')) {
+                        item.classList.remove("opened");
+                        unlockBodyScroll();
+                    }
+                })
+            };
+        }
+    });
+    const headerMenu = document.querySelector(".header-menu");
+    let menuIcon = null;
+    let menuList = null;
+    if (headerMenu) {
+        menuIcon = headerMenu.querySelector(".header-menu__icon");
+        menuList = headerMenu.querySelector(".header-menu__list");
+    }
+    const userMenu = document.querySelector(".header-user .header-user__menu");
+    const changeProfile = document.querySelector(".change-profile__block");
+    const profilesDropDowns = document.querySelectorAll('.profiles__dropdown');
+
+    document.body.addEventListener("click", (e) => {
+
+        if (menuIcon) {
+            menuIcon.classList.remove("_active");
+        }
+        if (menuList) {
+            menuList.classList.remove("_active");
+        }
+        if (userMenu) {
+            userMenu.classList.remove("_active");
+        }
+        if (changeProfile) {
+            changeProfile.setAttribute("data-state", "");
+        }
+        if (profilesDropDowns) {
+            profilesDropDowns.forEach((item) => item.classList.remove("profiles__dropdown_active"));
+        }
+        if (modalWindow) {
+
+            modalWindow.forEach((item) => {
+                if (item.classList.contains('opened')) {
+                    item.classList.remove("opened");
+                    unlockBodyScroll();
+                }
+                })
+            };
+        });
 })();
