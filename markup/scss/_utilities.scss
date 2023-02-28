@@ -111,3 +111,13 @@ $margin-range: -200;
   }
   $margin-range: $margin-range + 5;
 }
+
+$f-size: 1;
+@while $f-size < 40 {
+
+  .f-size-#{$f-size} {
+    font-size: #{$f-size}px;
+  }
+
+  $f-size: $f-size + 1;
+}

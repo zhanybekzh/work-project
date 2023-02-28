@@ -149,7 +149,6 @@
                             aria-hidden="true"
                             class="cloud modal"
                             id="buyModalJS"
-                            style="display:flex;"
                         >
                             <div class="popup-wrapper">
                                 <div
@@ -179,7 +178,7 @@
                                                 <option value="">Бухгалтерия государственного предприятия: Учебное заведение</option>
                                             </select>
                                         </div>
-                                        <div class="form__columns mb-20">
+                                        <div class="form__columns mb-50">
                                             <div class="incAndDecrButtons__block">
                                                 <div class="incAndDecrButtons">
                                                     <button type="button" class="minus btn"></button>
@@ -197,7 +196,7 @@
                                                 <p>Количество информационных баз</p>
                                             </div>
                                         </div>
-                                        <ul class="checkbox-list">
+                                        <ul class="check-radio-list mb-50">
                                             <li><div class="form-checkbox">
                                                 <input
                                                     id="checkbox-1"
@@ -206,7 +205,7 @@
                                                     value="fiz"
                                                 />
                                                 <label for="checkbox-1"
-                                                    >Физическое лицо</label
+                                                    >Конфигуратор</label
                                                 >
                                             </div></li>
                                             <li><div class="form-checkbox">
@@ -217,7 +216,7 @@
                                                     value="fiz"
                                                 />
                                                 <label for="checkbox-2"
-                                                    >Физическое лицо</label
+                                                    >Сервисное хранилище</label
                                                 >
                                             </div></li>
                                             <li><div class="form-checkbox">
@@ -228,15 +227,52 @@
                                                     value="fiz"
                                                 />
                                                 <label for="checkbox-3"
-                                                    >Физическое лицо</label
+                                                    >Прямая отправка ФНО (для одной организации)</label
                                                 >
                                             </div></li>
                                         </ul>
+                                        <style>
+                                            .cloud .price {
+                                                padding-top:40px;
+                                                padding-bottom: 40px;
+                                                border-top: 1px solid #C6C9CB;
+                                                text-align: right;
+                                            }
+                                        </style>
+                                        <div class="price">
+                                            <p>Общая сумма заказа: <b class="f-size-24 text-green-300"><span class="price-value">18 255</span> тг/месяц</b></p>
+                                        </div>
+                                        <p class="popup__title mb-50">
+                                            Для отправления заявки необходимо заполнить все поля*
+                                        </p>
+                                        <ul class="check-radio-list mb-50">
+                                            <li class="form-radio">
+                                                <input
+                                                    id="radio-1"
+                                                    type="radio"
+                                                    name="radio"
+                                                    value="fiz"
+                                                    checked
+                                                />
+                                                <label for="radio-1">Юридическое лицо ТОО</label>
+                                            </li>
+                                            <li class="form-radio">
+                                                <input
+                                                    id="radio-2"
+                                                    type="radio"
+                                                    name="radio"
+                                                    value="too"
 
+                                                />
+                                                <label for="radio-2"
+                                                    >Физическое лицо</label
+                                                >
+                                            </li>
+                                            </ul>
                                         <div class="form__columns mb-20">
                                             <div class="form-input">
                                                 <label class="form-input__label" for="form-input1">
-                                                    Ваше имя*
+                                                    Ваше имя
                                                 </label>
                                                 <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Ваше имя">
                                                 <div class="form-input__error">
@@ -245,13 +281,158 @@
                                             </div>
                                             <div class="form-input">
                                                 <label class="form-input__label" for="form-input1">
-                                                    Телефон*
+                                                    Ваша фамилия
                                                 </label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Ваша фамилия">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">
+                                                    Название организации
+                                                </label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Название организации">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">Телефон</label>
                                                 <input class="form-input__input" type="text" name="" id="form-input1" placeholder="+7 (7__)___-__-__">
                                                 <div class="form-input__error">
                                                     Поле не заполнено
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="form-select mb-20">
+                                            <label class="form-text__label" for="">Регион</label>
+                                            <select class="form-select__select" type="" name="" id="" placeholder="Регион">
+                                                <option value="">Регион</option>
+                                                <option value="">Социальные сети</option>
+                                                <option value="">PRO1C</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">
+                                                    Полное наименование
+                                                </label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Полное наименование">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">Юридический адрес</label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Юридический адрес">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="form-select ">
+                                                <label class="form-text__label" for="">Сфера деятельности</label>
+                                                <select class="form-select__select" type="" name="" id="" placeholder="Сфера деятельности">
+                                                    <option value="">Бухгалтерия для Казахстана</option>
+                                                    <option value="">Госсектор: Бухгалтерия государственного учреждения</option>
+                                                    <option value="">Бухгалтерия государственного предприятия: Учебное заведение</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">БИН</label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="0000 0000 0000 KZ">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">Номер счета</label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Номер счета">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="form-select ">
+                                                <label class="form-text__label" for="">Форма собственности</label>
+                                                <select class="form-select__select" type="" name="" id="" placeholder="Форма собственности">
+                                                    <option value="">Бухгалтерия для Казахстана</option>
+                                                    <option value="">Госсектор: Бухгалтерия государственного учреждения</option>
+                                                    <option value="">Бухгалтерия государственного предприятия: Учебное заведение</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">Банк</label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Банк">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                        <div class="form-input">
+                                            <label
+                                                class="form-input__label"
+                                                for="form-input4"
+                                                >Пароль</label
+                                            >
+
+                                            <div class="form-input__password">
+                                                <input
+                                                    id="password-input"
+                                                    class="form-input__input"
+                                                    type="password"
+                                                    name=""
+                                                    id="form-input4"
+                                                    placeholder="Введите пароль"
+                                                    value=""
+                                                />
+
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                                <a
+                                                    class="form-input__password-icon"
+                                                    onclick="return show_hide_password(this); "
+                                                >
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="form-input">
+                                            <label
+                                                class="form-input__label"
+                                                for="form-input5"
+                                                >Подтвердите пароль</label
+                                            >
+
+                                            <div class="form-input__password">
+                                                <input
+                                                    id="password-input"
+                                                    class="form-input__input"
+                                                    type="password"
+                                                    name=""
+                                                    id="form-input5"
+                                                    placeholder="Подтвердите пароль"
+                                                    value=""
+                                                />
+
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                                <a
+                                                    class="form-input__password-icon"
+                                                    onclick="return show_hide_password(this); "
+                                                >
+                                                </a>
+                                            </div>
+                                        </div>
                                         </div>
                                     </form>
                                     <div
