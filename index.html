@@ -66,8 +66,11 @@
                         <button class="popup__open-button button mb-40" data-modal="cancelModalJS">
                             Отменить подписку
                         </button>
-                        <button class="popup__open-button button" data-modal="demoModalJS">
+                        <button class="popup__open-button button mb-40" data-modal="demoModalJS">
                             Демо доступ
+                        </button>
+                        <button class="popup__open-button button" data-modal="buyModalJS">
+                            Купить
                         </button>
                         <div
                             tabindex="-1"
@@ -187,7 +190,132 @@
                                         >
                                         Попробовать сервис
                                         </button>
-                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            tabindex="-1"
+                            aria-hidden="true"
+                            class="cloud modal"
+                            id="buyModalJS"
+                            style="display:flex;"
+                        >
+                            <div class="popup-wrapper">
+                                <div
+                                    class="popup popup-question"
+                                >
+                                    <button
+                                        type="button"
+                                        class="popup__close-button"
+                                        data-modal="buyModalJS"
+                                    ></button>
+
+                                    <p class="popup__title">
+                                        Купить 1С в Облаке
+                                    </p>
+                                    <p class="popup__text">
+                                        Заполните поля нашего калькулятора и узнайте, сколько сможете сэкономить.
+                                    </p>
+                                    <p class="popup__text mb-40">
+                                        Калькуляция является примерной. Более точную информацию можно получить у менеджера.
+                                    </p>
+                                    <form action="" class="form mt-20">
+                                        <div class="form-select mb-40">
+                                            <label class="form-text__label" for="">Выберите программный продукт*</label>
+                                            <select class="form-select__select" type="" name="" id="" placeholder="Выберите регион">
+                                                <option value="">Бухгалтерия для Казахстана</option>
+                                                <option value="">Госсектор: Бухгалтерия государственного учреждения</option>
+                                                <option value="">Бухгалтерия государственного предприятия: Учебное заведение</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__columns mb-20">
+                                            <div class="incAndDecrButtons__block">
+                                                <div class="incAndDecrButtons">
+                                                    <button type="button" class="minus btn"></button>
+                                                    <input value="1" title="Кол." step="1" min="1" type="text" class="num">
+                                                    <button type="button" class="plus btn"></button>
+                                                </div>
+                                                <p>Количество пользователей</p>
+                                            </div>
+                                            <div class="incAndDecrButtons__block">
+                                                <div class="incAndDecrButtons">
+                                                    <button type="button" class="minus btn"></button>
+                                                    <input value="1" title="Кол." step="1" min="1" type="text" class="num">
+                                                    <button type="button" class="plus btn"></button>
+                                                </div>
+                                                <p>Количество информационных баз</p>
+                                            </div>
+                                        </div>
+                                        <ul class="checkbox-list">
+                                            <li><div class="form-checkbox">
+                                                <input
+                                                    id="checkbox-1"
+                                                    type="checkbox"
+                                                    name="checkbox"
+                                                    value="fiz"
+                                                />
+                                                <label for="checkbox-1"
+                                                    >Физическое лицо</label
+                                                >
+                                            </div></li>
+                                            <li><div class="form-checkbox">
+                                                <input
+                                                    id="checkbox-2"
+                                                    type="checkbox"
+                                                    name="checkbox"
+                                                    value="fiz"
+                                                />
+                                                <label for="checkbox-2"
+                                                    >Физическое лицо</label
+                                                >
+                                            </div></li>
+                                            <li><div class="form-checkbox">
+                                                <input
+                                                    id="checkbox-3"
+                                                    type="checkbox"
+                                                    name="checkbox"
+                                                    value="fiz"
+                                                />
+                                                <label for="checkbox-3"
+                                                    >Физическое лицо</label
+                                                >
+                                            </div></li>
+                                        </ul>
+
+                                        <div class="form__columns mb-20">
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">
+                                                    Ваше имя*
+                                                </label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="Ваше имя">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="form-input__label" for="form-input1">
+                                                    Телефон*
+                                                </label>
+                                                <input class="form-input__input" type="text" name="" id="form-input1" placeholder="+7 (7__)___-__-__">
+                                                <div class="form-input__error">
+                                                    Поле не заполнено
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div
+                                        class="popup__buttons "
+                                    >
+                                        <button
+                                            type="button"
+                                            title="Попробовать сервис"
+                                            class="popup__button"
+                                        >
+                                        Попробовать сервис
+                                        </button>
+
                                     </div>
                                 </div>
                             </div>

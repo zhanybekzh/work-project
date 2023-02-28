@@ -108,7 +108,34 @@ const openModal = (el) => {
     }
     return;
 }
+(() => {
+                                                class PlusMinusEl {
+                                                    constructor(component) {
+                                                        this.input = component.querySelector('input.num');
+                                                        this.value = Number(this.input.value);
+                                                    }
+                                                    render = () => {
+                                                        this.input.value = this.value;
+                                                    }
+                                                    plus = () => {
+                                                        this.value += 1;
+                                                        this.render();
+                                                    }
+                                                    minus = () => {
+                                                        if(this.value > 1) {
+                                                            this.value -= 1;
+                                                            this.render();
+                                                        }
+                                                    }
+                                                }
+                                                const plusMinusComponents = document.querySelectorAll(".incAndDecrButtons");
+                                                plusMinusComponents.forEach((component) => {
+                                                    const plusMinusComponent = new PlusMinusEl(component);
+                                                    component.querySelector('.minus').addEventListener('click', plusMinusComponent.minus);
+                                                    component.querySelector('.plus').addEventListener('click', plusMinusComponent.plus);
+                                                })
 
+})();
 (()=> {
     const body = document.body;
     const lockBodyScroll = () => {
@@ -120,6 +147,7 @@ const openModal = (el) => {
         }
 
     }
+
     const modalWindows = document.querySelectorAll('.popup-wrapper');
     modalWindows.forEach((item) => {
         item.addEventListener('click', (e) => {
