@@ -111,11 +111,12 @@ const openModal = (el) => {
 (() => {
                                                 class PlusMinusEl {
                                                     constructor(component) {
+                                                        this.component = component;
                                                         this.input = component.querySelector('input.num');
                                                         this.value = Number(this.input.value);
                                                     }
                                                     render = () => {
-                                                        this.input.value = this.value;
+                                                        this.input.setAttribute('value', String(this.value));
                                                     }
                                                     plus = () => {
                                                         this.value += 1;
