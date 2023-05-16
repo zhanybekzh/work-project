@@ -314,6 +314,10 @@
   }
 
   &-input {
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
     &__label {
       display: block;
       padding-bottom: 0.3rem;
@@ -568,6 +572,7 @@
         padding-right: 125px;
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
+
       }
     }
 
