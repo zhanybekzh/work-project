@@ -93,7 +93,6 @@ const show_hide_password = (target) => {
         }
     });
     pagesId.forEach((element) => {
-
         if (element.getAttribute("href").slice(1) === pageName) {
             element.classList.add("header-menu__link_active");
         }
@@ -104,100 +103,99 @@ const openModal = (el) => {
     const modalName = el.dataset.modal;
     if (modalName) {
         const modalEl = document.querySelector(`#${modalName}`);
-        modalEl.classList.add('opened');
+        modalEl.classList.add("opened");
     }
     return;
-}
+};
 (() => {
-                                                class PlusMinusEl {
-                                                    constructor(component) {
-                                                        this.component = component;
-                                                        this.input = component.querySelector('input.num');
-                                                        this.value = Number(this.input.value);
-                                                    }
-                                                    render = () => {
-                                                        this.input.setAttribute('value', String(this.value));
-                                                    }
-                                                    plus = () => {
-                                                        this.value += 1;
-                                                        this.render();
-                                                    }
-                                                    minus = () => {
-                                                        if(this.value > 1) {
-                                                            this.value -= 1;
-                                                            this.render();
-                                                        }
-                                                    }
-                                                }
-                                                const plusMinusComponents = document.querySelectorAll(".incAndDecrButtons");
-                                                plusMinusComponents.forEach((component) => {
-                                                    const plusMinusComponent = new PlusMinusEl(component);
-                                                    component.querySelector('.minus').addEventListener('click', plusMinusComponent.minus);
-                                                    component.querySelector('.plus').addEventListener('click', plusMinusComponent.plus);
-                                                })
-
+    class PlusMinusEl {
+        constructor(component) {
+            this.component = component;
+            this.input = component.querySelector("input.num");
+            this.value = Number(this.input.value);
+        }
+        render = () => {
+            this.input.setAttribute("value", String(this.value));
+        };
+        plus = () => {
+            this.value += 1;
+            this.render();
+        };
+        minus = () => {
+            if (this.value > 1) {
+                this.value -= 1;
+                this.render();
+            }
+        };
+    }
+    const plusMinusComponents = document.querySelectorAll(".incAndDecrButtons");
+    plusMinusComponents.forEach((component) => {
+        const plusMinusComponent = new PlusMinusEl(component);
+        component
+            .querySelector(".minus")
+            .addEventListener("click", plusMinusComponent.minus);
+        component
+            .querySelector(".plus")
+            .addEventListener("click", plusMinusComponent.plus);
+    });
 })();
-(()=> {
+(() => {
     const body = document.body;
     const lockBodyScroll = () => {
-        body.classList.add('scroll-hidden');
+        body.classList.add("scroll-hidden");
     };
     const unlockBodyScroll = () => {
-        if (body.classList.contains('scroll-hidden')) {
-            body.classList.remove('scroll-hidden');
+        if (body.classList.contains("scroll-hidden")) {
+            body.classList.remove("scroll-hidden");
         }
+    };
 
-    }
-
-    const modalWindows = document.querySelectorAll('.popup-wrapper');
+    const modalWindows = document.querySelectorAll(".popup-wrapper");
     modalWindows.forEach((item) => {
-        item.addEventListener('click', (e) => {
+        item.addEventListener("click", (e) => {
             e.stopPropagation();
-        })
-    })
-    const openButtons = document.querySelectorAll('.popup__open-button');
+        });
+    });
+    const openButtons = document.querySelectorAll(".popup__open-button");
     openButtons.forEach((item) => {
-        item.addEventListener('click', (e) => {
+        item.addEventListener("click", (e) => {
             e.stopPropagation();
             const targetModal = item.dataset.modal;
             if (targetModal) {
                 const modalEl = document.querySelector(`#${targetModal}`);
-                if(!modalEl.classList.contains('opened')) {
-                    modalEl.classList.add('opened');
+                if (!modalEl.classList.contains("opened")) {
+                    modalEl.classList.add("opened");
                     lockBodyScroll();
                 }
             }
-        })
-
-    })
-    const closeButtons = document.querySelectorAll('.popup__close-button');
+        });
+    });
+    const closeButtons = document.querySelectorAll(".popup__close-button");
     closeButtons.forEach((item) => {
-        item.addEventListener('click', (e) => {
+        item.addEventListener("click", (e) => {
             e.stopPropagation();
             const targetModal = item.dataset.modal;
             if (targetModal) {
                 const modalEl = document.querySelector(`#${targetModal}`);
-                if(modalEl.classList.contains('opened')) {
-                    modalEl.classList.remove('opened');
+                if (modalEl.classList.contains("opened")) {
+                    modalEl.classList.remove("opened");
                     unlockBodyScroll();
                 }
             }
-        })
-
+        });
     });
-    const modalWindow = document.querySelectorAll('.modal');
-    document.addEventListener('keydown', function(event) {
+    const modalWindow = document.querySelectorAll(".modal");
+    document.addEventListener("keydown", function (event) {
         const key = event.key; // const {key} = event; in ES6+
         if (key === "Escape") {
             if (modalWindow) {
-
                 modalWindow.forEach((item) => {
-                    if (item.classList.contains('opened')) {
+                    if (item.classList.contains("opened")) {
                         item.classList.remove("opened");
                         unlockBodyScroll();
                     }
-                })
-            };
+                });
+            }
         }
     });
     const headerMenu = document.querySelector(".header-menu");
@@ -209,10 +207,9 @@ const openModal = (el) => {
     }
     const userMenu = document.querySelector(".header-user .header-user__menu");
     const changeProfile = document.querySelector(".change-profile__block");
-    const profilesDropDowns = document.querySelectorAll('.profiles__dropdown');
+    const profilesDropDowns = document.querySelectorAll(".profiles__dropdown");
 
     document.body.addEventListener("click", (e) => {
-
         if (menuIcon) {
             menuIcon.classList.remove("_active");
         }
@@ -226,16 +223,36 @@ const openModal = (el) => {
             changeProfile.setAttribute("data-state", "");
         }
         if (profilesDropDowns) {
-            profilesDropDowns.forEach((item) => item.classList.remove("profiles__dropdown_active"));
+            profilesDropDowns.forEach((item) =>
+                item.classList.remove("profiles__dropdown_active")
+            );
         }
         if (modalWindow) {
-
             modalWindow.forEach((item) => {
-                if (item.classList.contains('opened')) {
+                if (item.classList.contains("opened")) {
                     item.classList.remove("opened");
                     unlockBodyScroll();
                 }
-                })
-            };
-        });
+            });
+        }
+    });
+})();
+(() => {
+    const rangeInputs = document.querySelectorAll('.form-range__input');
+    function handleInputChange(e) {
+        let target = e.target;
+        if (e.target.type === "range") {
+            const min = target.min;
+            const max = target.max;
+            const val = target.value;
+
+            target.style.backgroundSize =
+                ((val - min) * 100) / (max - min) + "% 100%";
+        }
+
+    }
+
+    rangeInputs.forEach((input) => {
+        input.addEventListener("input", handleInputChange);
+    });
 })();

@@ -864,6 +864,20 @@
                                     <label for="radio-two">HDD</label>
                                 </div>
                             </form>
+                            <form class="form">
+                                <div class="mb-40 mt-40 form-range">
+                                    <label class="form-input__label" for="range">Количество RAM</label>
+                                    <input id="range" class="form-range__input" type="range" value="2" min="2" max="64" step="2" oninput="currentValue.value=value"/>
+                                    <div class="form-range__values">
+                                        <div class="value min-value">2ГБ</div>
+                                        <div class="current-value">
+                                            <output id="currentValue">2</output>
+                                            <span>ГБ</span>
+                                        </div>
+                                        <div class="value max-value">64ГБ</div>
+                                    </div>
+                                </div>
+                            </form>
                             <div
                                 class=""
                                 style="background-color: #00898d; padding: 20px"
